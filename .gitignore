@@ -1,0 +1,15 @@
+# Entornos virtuales
+venv/
+
+# Bases de datos y modelos locales
+chroma_db/
+__pycache__/
+
+# Datos pesados
+datos/
+
+# Configuraciones del editor
+.vscode/
+
+# Archivos de sistema operativo
+.DS_Store
