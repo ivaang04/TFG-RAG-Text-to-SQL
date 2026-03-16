@@ -78,6 +78,7 @@ class ClasificadorIntencion:
                 "A partir de la temperatura máxima registrada en los datos, investiga en la bibliografía el efecto del calentamiento en la dinámica de nutrientes.",
                 "Compara el caudal máximo registrado en los datos con los impactos de escorrentía descritos en la literatura científica.",
                 "Calcula la concentración media de clorofila-a en los datos empíricos y contrástala con los umbrales de eutrofización definidos en los artículos.",
+                "Analiza las tendencias de nuestra tabla de datos y explica si concuerdan con los patrones documentados en los papers",
                 "¿Justifica la literatura el comportamiento anómalo del pH observado en nuestra base de datos durante los episodios de lluvia intensa?"
             ]
         }
