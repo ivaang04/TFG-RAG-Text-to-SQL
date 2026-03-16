@@ -88,7 +88,7 @@ class ConsultaSQL:
 
         return None
 
-    def generar_sql(self, pregunta, error_previo=None):
+    def generar_sql(self, pregunta, error_previo=None, sql_fallido=None):
 
         ejemplos = """
         EJEMPLOS DE REFERENCIA (ESTILO DE PENSAMIENTO Y CÓDIGO):
@@ -140,8 +140,19 @@ class ConsultaSQL:
         # PREGUNTA: {pregunta}
         """
         
-        if error_previo:
-            prompt += f"\n Tu intento anterior falló con: {error_previo}. Analiza el error en tu razonamiento y corrige el SQL."
+        if error_previo and sql_fallido:
+            prompt += f"""
+        Tu último intento de responder a esta pregunta falló.
+        
+        - Consulta SQL que escribiste:
+        ```sql
+        {sql_fallido}
+        ```
+        - Error devuelto por DuckDB:
+        {error_previo}
+        
+        Por favor, analiza por qué falló esa consulta específica en tu <thought_process> y escribe una nueva consulta corregida.
+        """
 
         prompt += "\nTU RESPUESTA (Thinking + SQL + Explicación):"
                 
@@ -171,7 +182,7 @@ class ConsultaSQL:
             raise ValueError("El agente no pudo generar una consulta SQL válida.")
 
         # Bucle de intentos
-        max_intentos = 3
+        max_intentos = 5
         ultimo_error = None
         for intento in range(max_intentos):
             try:
@@ -195,7 +206,7 @@ class ConsultaSQL:
                     print("Auto-corrigiendo...")
                     #Enviamos el error de vuelta
                     # anadir consulta que ha generado error
-                    respuesta_corr = self.generar_sql(pregunta, error_previo=str(e))
+                    respuesta_corr = self.generar_sql(pregunta, error_previo=str(e), sql_fallido=sql)
                     sql = self.limpiar_respuesta(respuesta_corr)
 
                     if not sql:

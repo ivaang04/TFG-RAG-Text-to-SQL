@@ -1,8 +1,7 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 import numpy as np
 
-UMBRAL_CONFIANZA = 0.75
-MARGEN_EMPATE = 0.012
+MARGEN_EMPATE = 0.008
 TOP_K = 3
 class ClasificadorIntencion:
     def __init__(self):
@@ -14,22 +13,58 @@ class ClasificadorIntencion:
 
         self.ejemplos = {
             "SQL": [
+                "¿Cuál fue la temperatura media mensual registrada en la boya de Los Urrutias durante el verano?",
+                "Filtra los registros de la estación E3 donde la concentración de clorofila-a superó los 5 mg/m3 y devuélveme la fecha exacta.",
+                "Dime el valor máximo de precipitación acumulada en la estación meteorológica de San Javier.",
+                "¿Cuántos días el nivel de oxígeno disuelto en la Cubeta Sur estuvo por debajo de 4 mg/L?",
+                "¿Cuál es el registro de caudal más alto en la rambla del Albujón según los datos del SAIH?",
+                "Muestra los valores de conductividad medidos en la boya de Entreislas cuando la temperatura del agua superó los 28 grados.",
+                "¿Qué día se registró el nivel freático más bajo en los piezómetros del Campo de Cartagena?",
+                "Busca en la base de datos los registros donde el pH de la boya de Los Nietos haya bajado de 7.5.",
+                "Dime a qué hora exacta se midió la temperatura del agua más alta en la boya de Los Narejos.",
+                "Extrae todos los registros de la estación E3 donde la salinidad sea mayor a 44 PSU.",
                 "¿Cuál fue el valor máximo o mínimo registrado?",
                 "¿Cuántos registros superan este umbral en la tabla?",
                 "Muéstrame los datos de la estación del mes de julio.",
                 "Dame el promedio mensual y la desviación estándar.",
                 "¿Qué día y hora exactos se registró el valor más extremo?",
-                "Filtra los registros por variable y devuelve la tabla resultante."
+                "Filtra los registros por variable y devuelve la tabla resultante.",
+                "¿Cuál es el valor mínimo de oxígeno disuelto registrado en la base de datos?",
+                "Calcula la media de turbidez agrupada por mes.",
+                "¿Cuántos registros superan el umbral de salinidad de 38 PSU?",
+                "Dame la desviación típica de la temperatura del agua para cada año disponible.",
+                "Muestra los registros donde la concentración de clorofila-a fue mayor a 10 mg/m3."
             ],
             "RAG": [
+                "Según los informes del IEO-CSIC, ¿cuáles son las principales causas del fenómeno de la mancha blanca en el Mar Menor?",
+                "¿Qué ventajas tiene el algoritmo C2RCC para estimar clorofila-a con Sentinel-2 en aguas someras según la literatura?",
+                "¿Qué modelos de Machine Learning y Deep Learning se proponen en la literatura para monitorizar la calidad del agua?",
+                "¿Qué metodología se utilizó para aplicar Landsat-8 y Sentinel-2 como sistema de alerta temprana en lagunas costeras?",
+                "¿Cómo se realiza la corrección atmosférica sobre aguas continentales según los estudios de teledetección?",
+                "¿Qué relación causal existe entre la anoxia y la mortandad masiva de peces según los papers?",
+                "¿Qué es el índice NDCI propuesto por Mishra y Mishra y cómo se calcula?",
+                "Detalla el uso de redes neuronales artificiales para modelar la eutrofización en ecosistemas acuáticos.",
                 "¿Qué metodología, modelo empírico o algoritmo propone el estudio?",
                 "Según el artículo, ¿cómo se define este fenómeno?",
                 "¿Qué conclusiones o resultados principales extrae el paper?",
                 "Según la literatura científica, ¿qué factores influyen en este proceso?",
                 "¿Qué instrumentos o herramientas se recomiendan según el documento?",
-                "Explícame la teoría descrita en el documento sobre este proceso."
+                "Explícame la teoría descrita en el documento sobre este proceso.",
+                "¿Qué factores influyen en la eutrofización de lagunas costeras según la literatura científica?",
+                "¿Qué sensores satelitales se recomiendan para monitorizar la calidad del agua marina?",
+                "¿Cómo afecta la turbidez a la penetración de luz en ecosistemas acuáticos según los estudios?",
+                "¿Qué índices espectrales se usan para detectar floraciones de algas en aguas costeras?",
+                "Según la literatura, ¿cómo afecta la escorrentía agrícola a la salinidad y nutrientes de una laguna?",
+                "¿Qué métodos analíticos se emplean para medir parámetros biofísicos en agua de mar?",
+                "¿Qué variabilidad espacio-temporal presentan los parámetros de calidad del agua en lagunas costeras?"
             ],
             "HIBRIDO": [
+                "Cruza los picos de clorofila-a medidos en la estación E3 con los umbrales de eutrofización definidos en los informes del IEO-CSIC.",
+                "¿Explica la teoría de Pérez-Ruzafa la bajada repentina de salinidad que muestran los datos de la boya de Los Urrutias?",
+                "Verifica si las temperaturas extremas registradas en la boya de Pedruchillo coinciden con los periodos de crisis ecológica mencionados en los artículos.",
+                "Basado en la evolución del pH y materia orgánica de la estación E3 en 2023, ¿qué fase de eutrofización estaría atravesando el Mar Menor según los autores?",
+                "Relaciona los niveles altos de sólidos disueltos totales en los datos empíricos con las causas de la mancha blanca descritas por el CSIC.",
+                "Analiza los datos de precipitación de San Javier e indica cómo este tipo de eventos DANA afectan a la turbidez según la literatura.",
                 "¿Coinciden los datos medidos en nuestra tabla con lo que describe la literatura?",
                 "Compara los registros reales de la estación con la teoría del artículo.",
                 "¿Es normal el valor registrado hoy si nos basamos en los estudios científicos?",
@@ -39,6 +74,11 @@ class ClasificadorIntencion:
                 "¿Podemos usar la teoría del artículo para interpretar los datos de nuestra tabla?",
                 "¿Los patrones de nuestra base de datos coinciden con las tendencias descritas en el paper?",
                 "Cómo se relacionan los registros de nuestra tabla con los conceptos teóricos del documento?",
+                "Extrae el valor medio de oxígeno disuelto de los datos empíricos e indica si, según los papers, estos niveles son críticos para las especies bentónicas.",
+                "A partir de la temperatura máxima registrada en los datos, investiga en la bibliografía el efecto del calentamiento en la dinámica de nutrientes.",
+                "Compara el caudal máximo registrado en los datos con los impactos de escorrentía descritos en la literatura científica.",
+                "Calcula la concentración media de clorofila-a en los datos empíricos y contrástala con los umbrales de eutrofización definidos en los artículos.",
+                "¿Justifica la literatura el comportamiento anómalo del pH observado en nuestra base de datos durante los episodios de lluvia intensa?"
             ]
         }
 
@@ -104,14 +144,9 @@ class ClasificadorIntencion:
 
         tipo_detectado = max(scores, key=scores.get)
         mejor_score = scores[tipo_detectado]
+        
 
         print(f"Match más cercano: '{mejor_match['texto_match']}' ({mejor_match['score']:.3f})")
-
-        if mejor_score < UMBRAL_CONFIANZA:
-
-            print (f"Baja confianza ({mejor_score:.2f}). Forzando ruta HÍBRIDA.")
-        
-            return "HIBRIDO", scores
 
         # ----------------------------------
         # empate SQL vs RAG (si no se ha detectado híbrido)
@@ -126,3 +161,84 @@ class ClasificadorIntencion:
                 return "HIBRIDO", scores
             
         return tipo_detectado, scores
+
+
+
+if __name__ == "__main__":
+    import time
+    
+    print("Iniciando y descargando/cargando el modelo E5 en memoria...")
+    inicio = time.time()
+    clasificador = ClasificadorIntencion()
+    print(f"Modelo cargado y ejemplos vectorizados en {time.time() - inicio:.2f} segundos.\n")
+
+    # Hemos añadido tu batería de preguntas extremas
+    bateria_pruebas = [
+        # --- PREGUNTAS TIPO SQL ---
+        "¿Cuál fue la temperatura máxima y mínima registrada durante el mes de julio?",
+        "Devuélveme la temperatura máxima y mínima registradas durante el mes de julio de cada año",
+        "¿Cuál fue la temperatura máxima y mínima registrada durante el mes de julio en 2025?",
+        "¿Humedad promedio diaria?",
+        "Cuáles son las cifras más extremas que hemos capturado, refiriéndonos a humedad relativa, precipitación y temperatura.",
+        "Muestra un listado de todos los registros donde la precipitación acumulada fue mayor a 0",
+        "Muestra un listado de todos los registros donde la precipitación acumulada fue mayor a 0 en 2025",
+        
+        # --- PREGUNTAS TIPO RAG ---
+        "Según la literatura proporcionada, ¿qué algoritmos de Machine Learning y Deep Learning se han utilizado recientemente para estimar la concentración de clorofila-a en el Mar Menor?",
+        "¿Qué sensores se usan para la evaluar la presencia de clorofila-a?",
+        "¿De dónde se han obtenido los datos para elegir las bandas y los modelos matemáticos?",
+        "¿De qué cuatro lagos se han obtenido los datos para elegir las bandas y los modelos matemáticos?",
+        "¿Cuál es la fórmula del Índice Sentinel-3 (IS3) propuesto en el estudio?",
+        "¿Cuál de los dos índices propuestos (IS2 o IS3) obtuvo un menor error (RMSE) en la validación y a qué se debe esto según los autores?",
+        
+        # --- PREGUNTAS TIPO HÍBRIDO ---
+        "Valida los picos de temperatura de nuestras mediciones empíricas comparándolos con lo que dicen los estudios científicos sobre la clorofila",
+        "¿Cómo explican los artículos de teledetección del Mar Menor el evento de precipitación extrema de nuestra base de datos?",
+        "¿Cómo se relaciona la humedad promedio con la presencia de clorifila-a?",
+        "¿Se puede relacionar la humedad promedio registrada con la presencia de clorofila-a?",
+        "Extrae los picos de temperatura máxima de nuestra base de datos empírica y explica, basándote en la literatura de Delegido, por qué es importante monitorizar la clorofila-a en episodios de calor extremo en aguas continentales.",
+        "Calcula la humedad promedia diaria e investiga si tiene influencia en la presencia de clorofila-a"
+    ]
+
+    print("EJECUTANDO BATERÍA DE PRUEBAS AUTOMÁTICA")
+
+    
+    for i, pregunta in enumerate(bateria_pruebas, 1):
+        print(f"\n[PRUEBA {i}] Pregunta: '{pregunta}'")
+        
+        tipo_final, scores_finales = clasificador.clasificar(pregunta)
+        
+        print(f"RUTA ASIGNADA: -> {tipo_final} <-")
+        print(f"Scores (SQL: {scores_finales['SQL']:.3f} | RAG: {scores_finales['RAG']:.3f} | HIB: {scores_finales['HIBRIDO']:.3f})")
+
+    print("\n" + "=" * 70)
+    print(" Escribe tus propias preguntas para probar el orquestador.")
+    print(" (Escribe 'salir' o 'exit' para terminar)")
+    print("=" * 70)
+    
+    while True:
+        try:
+            print("Si quieres salir, escribe 'salir', 'exit', 'quit' o 'q'.")
+            pregunta_usuario = input("\nTu pregunta: ")
+            
+            # Condición de salida
+            if pregunta_usuario.strip().lower() in ['salir', 'exit', 'quit', 'q']:
+                break
+                
+            # Evitar inputs vacíos
+            if not pregunta_usuario.strip():
+                continue
+                
+            print("-" * 50)
+            tipo_final, scores_finales = clasificador.clasificar(pregunta_usuario)
+            
+            print(f"DECISIÓN DEL ROUTER: {tipo_final}")
+            print(" Puntuaciones detalladas:")
+            for cat, sc in scores_finales.items():
+                print(f"   • {cat}: {sc:.4f}")
+            print("-" * 50)
+            
+        except KeyboardInterrupt:
+            # Por si pulsas Ctrl+C
+            print("\nEjecución interrumpida por el usuario. Saliendo...")
+            break

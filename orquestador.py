@@ -101,7 +101,6 @@ class Orquestador:
                 return "No se pudo obtener evidencia empírica válida...\n\n" + self.generar_rag_only(pregunta_usuario, literatura)
             
             return self.generar_sintesis(pregunta_usuario, datos, literatura)
-  
 
     def detectar_tipo_resultado(self, df):
         total_filas = len(df)
