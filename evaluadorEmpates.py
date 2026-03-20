@@ -28,6 +28,12 @@ class EvaluadorEnrutador:
 
     def similitud_coseno(self, v1, v2):
         return np.dot(v1, v2)
+    
+    def aplicar_margen(s_sql, s_rag, s_hib, margen=0.008):
+        if abs(s_sql - s_rag) <= margen:
+            return "HIBRIDO"
+        dicc = {"SQL": s_sql, "RAG": s_rag, "HIBRIDO": s_hib}
+        return max(dicc, key=dicc.get)
 
     def evaluar_pregunta(self, pregunta):
 
@@ -57,19 +63,13 @@ class EvaluadorEnrutador:
         pred_1nn = resultados[0]["tipo"]
 
 
-        def aplicar_margen(s_sql, s_rag, s_hib, margen=0.008):
-            if abs(s_sql - s_rag) <= margen:
-                return "HIBRIDO"
-            dicc = {"SQL": s_sql, "RAG": s_rag, "HIBRIDO": s_hib}
-            return max(dicc, key=dicc.get)
-
 
         # Media total (Con regla de empate)
         media_tot_sql = np.mean(scores_por_categoria["SQL"]) if scores_por_categoria["SQL"] else 0
         media_tot_rag = np.mean(scores_por_categoria["RAG"]) if scores_por_categoria["RAG"] else 0
         media_tot_hib = np.mean(scores_por_categoria["HIBRIDO"]) if scores_por_categoria["HIBRIDO"] else 0
         
-        pred_media_total = aplicar_margen(media_tot_sql, media_tot_rag, media_tot_hib)
+        pred_media_total = self.aplicar_margen(media_tot_sql, media_tot_rag, media_tot_hib)
 
         #Media Top-K 
 
@@ -81,7 +81,7 @@ class EvaluadorEnrutador:
             m_rag = np.mean(sorted(scores_por_categoria["RAG"], reverse=True)[:k]) if scores_por_categoria["RAG"] else 0
             m_hib = np.mean(sorted(scores_por_categoria["HIBRIDO"], reverse=True)[:k]) if scores_por_categoria["HIBRIDO"] else 0
             
-            predicciones_media_k[f"Media_Top_{k}"] = aplicar_margen(m_sql, m_rag, m_hib)
+            predicciones_media_k[f"Media_Top_{k}"] = self.aplicar_margen(m_sql, m_rag, m_hib)
 
         #Voto Top-K
         predicciones_voto_k = {}
