@@ -1,6 +1,6 @@
 import os
 import shutil
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader, PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
@@ -38,14 +38,16 @@ class GestorRAG:
         print(f" Base de datos vectorial lista en: {self.db_path}")
 
 
-    def cargar_pdf(self, ruta_archivo):
-        """Carga un PDF y devuelve una lista de páginas."""
-        if not os.path.exists(ruta_archivo):
-            raise FileNotFoundError(f"El archivo no existe: {ruta_archivo}")
+    def cargar_directorio(self, ruta_directorio):
+        """Carga los PDFs de una carpeta."""
+        if not os.path.exists(ruta_directorio) or not os.path.isdir(ruta_directorio):
+            raise FileNotFoundError(f"La carpeta no existe o no es un directorio: {ruta_directorio}")
         
-        print(f"Cargando PDF: {ruta_archivo}...")
-        loader = PyPDFLoader(ruta_archivo)
-        return loader.load()
+        print(f"Cargando todos los PDFs desde: {ruta_directorio}...")
+        loader = PyPDFDirectoryLoader(ruta_directorio)
+        documentos = loader.load()
+        print(f"Se han cargado {len(documentos)} páginas en total.")
+        return documentos
 
     def dividir_texto(self, documentos):
         """Divide las páginas en fragmentos (chunks) más pequeños."""
@@ -114,7 +116,7 @@ class GestorRAG:
     def ingestar(self, ruta_pdf):
         """Método público para procesar un PDF completo."""
         try:
-            documentos = self.cargar_pdf(ruta_pdf)
+            documentos = self.cargar_directorio(ruta_pdf)
             chunks = self.dividir_texto(documentos)
             chunks_con_ids = self.calcular_ids_chunks(chunks)
             self.agregar_a_chroma(chunks_con_ids)
@@ -196,7 +198,7 @@ if __name__ == "__main__":
     #Inicializamos la clase RAG
     rag = GestorRAG()
     
-    ruta_pdf_prueba = "/home/ivan/Universidad/TFG/datos/Docs/Delegido et al_2014_Modelo empírico para la determinación de clorofila-a en aguas continentales a.pdf"
+    ruta_pdf_prueba = "/home/ivan/Universidad/TFG/datos/Docs/"
     
     # Se ingesta el PDF 
     rag.ingestar(ruta_pdf_prueba)
