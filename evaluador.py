@@ -114,8 +114,37 @@ class EvaluadorEnrutador:
             pred_random,
             scores_medios
         )
+    
 
-
+dataset_tfg_antiguas = {
+    "SQL": [
+        "¿Cuál fue el valor máximo o mínimo registrado?",
+        "¿Cuántos registros superan este umbral en la tabla?",
+        "Muéstrame los datos de la estación del mes de julio.",
+        "Dame el promedio mensual y la desviación estándar.",
+        "¿Qué día y hora exactos se registró el valor más extremo?",
+        "Filtra la precipitación acumulada y la temperatura empírica."
+    ],
+    "RAG": [
+        "¿Qué metodología, modelo empírico o algoritmo propone el estudio?",
+        "Según el artículo, ¿cómo se define este fenómeno?",
+        "¿Qué conclusiones o resultados principales extrae el paper?",
+        "Según la literatura científica, ¿qué factores influyen en este proceso?",
+        "¿Qué instrumentos o herramientas se recomiendan según el documento?",
+        "Explícame la teoría descrita en el documento sobre este proceso.",
+    ],
+    "HIBRIDO": [
+        "¿Coinciden los datos medidos en nuestra tabla con lo que describe la literatura?",
+        "Compara los registros reales de la estación con la teoría del artículo.",
+        "¿Es normal el valor registrado hoy si nos basamos en los estudios científicos?",
+        "¿Hay anomalías en nuestra base de datos respecto a los umbrales del paper?",
+        "Valida los picos de temperatura de nuestras mediciones usando el modelo teórico.",
+        "¿Nuestra tabla empírica refleja los episodios descritos por los autores?",
+        "¿Podemos usar la teoría del artículo para interpretar los datos de nuestra tabla?",
+        "¿Los patrones de nuestra base de datos coinciden con las tendencias descritas en el paper?",
+        "Cómo se relacionan los registros de nuestra tabla con los conceptos teóricos del documento?"
+    ]
+}
 # DATASET BASE (63 PREGUNTAS)
 dataset_tfg = {
      "SQL": [
@@ -272,7 +301,7 @@ dataset_test = {
 
 if __name__ == "__main__":
 
-    evaluador = EvaluadorEnrutador(dataset_tfg)
+    evaluador = EvaluadorEnrutador(dataset_tfg_antiguas)
 
     ks = [1, 2, 3, 4, 5, 7, 10]
 
@@ -340,7 +369,7 @@ if __name__ == "__main__":
             contador += 1
 
 
-    nombre_archivo = "resultados_clasificador.csv"
+    nombre_archivo = "resultados_clasificador_antiguo.csv"
 
     with open(nombre_archivo, mode="w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=campos)

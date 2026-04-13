@@ -1,0 +1,3193 @@
+=== DIARIO DEL JUEZ | K=5 | Umbral=0.45 ===
+
+--- PREGUNTA 1 ---
+USUARIO: Según el estudio de Caballero et al., ¿qué satélites se proponen utilizar como herramienta de alerta temprana para la monitorización de la calidad del agua en el Mar Menor?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: 324
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros biofísicos en el Mar Menor 
+Erena, et al. 
+ 
+Figura 8. Puntos de muestreo  del CDT y perfiles de 
+clorofila-a del 18/04/2017.
+4. CONCLUSIONES
+Este trabajo se puede poner en marcha la primera fase 
+de un sistema de seguimiento de calidad del agua 
+mediante imágenes de satélite del Mar Menor en tiempo 
+cuasi real. Las técnicas de teledetección y toma de datos 
+in situ empleadas en el presente trabajo han resultado 
+adecuadas, permitiendo abordar de manera sinóptica 
+y económica la descripción de los patrones espacio-
+temporal de los procesos de elevada turbidez y alto 
+contenido en clorofila-a de las aguas del Mar Menor 
+que se dieron en 2016. Los resultados obtenidos con 
+este desarrollo metodológico pueden ser muy útiles para 
+anticipar la toma de decisiones en la gestión ambiental 
+de la laguna. La experiencia adquirida desde el inicio
+
+---
+
+passage: ha alterado el carácter oligotrófico que siempre había 
+tenido la laguna, de aguas claras con bajo contenido en 
+nutrientes y escasa productividad primaria.
+El objetivo de este trabajo es evaluar el uso de los 
+satélites Landsat y SPOT para el seguimiento del estado 
+trófico a partir de las variables de concentración de 
+clorofila-a y turbidez del Mar Menor. Los primeros 
+estudios de la calidad de agua mediante teledetección en 
+España se remontan a la década de los 80, en la cual se 
+estudió por primera vez la Albufera de Valencia mediante 
+imágenes del satélite Landsat 5 (López y Caselles, 1990) 
+y se empezó a realizar el seguimiento de la eutrofización 
+de embalses por el Centro de Estudios Hidrográficos 
+(Ortiz y Peña, 1989). En el Mar Menor, también se han 
+realizado estudios de este tipo (Gilabert, 1992) y (Pérez-
+Ruzafa, 2005).
+2. MATERIAL Y MÉTODOS
+2.1. Imágenes de satélite utilizadas
+Las imágenes utilizadas  proceden del sensor OLI del
+
+---
+
+passage: estudios de detalle que permitan estimar con mayor precisión los flujos de descarga y la 
+transferencia de masa desde el acuífero Cuaternario al Mar Menor, para lo cual, en una primera 
+fase, requerirá las siguientes tareas: 1) Campañas de prospección geofísica en el sector litoral 
+para la determinación de la geometría, espesores del acuífero y emplazamientos fa vorables de 
+sondeos piezométricos; 2) Establecimiento de una red de monitorización hidrogeológica 
+permanente del entorno del Mar Menor mediante la ejecución de sondeos piezométricos 
+(eventualmente con algún sondeo dentro del Mar Menor), que permitan defini r los espesores 
+reales del acuífero en el frente de contacto; 3) Ensayos de bombeo y de laboratorio para la 
+determinación de parámetros hidráulicos y testificaciones en sondeos incluyendo medidas de 
+velocidades de flujo; 4) Trabajos de campo y gabinete par a la actualización del inventario de
+
+---
+
+passage: Las imágenes satelitales nos permiten analizar la temperatura y la clorofila -a. La temperatura se 
+obtiene a través de l producto "Copernicus Mediterranean Sea – High Resolution L4 Sea Surface 
+Temperature Reprocessed 0,05 deg resolution " disponible desde el servicio de Copernicus 
+(Nardelli et al., 2013). 
+Hasta la fecha, la concentración superficial de clorofila-a en la laguna se obtenía utilizando el 
+producto “ Mediterranean Sea Ocean Colour Plankton MY L4 daily gapfree observations and 
+climatology and monthly observations" del portal marino de Copernicus (CMEMS). Sin embargo, 
+desde febrero de 2024 se utiliza un algoritmo específico para el Mar Menor que ha sido diseñado 
+a partir del análisis de datos de los satélites y sensores del color del océano (Tabla 1) y datos de 
+clorofila-a procedentes de los muestreos in situ recopilados en el Mar Menor desde 2016. 
+Tabla 1: Características de los satélites y sensores analizados hasta agosto de 2023. 
+Satélite Sensor Fecha 
+inicial
+
+---
+
+passage: ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en 
+[Chl-a] y turbidez del Mar Menor usando imágenes de Sentinel-2. Para ello se ha utilizado una extensa base de datos, que 
+cuenta con ambos parámetros, [Chl-a] y turbidez, medidos en diferentes fechas entre el año 2016 y 2019 en 12 puntos sobre 
+el Mar Menor. Las imágenes fueron corregidas atmosféricamente con la versión para aguas turbias (C2X) del procesador 
+Case 2 Regional Coast Colour Processor (C2RCC), para obtener los valores de reflectividad. A continuación, se analizaron 
+las relaciones aritméticas entre las reflectividades de las bandas utilizadas en la bibliografía para el estudio de la [Chl- a] y 
+la turbidez. Comparando cada una de esas relaciones con los datos in situ se obtuvo que el mejor índice para la [Chl-a] es la 
+Limnetica, 41(2): 000-000 (2022). DOI: 10.23818/limn.41.18
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según el estudio de Caballero et al., no se menciona la utilización de satélites como herramienta de alerta temprana para la monitorización de la calidad del agua en el Mar Menor. La literatura científica recuperada no menciona la utilización de satélites específicos, como Landsat o SPOT, para este propósito.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado no directamente responde a la pregunta sobre qué satélites se proponen utilizar como herramienta de alerta temprana para la monitorización de la calidad del agua en el Mar Menor. Sin embargo, se menciona el uso de imágenes de satélite Sentinel-2 y Landsat para el seguimiento del estado trófico a partir de variables como concentración de clorofila-a y turbidez. También se hace referencia al uso de imágenes de satélite Copernicus Mediterranean Sea – High Resolution L4 Sea Surface Temperature Reprocessed 0,05 deg resolution para analizar la temperatura y la clorofila -a. Aunque no se menciona específicamente qué satélites se proponen utilizar, se sugiere que los satélites Sentinel-2 y Landsat pueden ser utilizados para este propósito.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta se basa en el contexto y no inventa datos. Sin embargo, no hace una correcta aplicación de la información proporcionada. No hay mención a satélites específicos como Landsat o SPOT en el contexto, pero la respuesta menciona que "no se menciona" su utilización, lo que sugiere que el autor asume conocimiento previo sobre este tema. Además, no se hace referencia explícita al estudio de Caballero et al., aunque se cita como fuente.
+
+**********************************************************************
+
+--- PREGUNTA 2 ---
+USUARIO: ¿Qué cuatro algoritmos de Machine Learning y Deep Learning evaluaron Gómez et al. (2021) para estimar el contenido de clorofila-a en el Mar Menor usando datos de Sentinel-2?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Las imágenes satelitales nos permiten analizar la temperatura y la clorofila -a. La temperatura se 
+obtiene a través de l producto "Copernicus Mediterranean Sea – High Resolution L4 Sea Surface 
+Temperature Reprocessed 0,05 deg resolution " disponible desde el servicio de Copernicus 
+(Nardelli et al., 2013). 
+Hasta la fecha, la concentración superficial de clorofila-a en la laguna se obtenía utilizando el 
+producto “ Mediterranean Sea Ocean Colour Plankton MY L4 daily gapfree observations and 
+climatology and monthly observations" del portal marino de Copernicus (CMEMS). Sin embargo, 
+desde febrero de 2024 se utiliza un algoritmo específico para el Mar Menor que ha sido diseñado 
+a partir del análisis de datos de los satélites y sensores del color del océano (Tabla 1) y datos de 
+clorofila-a procedentes de los muestreos in situ recopilados en el Mar Menor desde 2016. 
+Tabla 1: Características de los satélites y sensores analizados hasta agosto de 2023. 
+Satélite Sensor Fecha 
+inicial
+
+---
+
+passage: One of these images was some days after September 2019 torrential rains, in which a considerable [Chl- a] and turbidity in -
+crease was observed.
+Key words: Mar Menor, chlorophyll-a, turbidity, Sentinel-2, eutrophication, pollution
+RESUMEN
+Estimación del contenido de clorofila-a y turbidez del Mar Menor con Sentinel 2
+El Mar Menor es un lago costero Mediterráneo con un alto valor medioambiental y social, pero que ha sufrido importantes 
+episodios de contaminación en los últimos años a causa de fuertes lluvias, arrastre de sedimentos y sustancias contaminantes 
+principalmente de la agricultura y la entrada de residuos mineros provocando un aumento de la eutrofización. La concen -
+tración de clorofila- a [Chl-a] y la turbidez son parámetros de calidad del agua que, por sus propiedades ópticas, pueden 
+ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en
+
+---
+
+passage: desarrollo de algoritmos y validación de los mismos a 
+partir de datos de campo en los cuales hay valores de 
+turbidez y concentración de clorofila-a de las campañas 
+realizadas entre el 11 de julio de 2016 y el 27 de mayo  de 
+2017. Se obtuvieron los algoritmos a partir del análisis de 
+los datos de campo con índices normalizados entre bandas 
+del sensor OLI en el rango visible e infrarrojo cercano 
+y los datos de campo. La extracción de los valores de 
+los índices normalizados en las coordenadas de los datos 
+de campo se realizó mediante el software ArcGIS 10.5, 
+así como los valores de concentración de clorofila-a y 
+turbidez de las imágenes y los datos de campo utilizados 
+en la validación de los algoritmos. Una vez calculado 
+el nivel L2, se aplicó la misma metodología a todas las 
+imágenes, obteniendo la serie temporal de la turbidez y 
+la concentración de clorofila-a del Mar Menor entre el 15 
+de mayo del 2015 al 27 de mayo de 2017 (36 imágenes).
+
+---
+
+passage: ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en 
+[Chl-a] y turbidez del Mar Menor usando imágenes de Sentinel-2. Para ello se ha utilizado una extensa base de datos, que 
+cuenta con ambos parámetros, [Chl-a] y turbidez, medidos en diferentes fechas entre el año 2016 y 2019 en 12 puntos sobre 
+el Mar Menor. Las imágenes fueron corregidas atmosféricamente con la versión para aguas turbias (C2X) del procesador 
+Case 2 Regional Coast Colour Processor (C2RCC), para obtener los valores de reflectividad. A continuación, se analizaron 
+las relaciones aritméticas entre las reflectividades de las bandas utilizadas en la bibliografía para el estudio de la [Chl- a] y 
+la turbidez. Comparando cada una de esas relaciones con los datos in situ se obtuvo que el mejor índice para la [Chl-a] es la 
+Limnetica, 41(2): 000-000 (2022). DOI: 10.23818/limn.41.18
+
+---
+
+passage: 324
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros biofísicos en el Mar Menor 
+Erena, et al. 
+ 
+Figura 8. Puntos de muestreo  del CDT y perfiles de 
+clorofila-a del 18/04/2017.
+4. CONCLUSIONES
+Este trabajo se puede poner en marcha la primera fase 
+de un sistema de seguimiento de calidad del agua 
+mediante imágenes de satélite del Mar Menor en tiempo 
+cuasi real. Las técnicas de teledetección y toma de datos 
+in situ empleadas en el presente trabajo han resultado 
+adecuadas, permitiendo abordar de manera sinóptica 
+y económica la descripción de los patrones espacio-
+temporal de los procesos de elevada turbidez y alto 
+contenido en clorofila-a de las aguas del Mar Menor 
+que se dieron en 2016. Los resultados obtenidos con 
+este desarrollo metodológico pueden ser muy útiles para 
+anticipar la toma de decisiones en la gestión ambiental 
+de la laguna. La experiencia adquirida desde el inicio
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona específicamente los cuatro algoritmos de Machine Learning y Deep Learning utilizados por Gómez et al. (2021) para estimar el contenido de clorofila-a en el Mar Menor usando datos de Sentinel-2.
+
+Sin embargo, se puede inferir que se utilizaron algoritmos para analizar las imágenes de Sentinel-2 y obtener la concentración superficial de clorofila-a en la laguna. La literatura menciona el desarrollo de algoritmos a partir de datos de campo y su validación con índices normalizados entre bandas del sensor OLI en el rango visible e infrarrojo cercano.
+
+La literatura no proporciona información específica sobre los cuatro algoritmos utilizados, pero se puede inferir que se utilizaron técnicas de teledetección y análisis de datos para monitorizar el contenido de clorofila-a y turbidez del Mar Menor.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado contiene información relevante para responder a la pregunta, ya que se menciona la estimación del contenido de clorofila-a en el Mar Menor utilizando datos de Sentinel-2 y algoritmos específicos. Además, se presentan diferentes pasajes que abordan temas relacionados con la teledetección, la turbidez y la concentración de clorofila-a, lo que sugiere una conexión con la pregunta.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta se basa en la información del contexto, mencionando el desarrollo de algoritmos a partir de datos de campo y su validación con índices normalizados entre bandas del sensor OLI. Sin embargo, no proporciona información específica sobre los cuatro algoritmos utilizados por Gómez et al. (2021). La respuesta se centra en la inferencia y el análisis de las técnicas de teledetección y análisis de datos para monitorizar el contenido de clorofila-a y turbidez del Mar Menor.
+
+**********************************************************************
+
+--- PREGUNTA 3 ---
+USUARIO: Según el artículo de Erena et al. (2019), ¿cuáles son las principales presiones humanas que sufre el frágil ecosistema del Mar Menor?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Desde un primer momento, fue evidente la presión sufrida por la laguna y los camb ios aparecidos 
+como consecuencia de las diferentes acciones y actividades desarrolladas en sus márgenes. Por 
+ello, en la investigación del grupo se le ha dado una especial importancia a estos aspectos 
+aplicados, y así se ha estudiado la evolución de las ca racterísticas ambientales del Mar Menor a lo 
+largo de todo este periodo (Pérez -Ruzafa et al., 1987, 1991, 2005b; Marcos, 1991; Pérez -Ruzafa, 
+1996, 2006; Pérez -Ruzafa & Marcos, 2003, 2005), centrando particularmente la atención en los 
+efectos producidos por  y en las pesquerías (Departamento de Ecología, 1985; Pérez -Ruzafa & 
+Marcos, 1987; López-Capel, 2008). 
+De las actuaciones humanas que se han producido en la historia reciente del Mar Menor, tres han 
+inducido, y continúan induciendo, cambios drásticos en lo s procesos hidrográficos, 
+sedimentológicos y ecológicos, y por tanto en los poblamientos biológicos. Por un lado, los cambios
+
+---
+
+passage: necesidad de publicitar iniciativas ante la opinión pública y el miedo a saber realmente lo que 
+ocurre. Hay mucho trabajo aún por hacer. El Mar Menor mantiene un equilibrio inestable y será 
+difícil de recuperar si se rompen sus mecanismos homeostáticos  y no debería dejarse perder la 
+oportunidad de recuperarlo para la Región de Murcia. 
+El estudio sistemático del Mar Menor ha permitido conocer en profundidad cómo se estructuran las 
+comunidades lagunares y cómo responden a las distintas presiones antrópica s a las que están 
+sometidas, incluyendo dragados y vertidos de arenas, construcción de diques, la apertura de 
+canales de comunicación con el mar abierto o la introducción de especies alóctonas. Pero la 
+contribución más importante de las investigaciones rea lizadas en esta laguna ha sido el cambiar 
+radicalmente los paradigmas y asunciones acerca de la complejidad y estrategias ecológicas de
+
+---
+
+passage: Informe integral sobre el estado ecológico del Mar Menor 
+ 
+ 
+Comité de Asesoramiento Científico del Mar Menor 
+2. Ecología lagunar 
+ 
+Página 25 
+ 
+antiguas explotaciones mineras etc.  Estas actividades han operado como fuerzas motrices 
+generadoras de presiones que actuaban en la laguna generando impactos desde hace décadas, lo 
+que ha inducido al deterioro ambiental y  la pérdida tanto de sus característica, valores naturales y 
+culturales como de usos y aprovechamientos tradicionales.  
+Los cambios socioeconómicos experimentados en la laguna y su zona de influencia en los últimos 
+años han provocado el deterioro ambiental y la pérdida tanto de valores naturales y culturales como 
+de usos y aprovechamientos tradicionales.  
+Las alteraciones producidas por la minería sobre el medio natural abarcan un amplio espectro de 
+problemas ambientales. Derivada de las antiguas explotaciones en la Sierra de Cartagena -La
+
+---
+
+passage: Remote sensing of Environment , 120, 25-36. 
+DOI: 10.1109/IGARSS.2007.4423394
+Elosegi, A. & Sabater, S. (2009). Concepto y 
+técnicas en ecología fluvial . Bilbao, España: 
+Rubes Editorial. Ed. Fundación BBV A.
+Erena, M., Domínguez, J.A., Soria, J., Agua -
+do-Giménez, F., García-pintado, J., Melendre-
+ras, R., Atenza, J. & Lopez, J. (2017). Análisis 
+multisensor de la variabilidad espacio tempo -
+ral de diversos parámetros biofísicos en el Mar 
+Menor. XVII Congreso de la Asociación Es -
+pañola de Teledetección, Murcia, 2017.
+Erena, M., Domínguez, J.A., Aguado-gimén -
+ez, F., Soria, J. & García-Galiano, S. (2019). 
+Monitoring Coastal Lagoon Water Quality 
+through Remote Sensing: The Mar Menor as a 
+Case Study. Water, 11(7), 1468. DOI: 10.3390/
+w11071468
+Erena, M. (2020). La exposición a metales pesados 
+de la minería acelera el colapso del Mar Menor. 
+Eldiario.es. Recovered in January 2020, availa-
+ble on: https://www.eldiario.es/murcia/medio_ 
+ambiente/exposicion-metales-pesados-
+
+---
+
+passage: Informe integral sobre el estado ecológico del Mar Menor 
+ 
+ 
+Comité de Asesoramiento Científico del Mar Menor 
+2. Ecología lagunar 
+ 
+Página 65 
+ 
+Pérez-Ruzafa, A. & Marcos, C., 1987. Los sustratos arenosos y fangosos del Mar Menor (Murcia), su cubierta 
+vegetal y su posible relación con la disminución del mújol en la laguna. Cuadernos Marisqueros Publ. 
+Téc., 11: 111-123. 
+Pérez-Ruzafa, A. & Marcos, C., 1993. La teoría del confinamiento como modelo para explicar la estructura y 
+zonación horizontal de las comunidades bentónicas en las lagunas costeras. Publicaciones 
+Especiales del Instituto Español de Oceanografía, 11: 347-358. 
+Pérez-Ruzafa, A. & Marcos, C., 2005 . Pressures on Mediterranean coastal lagoons as a consequence of 
+human activities. En: Fletcher, C. & Spencer, T. (Eds.), Flooding and Environmental Challenges for 
+Venice and its Lagoon: State of Knowledge. Cambridge University Press, Cambridge: 545 -555.
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según el artículo de Erena et al. (2019), las principales presiones humanas que sufre el frágil ecosistema del Mar Menor son:
+
+* Las antiguas explotaciones mineras, que han generado impactos ambientales y pérdida de valores naturales y culturales.
+* Los cambios socioeconómicos experimentados en la laguna y su zona de influencia, lo que ha provocado el deterioro ambiental y la pérdida de usos y aprovechamientos tradicionales.
+* Las actividades humanas que han operado como fuerzas motrices generadoras de presiones que actúan en la laguna, induciendo al deterioro ambiental y la pérdida de características naturales y culturales.
+
+No se mencionan otras presiones humanas en el contexto proporcionado.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado contiene información relevante para responder a la pregunta. Se mencionan diferentes presiones humanas que afectan al ecosistema del Mar Menor, como dragados y vertidos de arenas, construcción de diques, apertura de canales de comunicación con el mar abierto o introducción de especies alóctonas. También se hace referencia a la minería y sus impactos en el medio natural. Sin embargo, no se proporciona información específica sobre las principales presiones humanas que sufre el frágil ecosistema del Mar Menor.
+
+[NOTA GROUNDEDNESS: 3/5]
+<razonamiento>La respuesta se basa en la información del contexto, específicamente en los artículos de Erena et al. (2019) y Pérez-Ruzafa & Marcos (1987, 1993, 2005). La mayoría de los datos aportados están respaldados por el contexto, como las antiguas explotaciones mineras, cambios socioeconómicos y actividades humanas que generan presiones en la laguna. Sin embargo, no se mencionan otras presiones humanas que podrían estar presentes en el contexto, lo que sugiere una parcial fundamentación.
+
+**********************************************************************
+
+--- PREGUNTA 4 ---
+USUARIO: ¿Con qué sensor específico validaron Delegido et al. (2014) sus modelos empíricos de estimación de clorofila-a diseñados para los satélites Sentinel-2 y Sentinel-3?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Asoci Ación Esp Añol A dE TElEdETEcción
+Modelo empírico para la determinación de clorofila-a en aguas continentales a partir de los futuros Sentinel-2 y 3. […]
+43
+valores del coeficiente de determinación R². Con 
+ello se determinó qué modelo presentaba mayor 
+correlación lineal con [Chl-a] para cada caso, tan-
+to en conjunto como por masa de agua, teniendo 
+en cuenta además su simplicidad y su aplicabili -
+dad a MSI de Sentinel-2 y a OLCI de Sentinel-3. 
+Se seleccionaron los mejores índices, tanto para 
+Sentinel-2 como para Sentinel-3, teniendo en cuen-
+ta que presentan los mayores valores de R
+2 y cuan-
+do son muy similares se seleccionan los más senci-
+llos y que usan menos bandas.
+Una vez obtenidos ambos índices, se calibró el mé-
+todo con la segunda base de datos de la Albufera y 
+se validó con la tercera base de datos que incluye 
+imágenes del sensor HICO para, al final, obtener 
+mapas de [Chl-a] usando los índices propuestos a 
+partir de una imagen HICO.
+4. Resultados y análisis
+
+---
+
+passage: 37Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+Recibido: 15-04-2014 
+Aceptado: 23-05-2014 
+Revista de teledetección 
+Asociación Española de Teledetección
+(2014) 41, 37-47
+ISSN 1133-0953
+EISSN 1988-8740
+http:/ /dx.doi.org/10.4995/raet.2014.2295
+* Autor para la correspondencia: Jesus.Delegido@uv.es
+Modelo empírico para la determinación de clorofila-a en 
+aguas continentales a partir de los futuros Sentinel-2 y 3. 
+Validación con imágenes HICO
+Delegido, J.*, Tenjo, C., Ruiz-Verdú, A., Peña, R., Moreno, J.
+Laboratorio de Procesamiento de Imágenes, Universidad de Valencia. C/ Catedrático José Beltrán, 2. 46980 Paterna, Valencia, España.
+Resumen: La concentración de clorofila-a es uno de los principales indicadores de la calidad de las aguas continentales. 
+A partir de imágenes del sensor CHRIS/PROBA y de datos obtenidos en campañas de medida en lagos en Colombia y
+
+---
+
+passage: A partir de imágenes del sensor CHRIS/PROBA y de datos obtenidos en campañas de medida en lagos en Colombia y 
+España, se han obtenido modelos empíricos para la estimación de la concentración de clorofila-a, directamente aplica-
+bles a los futuros sensores de la ESA, MSI de Sentinel-2 y OLCI de Sentinel-3. Los modelos, basados en índices de bandas 
+espectrales, se han validado con datos del sensor hiperespectral HICO, a bordo de la Estación Espacial Internacional.
+Palabras clave:
+ aguas continentales, clorofila, CHRIS/PROBA, Sentinel-2, Sentinel-3, OLCI, MSI, HICO.
+empirical model for chlorophyll-a determination in inland waters from the forthcoming sentinel-2 
+and 3. v alidation from HicO images
+Abstract: Chlorophyll-a concentration is one of the main indicators of inland waters quality. Using CHRIS/PROBA 
+images and in situ data obtained in four lakes in Colombia and Spain, we obtained empirical models for the estimation of
+
+---
+
+passage: sensores. Los muestreos con sondas multiparamétricas nos han permitido, a su vez, realizar un 
+análisis espacial de la SST en las c uatro estaciones de muestreo. Por último, los datos satelitales 
+del satélite Copernicus Mediterranean Sea – High Resolution L4 Sea Surface Temperature 
+Reprocessed, con una resolución de 0,05 grados (disponible en https://doi.org/10.48670/moi -
+00173), han ampliado la disponibilidad de datos SST en el Mar Menor más allá del año 2012. Estos 
+datos también han sido sometidos a un proceso de intercalibración con el sensor HOBO y los 
+sensores de la boya piloto SMLG.                                
+7.2.2. Clorofila-a 
+La medida de clorofila-a se lleva a cabo mediante dos métodos distintos: espectrofotométricos y 
+fluorescencia. La espectrofotometría es una técnica analítica que permite la cuantificación de 
+compuestos en solución, basándose en la relación directa que existe entre la absorción de luz y la
+
+---
+
+passage: Zhan et al.
+Delegido, J., Tenjo, C., Ruiz-verdú, A., Peña, R. 
+& Moreno, J. (2014). Modelo empírico para 
+la determinación de clorofila-a en aguas con -
+tinentales a partir de los futuros Sentinel-2 y 
+3. Validación con imágenes HICO. Revista 
+de Teledetección, (41), 37-47. DOI: 10.4995/
+raet.2014.2295
+Delegido, J., Urrego, P., Vicente, E., Sòria-per -
+pinyà, X., Soria, J.M., Pereira-Sandoval, M., 
+Ruiz-Verdú, A., Peña, R.& Moreno, J. (2019). 
+Turbidity and Secchi disc depth with Senti -
+nel-2 in different trophic status reservoirs at 
+the Comunidad Valenciana. Revista de Telede-
+tección, (54), 15-24.
+Dogliotti, A.I., Ruddick, G.K., Nechad, B., 
+Doxaran, D., & Knaeps, E. (2015). A single 
+algorithm to retrieve turbidity from remote -
+ly-sensed data in all coastal and estuarine 
+waters. Remote sensing of environment , 156, 
+157-168.
+Doxaran, D., Froidefond, J.M., Lavender, S. 
+& Castaing, P. (2002). Spectral signature of 
+highly turbid waters: application with SPOT
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona qué sensor específico validaron Delegido et al. (2014) sus modelos empíricos de estimación de clorofila-a diseñados para los satélites Sentinel-2 y Sentinel-3. El documento trata sobre el desarrollo de modelos empíricos para la determinación de la concentración de clorofila-a en aguas continentales a partir de imágenes del sensor CHRIS/PROBA y datos obtenidos en campañas de medida, y su validación con imágenes del sensor HICO.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado contiene información relevante para responder a la pregunta, ya que se menciona el trabajo de Delegido et al. (2014) sobre el modelo empírico para la determinación de clorofila-a en aguas continentales a partir de los sensores Sentinel-2 y Sentinel-3, y se incluye información sobre la validación con imágenes HICO. Sin embargo, no se menciona específicamente qué sensor se utilizó para validar el modelo.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta se basa en el contexto al mencionar que Delegido et al. (2014) desarrollaron modelos empíricos para la estimación de clorofila-a diseñados para los satélites Sentinel-2 y Sentinel-3, y su validación con imágenes del sensor HICO. Sin embargo, no se especifica qué sensor específico utilizaron para validar sus modelos empíricos.
+
+**********************************************************************
+
+--- PREGUNTA 5 ---
+USUARIO: ¿Qué parámetros biofísicos se relacionaron mediante el uso de datos in situ y técnicas de teledetección en el análisis multisensor de Erena et al. (2017)?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: 324
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros biofísicos en el Mar Menor 
+Erena, et al. 
+ 
+Figura 8. Puntos de muestreo  del CDT y perfiles de 
+clorofila-a del 18/04/2017.
+4. CONCLUSIONES
+Este trabajo se puede poner en marcha la primera fase 
+de un sistema de seguimiento de calidad del agua 
+mediante imágenes de satélite del Mar Menor en tiempo 
+cuasi real. Las técnicas de teledetección y toma de datos 
+in situ empleadas en el presente trabajo han resultado 
+adecuadas, permitiendo abordar de manera sinóptica 
+y económica la descripción de los patrones espacio-
+temporal de los procesos de elevada turbidez y alto 
+contenido en clorofila-a de las aguas del Mar Menor 
+que se dieron en 2016. Los resultados obtenidos con 
+este desarrollo metodológico pueden ser muy útiles para 
+anticipar la toma de decisiones en la gestión ambiental 
+de la laguna. La experiencia adquirida desde el inicio
+
+---
+
+passage: Nuevas plataformas y sensores de teledetección. XVII Congreso de la Asociación Española de Teledetección.
+(Eds. Luis A. Ruiz, Javier Estornell, Manuel Erena). pp. 321-324. Murcia 3-7 octubre 2017.
+321
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros 
+biofísicos en el Mar Menor 
+Erena, M. (1), Domínguez, J. A. (2), Soria, J. (3), Aguado-Giménez, F. (1), García-Pintado, J. (4), Melendreras, R. (5), 
+Atenza, J. F. (1), López, J. A. (1) 
+(1) IMIDA, C/ Mayor s/n, La Alberca. Murcia.
+(2) UNED. Universidad Nacional de Educación a Distancia, Madrid.
+(3) UV . Dep. de Microbiología y Ecología, Universitat de València. Valencia.
+(4) MARUM. Geosystem Modeling, Department of Geosciences, University of Bremen, Germany.
+(5) UCAM. Universidad Católica San Antonio (UCAM), Murcia.
+Resumen: En este trabajo se estudia la evolución de la turbidez y otros parámetros físicos en el Mar Menor, determinando
+
+---
+
+passage: 323
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros biofísicos en el Mar Menor 
+Erena, et al. 
+3. RESULTADOS Y DISCUSIÓN
+3.1. Análisis de las imágenes
+El nivel de procesamiento L1 determinó que las mejores 
+bandas para el desarrollo de los algoritmos de turbidez y 
+clorofila-a a correspondían a las bandas del rango visible 
+del espectro electromagnético azul (400-500 nm), verde 
+(500-600 nm) y rojo (600-700 nm). Estos resultados se 
+muestran en las Figuras 3 a 8.
+Figura 3. Relación entre los índices normalizados (V y 
+R) y la turbidez en los puntos de muestreo del CTD.
+Los algoritmos obtenidos en el nivel L2 explican un 77% 
+de la variabilidad de la turbidez (Figura 4) y del 88% para 
+la clorofila-a (Figura 6).
+ 
+Figura 4. Mapas de turbidez (NTU).
+Figura 5. Relación de la los índices normalizados (V/A) 
+y la clorofila-a en los puntos de muestreo del CTD.
+Los mapas de concentración de clorofila-a obtenidos
+
+---
+
+passage: 322
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros biofísicos en el Mar Menor 
+Erena, et al. 
+el acceso generalizado a los recursos subterráneos en las 
+últimas décadas ha supuesto una profunda transformación 
+de la superficie de cultivo del Campo de Cartagena. La 
+intensificación del regadío ha supuesto un incremento del 
+drenaje superficial y sub- superficial, que, junto con el 
+reciente vertido de salmueras procedentes de la desalación 
+de aguas subterráneas para disponer de más agua para 
+riego, y con los vertidos urbanos, fundamentalmente 
+en la época estival, ha supuesto la contaminación por 
+nutrientes de los acuíferos y el aumento de los niveles de 
+nutrientes en la laguna (García-Pintado et al., 2007). Esto 
+ha alterado el carácter oligotrófico que siempre había 
+tenido la laguna, de aguas claras con bajo contenido en 
+nutrientes y escasa productividad primaria.
+
+---
+
+passage: (5) UCAM. Universidad Católica San Antonio (UCAM), Murcia.
+Resumen: En este trabajo se estudia la evolución de la turbidez y otros parámetros físicos en el Mar Menor, determinando 
+su variabilidad mediante el uso conjunto de técnicas de teledetección y datos in situ. La investigación que se aborda ha 
+requerido el uso de numerosos sensores con diferentes resoluciones (espacial, temporal y espectral), proporcionando 
+de esta manera información para realizar un análisis multisensor de la laguna. El principal objetivo ha sido relacionar 
+los datos “in situ” de diversos parámetros: temperatura, salinidad, oxígeno disuelto, sólidos en suspensión y clorofila 
+a, mediante algoritmos empíricos con las bandas de diversos satélites (Landsat y Spot). También se han analizado los 
+procesos que acontecen en la laguna salina caracterizando los diferentes patrones espacio-temporales de los parámetros
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona qué parámetros biofísicos se relacionaron mediante el uso de datos in situ y técnicas de teledetección en el análisis multisensor de Erena et al. (2017). El documento trata sobre el análisis multisensor de la variabilidad espacio-temporal de diversos parámetros biofísicos en el Mar Menor, utilizando técnicas de teledetección y datos in situ.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado es relevante para responder a la pregunta, ya que se refiere específicamente al análisis multisensor de parámetros biofísicos en el Mar Menor, incluyendo la variabilidad espacio-temporal de la turbidez y otros parámetros físicos. La información presentada sobre los métodos utilizados, como la teledetección y la toma de datos in situ, es también útil para entender cómo se relacionaron los parámetros biofísicos en el estudio de Erena et al. (2017). Sin embargo, no hay una respuesta directa a la pregunta sobre qué parámetros biofísicos se relacionaron mediante el uso de datos in situ y técnicas de teledetección.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta no menciona qué parámetros biofísicos se relacionaron mediante el uso de datos in situ y técnicas de teledetección en el análisis multisensor de Erena et al. (2017), lo que está respaldado por la información del contexto, ya que el documento trata sobre el análisis multisensor de la variabilidad espacio-temporal de diversos parámetros biofísicos en el Mar Menor.
+
+**********************************************************************
+
+--- PREGUNTA 6 ---
+USUARIO: Según el informe del IEO-CSIC sobre la Mancha Blanca, ¿cuáles son las principales causas ambientales que originan este fenómeno en el Mar Menor?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Rocío García, CO Murcia - CSIC 
+Jesús M. Mercado, CO Málaga - CSIC 
+Isabel Ferrera, CO Málaga - CSIC 
+Francisco G. Jakobsen, CO Málaga - CSIC 
+Lidia Yebra, CO Málaga - CSIC 
+Soluna Salles, CO Málaga - CSIC 
+Ana María Cabello, CO Málaga - CSIC 
+Guillermo Domínguez-Huerta, CO Málaga - CSIC 
+Carlota R. Gazulla, CO Málaga - CSIC 
+ 
+Este informe debe citarse de la siguiente forma: 
+IEO-CSIC. (2024). Origen, naturaleza, causas y consecuencias del fenómeno de Mancha Blanca del Mar Menor. Pro-
+yecto BELICH: Monitorización, estudio y modelización del Mar Menor (MAPMM-MITECO).
+
+---
+
+passage: 1 
+   
+ 
+ORIGEN, NATURALEZA, CAUSAS Y CONSE-
+CUENCIAS DEL FENÓMENO DE MANCHA 
+BLANCA DEL MAR MENOR 
+Instituto Español de Oceanografía (IEO-CSIC) 
+ 
+ 
+ 
+NOTA: Los datos presentados y su interpretación deben ponerse en el contexto con los informes sobre el estado del 
+Mar Menor disponibles en la página web del IEO-CSIC (http://www.ieo.es/es_ES/web/ieo/mar-menor). Queda abso-
+lutamente prohibida la publicación de los datos contenidos en este informe sin el consentimiento previo de los auto-
+res y del IEO-CSIC.
+
+---
+
+passage: 4 
+   
+Contexto y preámbulo 
+El presente informe presenta los resultados y avances de la investigación en curso sobre la na-
+turaleza, dinámica y origen del fenómeno de blanqueamiento del agua conocido como “mancha 
+blanca”, desarrollada en el contexto del programa de seguimiento científico implementado para 
+evaluar el estado del ecosistema marino del Mar Menor. Este programa s e puso en marcha en 
+2016 para obtener un conocimiento fiable y objetivo sobre el estado y la evolución del Mar Me-
+nor a partir del episodio de “sopa verde” ocurrido ese mismo año. Este programa de seguimiento 
+se realizó, en un principio, como parte del proy ecto DMMEM, financiado por el IEO -CSIC. Sin 
+embargo, desde enero del año 2023, estas actividades de monitorización están integradas den-
+tro del proyecto BELICH, financiado por el Marco de Actuaciones Prioritarias para la Recupera-
+ción del Mar Menor (MAPMM) del Ministerio para la Transición Ecológica y el Reto Demográfico 
+(MITERD). 
+Introducción
+
+---
+
+passage: ria, lo que favorecería la aparición de condiciones anóxicas. No obstante, si la hipótesis pro-
+puesta es una buena aproximación de la realidad, la profundización de la fase seca del ciclo 
+climático, así como el descenso de los niveles piezométricos, pueden llevar aparejada una ate-
+nuación, reducción e incluso desaparición de la mancha blanca. Sin embargo , parece que las 
+condiciones que facilitan la aparición de la mancha pueden persistir en el largo plazo y deben 
+tomarse en consideración en la gestión integral del Mar Menor y su cuenca vertiente.
+
+---
+
+passage: Doney, S. C., Fabry, V. J., Feely, R. A., & Kleypas, J. A. (2009). Ocean acidification: the other CO 2 
+problem. Annual Review of Marine Science, 1, 169-192.     
+Gómez-Jakobsen, F.J., Oosterbaan, M., Mercado -Carmona, J.M., Ruíz -Fernández, J.M., Fraile  
+Nuez, E. (2024). Detección y descripción de “la mancha blanca” del Mar Menor. En Teledetección 
+y Cambio Global: Retos y Oportunidades para un Crecimiento Azul, Actas del XX Congreso de la 
+Asociación Española de Teledetección, pp. 63 -66. 2024, Cádiz. Disponible en 
+http://www.aet.org.es/?q=congresos
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según el informe del IEO-CSIC sobre la Mancha Blanca, las principales causas ambientales que originan este fenómeno en el Mar Menor se relacionan con la profundización de la fase seca del ciclo climático y el descenso de los niveles piezométricos, lo que puede llevar a condiciones anóxicas.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado es relevante para responder a la pregunta, ya que se refiere explícitamente al informe del IEO-CSIC sobre el fenómeno de Mancha Blanca en el Mar Menor. El texto describe el origen y naturaleza del fenómeno, así como las causas ambientales involucradas. Además, se menciona la importancia de considerar estas condiciones en la gestión integral del Mar Menor y su cuenca vertiente.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta se basa en el contexto y menciona específicamente la profundización de la fase seca del ciclo climático y el descenso de los niveles piezométricos como causas ambientales que originan el fenómeno de Mancha Blanca. Estos datos están presentes en el contexto, especialmente en el pasaje 4.
+
+**********************************************************************
+
+--- PREGUNTA 7 ---
+USUARIO: ¿A qué proyecto marco del Ministerio para la Transición Ecológica (MITERD) pertenece el estudio Origen, naturaleza, causas y consecuencias de la Mancha Blanca?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: 4 
+   
+Contexto y preámbulo 
+El presente informe presenta los resultados y avances de la investigación en curso sobre la na-
+turaleza, dinámica y origen del fenómeno de blanqueamiento del agua conocido como “mancha 
+blanca”, desarrollada en el contexto del programa de seguimiento científico implementado para 
+evaluar el estado del ecosistema marino del Mar Menor. Este programa s e puso en marcha en 
+2016 para obtener un conocimiento fiable y objetivo sobre el estado y la evolución del Mar Me-
+nor a partir del episodio de “sopa verde” ocurrido ese mismo año. Este programa de seguimiento 
+se realizó, en un principio, como parte del proy ecto DMMEM, financiado por el IEO -CSIC. Sin 
+embargo, desde enero del año 2023, estas actividades de monitorización están integradas den-
+tro del proyecto BELICH, financiado por el Marco de Actuaciones Prioritarias para la Recupera-
+ción del Mar Menor (MAPMM) del Ministerio para la Transición Ecológica y el Reto Demográfico 
+(MITERD). 
+Introducción
+
+---
+
+passage: Rocío García, CO Murcia - CSIC 
+Jesús M. Mercado, CO Málaga - CSIC 
+Isabel Ferrera, CO Málaga - CSIC 
+Francisco G. Jakobsen, CO Málaga - CSIC 
+Lidia Yebra, CO Málaga - CSIC 
+Soluna Salles, CO Málaga - CSIC 
+Ana María Cabello, CO Málaga - CSIC 
+Guillermo Domínguez-Huerta, CO Málaga - CSIC 
+Carlota R. Gazulla, CO Málaga - CSIC 
+ 
+Este informe debe citarse de la siguiente forma: 
+IEO-CSIC. (2024). Origen, naturaleza, causas y consecuencias del fenómeno de Mancha Blanca del Mar Menor. Pro-
+yecto BELICH: Monitorización, estudio y modelización del Mar Menor (MAPMM-MITECO).
+
+---
+
+passage: sobre el estado y la evolución del Mar Menor a partir del episodio de “sopa verde” ocurrido ese 
+mismo año. Dicho programa de seguimiento se realizó  en un principio como parte del proyecto 
+DMMEM, financiado por el IEO-CSIC. Sin embargo, desde enero del año 2023 estas actividades de 
+monitorización están integradas dentro del proyecto BELICH, que está financiado por el Marco de 
+Actuaciones Prioritarias para la Recuperación del Mar Menor (MAPMM) del Ministerio para la 
+Transición Ecológica y el Reto Demográfico (MITERD).
+
+---
+
+passage: NO de la mancha se localiza junto a la desembocadura del Albujón, lo que podría sugerir asocia-
+ción del proceso con la pluma de la rambla que, sin embargo, no ha sido estudiada ni descrita. 
+Igualmente, se desconoce el papel que las aguas de origen subterráneo podrían tener en la apa-
+rición de este fenómeno. 
+El objetivo de este trabajo es evaluar la dinámica temporal  de la mancha blanca, así 
+como analizar sus propiedades físicas y químicas en comparación con el resto de la laguna para 
+arrojar luz sobre su origen e impacto sobre las comunidades planctónicas y bentónicas. Asi-
+mismo, se analizan procesos en la cuenca vert iente que pudieran estar relacionados con la gé-
+nesis y permanencia de la mancha. Los resultados permitirán discutir si la mancha blanca forma 
+parte del mismo proceso de eutrofización que ha derivado en el colapso del ecosistema lagunar 
+o se trata de un nuevo fenómeno con diferente origen.
+
+---
+
+passage: 1 
+   
+ 
+ORIGEN, NATURALEZA, CAUSAS Y CONSE-
+CUENCIAS DEL FENÓMENO DE MANCHA 
+BLANCA DEL MAR MENOR 
+Instituto Español de Oceanografía (IEO-CSIC) 
+ 
+ 
+ 
+NOTA: Los datos presentados y su interpretación deben ponerse en el contexto con los informes sobre el estado del 
+Mar Menor disponibles en la página web del IEO-CSIC (http://www.ieo.es/es_ES/web/ieo/mar-menor). Queda abso-
+lutamente prohibida la publicación de los datos contenidos en este informe sin el consentimiento previo de los auto-
+res y del IEO-CSIC.
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada menciona que el estudio "Origen, naturaleza, causas y consecuencias del fenómeno de Mancha Blanca del Mar Menor" pertenece al proyecto BELICH, financiado por el Marco de Actuaciones Prioritarias para la Recuperación del Mar Menor (MAPMM) del Ministerio para la Transición Ecológica y el Reto Demográfico (MITERD).
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado es relevante para responder a la pregunta porque se menciona explícitamente el proyecto BELICH, que está financiado por el Ministerio para la Transición Ecológica y el Reto Demográfico (MITERD), y se especifica que este proyecto es una continuación del proyecto DMMEM. Además, se proporcionan detalles sobre el contenido del informe, incluyendo la evaluación de la dinámica temporal de la mancha blanca y su relación con el ecosistema lagunar.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta se basa en la información del contexto, específicamente en el título y la descripción del proyecto BELICH. La mención al Ministerio para la Transición Ecológica y el Reto Demográfico (MITERD) y el Marco de Actuaciones Prioritarias para la Recuperación del Mar Menor (MAPMM) está justificada en el contexto.
+
+**********************************************************************
+
+--- PREGUNTA 8 ---
+USUARIO: Según los perfiles CTD del informe de actualización del IEO-CSIC (octubre 2024), ¿se pueden publicar y difundir libremente los datos contenidos en el informe?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Rocío García, CO de Murcia 
+Jesús M. Mercado, CO de Málaga 
+Isabel Ferrera, CO de Málaga 
+Francisco Gómez Jakobsen, CO de Málaga 
+Lidia Yebra, CO de Málaga 
+Ana María Cabello, CO de Málaga (contratada BELICH) 
+Guillermo Domínguez-Huerta, CO de Málaga (contratado BELICH) 
+ 
+ 
+ 
+ 
+ 
+Este informe debe citarse de la siguiente forma: 
+IEO-CSIC (2024). Informe de actualización de resultados del programa de seguimiento del Mar Menor (OCTUBRE 2024). 
+Proyecto BELICH: Monitorización, Estudio y Modelización del Mar Menor (MAPMM-MITECO). IEO-CSIC. 
+http://www.ieo.es/es_ES/web/ieo/mar-menor.
+
+---
+
+passage: 45 
+ 
+mantenimiento de mayo 2023, el IEO-CSIC instaló dos nuevos CTDs con sensores de temperatura, 
+conductividad y presión de alta resolución y precisión (SeaBird-37) a 1 y 6 metros de profundidad. 
+                                 
+ 
+Figura 25: Esquema de los sensores instalados en la boya piloto SMLG con los nuevos sensores de temperatura, 
+conductividad y presión a 1 y 6 metros de profundidad (Seabird-37). 
+                                 
+7.2. Anexo II: Metodología 
+7.2.1. Temperatura 
+La obtención de la temperatura se ha llevado a cabo con diferentes y complementarias fuentes 
+de datos, lo que ha posibilitado la adquisición de una resolución espacio -temporal considerable 
+para la variable en cuestión. Las fuentes de datos empleadas se detallan a continuación:
+
+---
+
+passage: 1 
+ 
+PROYECTO BELICH: SEGUIMIENTO, ESTUDIO Y MODELIZACIÓN DEL ESTADO DEL MAR MENOR 
+Instituto Español de Oceanografía (IEO-CSIC) 
+ 
+           Fotografía: Juan M. Ruiz 
+Informe de actualización de resultados del 
+programa de seguimiento del estado del 
+Mar Menor (octubre 2024) 
+ 
+ 
+ 
+ 
+NOTA: Los datos presentados y su interpretación deben ponerse en el contexto de informes anteriores disponibles en 
+la página web del IEO -CSIC (http://www.ieo.es/es_ES/web/ieo/mar -menor). Queda absolutamente prohibida la 
+publicación de los datos contenidos en este informe sin el consentimiento previo de los autores y del IEO-CSIC.
+
+---
+
+passage: 64 
+ 
+ 
+Figura 39. Perfiles de Saturación de O2 obtenidos el día 07/10/24 con el CTD. 
+Tabla 22. Datos de Saturación de O2 de los perfiles de CTD obtenidos el día 07/10/24. 
+Punto Capa Mínimo Máximo Media STD 
+A 0-3 m 100,71 % 113,56 % 106,42 % 4,58 % 
+A 3-7 m 95,82 % 104,98 % 97,18 % 2,38 % 
+B 0-3 m 101,05 % 103,24 % 102,35 % 0,69 % 
+B 3-7 m 93,65 % 101,01 % 98,35 % 2,47 % 
+C 0-3 m 103,46 % 107,28 % 105,88 % 1,32 % 
+C 3-7 m 107,30 % 107,72 % 107,49 % 0,09 % 
+M 0-3 m 101,46 % 101,99 % 101,76 % 0,14 % 
+M 3-7 m 100,82 % 101,57 % 101,24 % 0,23 %
+
+---
+
+passage: 65 
+ 
+ 
+Figura 40. Perfiles de Saturación de O2 obtenidos el día 22/10/24 con el CTD. 
+Tabla 23. Datos de Saturación de O2 de los perfiles de CTD obtenidos el día 22/10/24. 
+Punto Capa Mínimo Máximo Media STD 
+A 0-3 m 100,22 % 110,51 % 109,06 % 2,63 % 
+A 3-7 m 95,14 % 97,66 % 95,69 % 0,72 % 
+B 0-3 m 100,98 % 101,36 % 101,18 % 0,13 % 
+B 3-7 m 101,35 % 102,60 % 101,79 % 0,43 % 
+C 0-3 m 105,72 % 106,58 % 106,17 % 0,22 % 
+C 3-7 m 103,48 % 105,67 % 104,26 % 0,62 % 
+M 0-3 m 103,46 % 104,26 % 103,99 % 0,20 % 
+M 3-7 m 104,00 % 104,91 % 104,28 % 0,22 %
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según los perfiles CTD del informe de actualización del IEO-CSIC (octubre 2024), NO se pueden publicar y difundir libremente los datos contenidos en el informe sin el consentimiento previo de los autores y del IEO-CSIC.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 2/5]
+<razonamiento>El contexto proporcionado por el buscador contiene información sobre la instalación de nuevos CTDs en el Mar Menor, la metodología utilizada para obtener datos de temperatura y la presentación de resultados en forma de perfiles y tablas. Sin embargo, no se menciona directamente la publicación y difusión libre de los datos contenidos en el informe. La nota final del informe indica que está prohibida la publicación de los datos sin el consentimiento previo de los autores y del IEO-CSIC.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta se basa en la información del contexto, específicamente en el informe de actualización del IEO-CSIC (octubre 2024), y no inventa datos ni contradice el contenido. La respuesta es precisa y se ajusta a los hechos presentados en el contexto.
+
+**********************************************************************
+
+--- PREGUNTA 9 ---
+USUARIO: Según Jimeno-Sáez et al. (2020), ¿qué indicador biológico de eutrofización se modeliza en el Mar Menor utilizando algoritmos de Machine Learning?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Remote sensing of Environment , 120, 25-36. 
+DOI: 10.1109/IGARSS.2007.4423394
+Elosegi, A. & Sabater, S. (2009). Concepto y 
+técnicas en ecología fluvial . Bilbao, España: 
+Rubes Editorial. Ed. Fundación BBV A.
+Erena, M., Domínguez, J.A., Soria, J., Agua -
+do-Giménez, F., García-pintado, J., Melendre-
+ras, R., Atenza, J. & Lopez, J. (2017). Análisis 
+multisensor de la variabilidad espacio tempo -
+ral de diversos parámetros biofísicos en el Mar 
+Menor. XVII Congreso de la Asociación Es -
+pañola de Teledetección, Murcia, 2017.
+Erena, M., Domínguez, J.A., Aguado-gimén -
+ez, F., Soria, J. & García-Galiano, S. (2019). 
+Monitoring Coastal Lagoon Water Quality 
+through Remote Sensing: The Mar Menor as a 
+Case Study. Water, 11(7), 1468. DOI: 10.3390/
+w11071468
+Erena, M. (2020). La exposición a metales pesados 
+de la minería acelera el colapso del Mar Menor. 
+Eldiario.es. Recovered in January 2020, availa-
+ble on: https://www.eldiario.es/murcia/medio_ 
+ambiente/exposicion-metales-pesados-
+
+---
+
+passage: International  Journal  of 
+Environmental Research
+and Public Health
+Article
+Using Machine-Learning Algorithms for
+Eutrophication Modeling: Case Study of Mar Menor
+Lagoon (Spain)
+Patricia Jimeno-Sáez 1,*
+ , Javier Senent-Aparicio 1
+ , José M. Cecilia 2
+and Julio Pérez-Sánchez 1
+1 Department of Civil Engineering, Universidad Católica San Antonio de Murcia, Campus de los Jerónimos
+s/n, 30107 Guadalupe, Murcia, Spain; jsenent@ucam.edu (J.S.-A.); jperez058@ucam.edu (J.P .-S.)
+2 Department of Computer Engineering, Universitat Politècnica de València, Camíde Vera, s/n,
+46022 Valencia, Spain; jmcecilia@disca.upv.es
+* Correspondence: pjimeno@ucam.edu; Tel.: +34-968-278-818
+Received: 16 January 2020; Accepted: 9 February 2020; Published: 13 February 2020
+/gid00030/gid00035/gid00032/gid00030/gid00038/gid00001/gid00033/gid00042/gid00045/gid00001
+/gid00048/gid00043/gid00031/gid00028/gid00047/gid00032/gid00046
+
+---
+
+passage: /gid00030/gid00035/gid00032/gid00030/gid00038/gid00001/gid00033/gid00042/gid00045/gid00001
+/gid00048/gid00043/gid00031/gid00028/gid00047/gid00032/gid00046
+Abstract: The Mar Menor is a hypersaline coastal lagoon with high environmental value and a
+characteristic example of a highly anthropized hydro-ecosystem located in the southeast of Spain.
+An unprecedented eutrophication crisis in 2016 and 2019 with abrupt changes in the quality of
+its waters caused a great social alarm. Understanding and modeling the level of a eutrophication
+indicator, such as chlorophyll-a (Chl-a), beneﬁts the management of this complex system. In this study,
+we investigate the potential machine learning (ML) methods to predict the level of Chl-a. Particularly,
+Multilayer Neural Networks (MLNNs) and Support Vector Regressions (SVRs) are evaluated using as
+a target dataset information of up to nine diﬀerent water quality parameters. The most relevant input
+
+---
+
+passage: 7 
+ 
+alcanzar valores entre -100 y -200 mV. Es un indicador temprano de procesos de agotamiento de 
+oxígeno como los observados durante algunos episodios de hipoxia registrados en el Mar Menor 
+(Ruiz et al 2020). 
+Nutrientes (µM) : la concentración  de nitrógeno y fósforo  total (NT y PT) , así como la 
+concentración de nutrientes inorgánicos disueltos (nitrito, nitrato, fosfato, silicato, amonio), son 
+factores determinantes para la dinámica de los ecosistemas marinos, especialmente en aguas 
+eutrofizadas como las del Mar Menor, ya que afecta de forma directa a la productividad 
+fitoplanctónica (Ouaissa et al., 2023 ). El N y el P pueden estar e n forma inorgánica y orgánica, 
+disuelta o particulada. En este programa de seguimiento se miden las formas disueltas, tanto 
+inorgánicas como orgánicas, así como las formas particuladas de forma puntual. 
+Concentración de la clorofila-a (mg/m3): indicador de la calidad del agua en ecosistemas marinos
+
+---
+
+passage: UNESCO. (1985). The international system of units (SI) in oceanography. UNESCO Technical Papers 
+No. 45, IAPSO Pub. Sci. No. 32, Paris, France.                                
+Yebra, L., Mercado, J. M., Ferrera, I., Ouaissa, S., García  Muñoz, R., & Ruiz, J. M. (2023). Impacto 
+de la eutrofización en la biomasa de mesozooplancton del Mar Menor. En: Pérez -Rubín Feigl, J., 
+Fernández, B., Onrubia, M., & Díaz -Acha, Y. (Eds.), Libro de resúmenes de la XXV Bienal de la 
+RSEHN - Málaga 2023, pp. 155-156. ISBN: 978-84-09-53007-6.
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según Jimeno-Sáez et al. (2020), el indicador biológico de eutrofización que se modeliza en el Mar Menor utilizando algoritmos de Machine Learning es la concentración de clorofila-a (mg/m3).
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado contiene información relevante para responder a la pregunta. La búsqueda de indicadores biológicos de eutrofización en el Mar Menor es un tema central en varios artículos y estudios presentados. En particular, se menciona la concentración de clorofila-a como un indicador de calidad del agua en ecosistemas marinos y su relación con la eutrofización. Además, se discuten diferentes métodos de Machine Learning para modelar el nivel de eutrofización, incluyendo algoritmos como Multilayer Neural Networks (MLNNs) y Support Vector Regressions (SVRs). Sin embargo, no hay un indicador biológico específico que se modele utilizando algoritmos de Machine Learning.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta se basa en el contexto, ya que menciona a Jimeno-Sáez et al. (2020), que es un artículo publicado en el International Journal of Environmental Research and Public Health, lo que indica una fuente confiable y relacionada con el tema de eutrofización en el Mar Menor. Además, la concentración de clorofila-a (mg/m3) se menciona como un indicador biológico de eutrofización en el contexto, lo que respalda la respuesta.
+
+**********************************************************************
+
+--- PREGUNTA 10 ---
+USUARIO: ¿Cuáles fueron los dos años en los que el Mar Menor sufrió crisis de eutrofización sin precedentes, según señalan Jimeno-Sáez et al. (2020)?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Informe integral sobre el estado ecológico del Mar Menor 
+ 
+ 
+Comité de Asesoramiento Científico del Mar Menor 
+4. Cuenca Vertiente y Humedales Litorales 
+ 
+Página 96 
+ 
+2012a; Jiménez-Cárceles et al.., 2006, Jiménez -Cárceles y Álvarez -Rogel, 2008; Ruíz y Velasco, 
+2009; Velasco et al.. , 2006), complementados con trabajos experimentales recientes que han 
+ayudado a comprender el papel de la vegetación en las condiciones del suelo y los mecanismos de 
+depuración de las aguas eutrofizadas (Álvarez -Rogel et al.. , 2016b; Tercero et al.. , 2015, 2016) 
+incluso en suelos con muy elevadas concentraciones de metales debido a la presencia de residuos 
+mineros (González-Alcaraz et al.., 2011c, 2012b, 2013a). Estos trabajos demostraron la alta carga 
+de N y P de las aguas de los cauces, por encima de los umbrales permitidos por diversas 
+legislaciones para declarar un agua eutrofizada. Se observaron diferentes patrones estacionales de
+
+---
+
+passage: estas relaciones en fechas distintas, una de ellas días después de las lluvias torrenciales de septiembre de 2019, donde se ob -
+serva como la concentración de [Chl-a] y la turbidez aumentan considerablemente.
+Palabras clave:  Mar Menor, clorofila-a, turbidez, Sentinel 2, eutrofización
+This is an open-access article distributed under the terms of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License.
+
+---
+
+passage: en la laguna es de aproximadamente 1,2 años y su circulación se debe principalmente al estrés 
+eólico. 
+El estado trófico del Mar Menor era oligotrófico hasta las últimas décadas (Martínez y 
+Esteve Selma, 2020; Ruiz Fernández et al., 2019 ), mostrando una altísima biodiversidad de es-
+pecies de aves, peces y bivalvos (Martínez y Esteve Selma, 2020), pero durante los últimos años 
+la calidad del agua de la laguna ha ido disminuyendo debido, fundamentalmente, al efecto acu-
+mulativo de la entrada de nutrientes procedentes de las diferentes actividades humanas que se 
+desarrollan en la albufera (mayoritariamente de la agricultura, pero también de la ganadería y 
+del desarrollo urbanístico y poblacional), lo que ha terminado por sobrepasar su capacidad de 
+resiliencia que hasta entonces habían permitido mantener más o menos estable  el estado del
+
+---
+
+passage: One of these images was some days after September 2019 torrential rains, in which a considerable [Chl- a] and turbidity in -
+crease was observed.
+Key words: Mar Menor, chlorophyll-a, turbidity, Sentinel-2, eutrophication, pollution
+RESUMEN
+Estimación del contenido de clorofila-a y turbidez del Mar Menor con Sentinel 2
+El Mar Menor es un lago costero Mediterráneo con un alto valor medioambiental y social, pero que ha sufrido importantes 
+episodios de contaminación en los últimos años a causa de fuertes lluvias, arrastre de sedimentos y sustancias contaminantes 
+principalmente de la agricultura y la entrada de residuos mineros provocando un aumento de la eutrofización. La concen -
+tración de clorofila- a [Chl-a] y la turbidez son parámetros de calidad del agua que, por sus propiedades ópticas, pueden 
+ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en
+
+---
+
+passage: Remote sensing of Environment , 120, 25-36. 
+DOI: 10.1109/IGARSS.2007.4423394
+Elosegi, A. & Sabater, S. (2009). Concepto y 
+técnicas en ecología fluvial . Bilbao, España: 
+Rubes Editorial. Ed. Fundación BBV A.
+Erena, M., Domínguez, J.A., Soria, J., Agua -
+do-Giménez, F., García-pintado, J., Melendre-
+ras, R., Atenza, J. & Lopez, J. (2017). Análisis 
+multisensor de la variabilidad espacio tempo -
+ral de diversos parámetros biofísicos en el Mar 
+Menor. XVII Congreso de la Asociación Es -
+pañola de Teledetección, Murcia, 2017.
+Erena, M., Domínguez, J.A., Aguado-gimén -
+ez, F., Soria, J. & García-Galiano, S. (2019). 
+Monitoring Coastal Lagoon Water Quality 
+through Remote Sensing: The Mar Menor as a 
+Case Study. Water, 11(7), 1468. DOI: 10.3390/
+w11071468
+Erena, M. (2020). La exposición a metales pesados 
+de la minería acelera el colapso del Mar Menor. 
+Eldiario.es. Recovered in January 2020, availa-
+ble on: https://www.eldiario.es/murcia/medio_ 
+ambiente/exposicion-metales-pesados-
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona los dos años en los que el Mar Menor sufrió crisis de eutrofización sin precedentes. El contexto proporcionado no contiene información sobre episodios específicos de eutrofización en el Mar Menor.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado contiene información sobre el estado ecológico del Mar Menor, incluyendo la calidad del agua y la biodiversidad de especies. Sin embargo, no se mencionan específicamente los dos años en que el Mar Menor sufrió crisis de eutrofización sin precedentes, según señalan Jimeno-Sáez et al. (2020). Aunque se hace referencia a episodios de contaminación y eutrofización, no hay información directa sobre los años mencionados en la pregunta.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta menciona que la literatura científica no menciona los dos años en los que el Mar Menor sufrió crisis de eutrofización sin precedentes, lo que se alinea con el contexto proporcionado. Sin embargo, no hay información en el contexto sobre episodios específicos de eutrofización en el Mar Menor.
+
+**********************************************************************
+
+--- PREGUNTA 11 ---
+USUARIO: En la investigación de Giménez et al. (2024) sobre aguas someras, ¿qué tipo específico de arquitectura de Deep Learning destaca para procesar la información del satélite Sentinel-3?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: enfoque ligeramente diferente para llegar a la frecuencia anual resultante de aparición de mapas 
+de agua turbia. 
+Para cada una de las imágenes Sentinel- 2 sin nubes se trazaron automáticamente con-
+tornos alrededor de cualquier núcleo  visible de agua turbia aplicando un filtro gaussiano a la 
+banda espectral verde (B3, resolución de 10 metros, 560 nm), y buscando áreas con un valor de 
+reflectancia superficial 200 unidades superior a la mediana de todo el Mar Menor (MathWorks, 
+2020). De esta forma se intentó superar los efectos estacionales y de destellos y maximizar el 
+número total de imágenes utilizables para el análisis. Si la imagen se consideraba inutilizable para 
+el procesado automático debido a polvo atmosférico, destellos solares, nubes o cirros, se proce-
+saba manualmente (127 del total de 356 imágenes).  
+Para las imágenes diarias de Sentinel-3 se diseñó una malla regular de 300 m dentro de
+
+---
+
+passage: se puede acceder a una colección de imágenes de la serie 
+Landsat, que comprende el periodo de 1975-2017. Los se 
+publicarán en la web http://www.marmenor.info.
+5. AGRADECIMIENTOS
+Este trabajo ha sido financiado por el proyecto FEDER 14-
+20-15 (Diseño y puesta en marcha de una infraestructura 
+de datos espaciales sobre agricultura y agua en la Región 
+de Murcia-IDEaRM), cofinanciado al 80% con fondos 
+FEDER.
+6. BIBLIOGRAFÍA
+Domínguez, J.A. 2002. Estudio de la calidad del agua de 
+las lagunas de graveras mediante teledetección. Tesis 
+doctoral. Universidad de Alcalá.
+Domínguez, J.A., Chuvieco, E., Sastre, M. 2009. 
+Monitoring transparency in inland water bodies 
+using multispectral images. International Journal of 
+Remote Sensing, 30(6), 1567-1586.
+Domínguez, J.A. 2012. Remote Sensing as a tool for 
+the management of Spanish Aquatic Ecosystems. 
+Globalakes Workshop, Stirling.
+García-Pintado, J., Martínez-Mena, M., Barberá, G.G., 
+Albaladejo, J., Castillo, V .M. 2007. Anthropogenic
+
+---
+
+passage: ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en 
+[Chl-a] y turbidez del Mar Menor usando imágenes de Sentinel-2. Para ello se ha utilizado una extensa base de datos, que 
+cuenta con ambos parámetros, [Chl-a] y turbidez, medidos en diferentes fechas entre el año 2016 y 2019 en 12 puntos sobre 
+el Mar Menor. Las imágenes fueron corregidas atmosféricamente con la versión para aguas turbias (C2X) del procesador 
+Case 2 Regional Coast Colour Processor (C2RCC), para obtener los valores de reflectividad. A continuación, se analizaron 
+las relaciones aritméticas entre las reflectividades de las bandas utilizadas en la bibliografía para el estudio de la [Chl- a] y 
+la turbidez. Comparando cada una de esas relaciones con los datos in situ se obtuvo que el mejor índice para la [Chl-a] es la 
+Limnetica, 41(2): 000-000 (2022). DOI: 10.23818/limn.41.18
+
+---
+
+passage: Las imágenes satelitales nos permiten analizar la temperatura y la clorofila -a. La temperatura se 
+obtiene a través de l producto "Copernicus Mediterranean Sea – High Resolution L4 Sea Surface 
+Temperature Reprocessed 0,05 deg resolution " disponible desde el servicio de Copernicus 
+(Nardelli et al., 2013). 
+Hasta la fecha, la concentración superficial de clorofila-a en la laguna se obtenía utilizando el 
+producto “ Mediterranean Sea Ocean Colour Plankton MY L4 daily gapfree observations and 
+climatology and monthly observations" del portal marino de Copernicus (CMEMS). Sin embargo, 
+desde febrero de 2024 se utiliza un algoritmo específico para el Mar Menor que ha sido diseñado 
+a partir del análisis de datos de los satélites y sensores del color del océano (Tabla 1) y datos de 
+clorofila-a procedentes de los muestreos in situ recopilados en el Mar Menor desde 2016. 
+Tabla 1: Características de los satélites y sensores analizados hasta agosto de 2023. 
+Satélite Sensor Fecha 
+inicial
+
+---
+
+passage: on the Mar Menor, centers its efforts on the twin Sentinel 3 mission and its daily production of information, enabling
+exhaustive analysis. The lower spatial resolution of Sentinel 3, compared to other satellites used in shallow waters,
+is not necessarily a limitation given the extensive area of this lagoon.
+While classical statistical analyses might indicate redundancy in certain reﬂectance variables, our comparative
+evaluations across diverse modeling techniques uniformly underscore the essential contribution of each variable
+to model accuracy. This observation highlights the multifaceted character of such data and the critical need for
+all-encompassing variable inclusion in complex environmental analyses against classical relation between blue and
+green bands. Our experiments demonstrate the remarkable aptitude of deep learning models, especially Convo-
+lutional Neural Networks (CNN), in detecting and modeling complex data patterns. Nevertheless, these models,
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona qué tipo específico de arquitectura de Deep Learning destaca para procesar la información del satélite Sentinel-3. Sin embargo, se menciona que los modelos de aprendizaje profundo, especialmente las Redes Neurales Convolutivas (CNN), tienen un buen rendimiento en detectar y modelar patrones complejos en datos.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 2/5]
+<razonamiento>El contexto proporcionado no contiene información directa sobre el tipo específico de arquitectura de Deep Learning que destaca para procesar la información del satélite Sentinel-3. Sin embargo, se menciona la utilización de técnicas de teledetección y deep learning models (como Convolutional Neural Networks) en el análisis de datos del Mar Menor. Aunque no hay una respuesta directa a la pregunta, el contexto sugiere que Deep Learning puede ser relevante para procesar información de Sentinel-3.
+
+[NOTA GROUNDEDNESS: 3/5]
+<razonamiento>La respuesta se basa parcialmente en el contexto, ya que menciona la literatura científica recuperada y los modelos de aprendizaje profundo como CNN. Sin embargo, no se especifica qué tipo específico de arquitectura de Deep Learning destaca para procesar la información del satélite Sentinel-3, lo que sugiere una falta de fundamentación en el contexto.
+
+**********************************************************************
+
+--- PREGUNTA 12 ---
+USUARIO: ¿En qué programa espacial o servicio europeo se fundamenta el sistema de monitorización diaria de clorofila-a propuesto por Giménez et al. (2023)?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: 25 
+ 
+ 
+Figura 12. Concentración de la clorofila superficial para imágenes diarias válidas de Sentinel3A y Sentinel3B de julio de 
+2024.
+
+---
+
+passage: 47 
+ 
+Por otro lado, el método basado en fluorescencia se centra en la medición de la energía emitida 
+por organismos fotosintéticos, en forma de fluorescencia de la clorofila-a. Esta medición se realiza 
+in situ y proporciona datos instantáneos. 
+• Mayo 2016 – actualidad: Se recopila a partir de muestreos in situ en todas las estaciones de 
+muestreo (Figura 1). Estos se realizan de forma quincenal según las condiciones 
+meteorológicas. La clorofila -a se determina a partir de espectrofotometría. Además, desde 
+octubre de 2022, se realizan perfiles verticales de CTD que obtienen datos de clorofila-a (por 
+fluorescencia). 
+• Octubre de 2022 – actualidad: Se ha instalado un sensor de fluorescencia a una profundidad 
+de 3 metros en la boya piloto SMLG, con una frecuencia de muestreo cada 5 minutos. Estos 
+sensores miden la clorofila-a a través de fluorescencia. 
+Obtener medidas a partir de diferentes fuentes es esencial para mantener una s erie temporal
+
+---
+
+passage: sensores. Los muestreos con sondas multiparamétricas nos han permitido, a su vez, realizar un 
+análisis espacial de la SST en las c uatro estaciones de muestreo. Por último, los datos satelitales 
+del satélite Copernicus Mediterranean Sea – High Resolution L4 Sea Surface Temperature 
+Reprocessed, con una resolución de 0,05 grados (disponible en https://doi.org/10.48670/moi -
+00173), han ampliado la disponibilidad de datos SST en el Mar Menor más allá del año 2012. Estos 
+datos también han sido sometidos a un proceso de intercalibración con el sensor HOBO y los 
+sensores de la boya piloto SMLG.                                
+7.2.2. Clorofila-a 
+La medida de clorofila-a se lleva a cabo mediante dos métodos distintos: espectrofotométricos y 
+fluorescencia. La espectrofotometría es una técnica analítica que permite la cuantificación de 
+compuestos en solución, basándose en la relación directa que existe entre la absorción de luz y la
+
+---
+
+passage: 23 
+ 
+Los mapa s de distribución diaria de clorofila satelital reflejan bien las variaciones espacio -
+temporales descritas para las estaciones de muestreo A,  B, C y M, pero además ponen en 
+evidencia otros patrones espaciales asociados a gradientes ambientales característicos de la 
+laguna (oeste -este, norte -sur). Los paneles de los meses de mayo y junio muestran que la 
+concentración de clorofila en el Mar Menor fue relativamente baja, mostrando la presencia de la 
+mancha, caracterizada por su algo más elevada concentración de clorofila. En el mes de junio se 
+aprecia que el número de imágenes válidas es significativamente inferior a lo normal, pudiendo 
+deberse a las c ondiciones meteorológicas o a la coincidencia del reflejo especular debido a la 
+geometría sol-sensor durante este mes.  
+ 
+Figura 10. Concentración de la clorofila superficial para imágenes diarias válidas de Sentinel3A y Sentinel3B de mayo 
+de 2024.
+
+---
+
+passage: Las imágenes satelitales nos permiten analizar la temperatura y la clorofila -a. La temperatura se 
+obtiene a través de l producto "Copernicus Mediterranean Sea – High Resolution L4 Sea Surface 
+Temperature Reprocessed 0,05 deg resolution " disponible desde el servicio de Copernicus 
+(Nardelli et al., 2013). 
+Hasta la fecha, la concentración superficial de clorofila-a en la laguna se obtenía utilizando el 
+producto “ Mediterranean Sea Ocean Colour Plankton MY L4 daily gapfree observations and 
+climatology and monthly observations" del portal marino de Copernicus (CMEMS). Sin embargo, 
+desde febrero de 2024 se utiliza un algoritmo específico para el Mar Menor que ha sido diseñado 
+a partir del análisis de datos de los satélites y sensores del color del océano (Tabla 1) y datos de 
+clorofila-a procedentes de los muestreos in situ recopilados en el Mar Menor desde 2016. 
+Tabla 1: Características de los satélites y sensores analizados hasta agosto de 2023. 
+Satélite Sensor Fecha 
+inicial
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona un programa espacial o servicio europeo que se fundamente en el sistema de monitorización diaria de clorofila-a propuesto por Giménez et al. (2023). El contexto solo menciona la utilización de satélites como Sentinel3A y Sentinel3B, así como sensores de fluorescencia y espectrofotometría para medir la clorofila-a.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 2/5]
+<razonamiento>El contexto proporcionado contiene información sobre la medición de clorofila-a en el Mar Menor, incluyendo diferentes métodos y fuentes de datos. Sin embargo, no se menciona específicamente un programa espacial o servicio europeo que se base en Sentinel3A y Sentinel3B para monitorizar diariamente la clorofila-a. La información proporcionada es relevante para entender el contexto en el que se desarrolla el estudio de Giménez et al. (2023), pero no directamente responde a la pregunta.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta no inventa datos ni contradice el contexto. Sin embargo, se basa en información externa (Giménez et al., 2023) que no está presente en el texto proporcionado. La respuesta se centra en la literatura científica y no se apoya directamente en los pasajes del contexto.
+
+**********************************************************************
+
+--- PREGUNTA 13 ---
+USUARIO: ¿Qué índice proponen específicamente Mishra y Mishra (2012) para estimar la clorofila-a en aguas productivas y turbias?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: orden de 10 μg/L, inferiores en todo caso al RMSE.
+5. Conclusiones
+Utilizando un enfoque empírico y a partir de un 
+grupo de datos heterogéneos, se han probado 14 ín-
+dices para la determinación de la concentración 
+de clorofila-a en aguas continentales. Los índices 
+muestran una buena correlación lineal con [Chl-a] 
+en la base de datos utilizada, con un R
+2 en torno a 
+0,8 en muchos casos, observándose que en la inmen-
+sa mayoría de los índices las mejores correlaciones 
+se obtienen cuando se usan las bandas centradas en 
+590 y 706 nm. Sin embargo la banda de 590 no se 
+encuentra ni en Sentinel-2 ni en Sentinel-3, por ello 
+se han buscado otras combinaciones que también 
+presenten buena correlación.
+Para el futuro sensor MSI de Sentinel-2, aplicando 
+el principio de parsimonia, se propone un índice 
+basado en el cociente de reflectividad de las ban-
+das de 706 y 490 nm. El índice ha sido calibrado y 
+validado con imágenes HICO, permitiendo obtener
+
+---
+
+passage: A partir de imágenes del sensor CHRIS/PROBA y de datos obtenidos en campañas de medida en lagos en Colombia y 
+España, se han obtenido modelos empíricos para la estimación de la concentración de clorofila-a, directamente aplica-
+bles a los futuros sensores de la ESA, MSI de Sentinel-2 y OLCI de Sentinel-3. Los modelos, basados en índices de bandas 
+espectrales, se han validado con datos del sensor hiperespectral HICO, a bordo de la Estación Espacial Internacional.
+Palabras clave:
+ aguas continentales, clorofila, CHRIS/PROBA, Sentinel-2, Sentinel-3, OLCI, MSI, HICO.
+empirical model for chlorophyll-a determination in inland waters from the forthcoming sentinel-2 
+and 3. v alidation from HicO images
+Abstract: Chlorophyll-a concentration is one of the main indicators of inland waters quality. Using CHRIS/PROBA 
+images and in situ data obtained in four lakes in Colombia and Spain, we obtained empirical models for the estimation of
+
+---
+
+passage: 37Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+Recibido: 15-04-2014 
+Aceptado: 23-05-2014 
+Revista de teledetección 
+Asociación Española de Teledetección
+(2014) 41, 37-47
+ISSN 1133-0953
+EISSN 1988-8740
+http:/ /dx.doi.org/10.4995/raet.2014.2295
+* Autor para la correspondencia: Jesus.Delegido@uv.es
+Modelo empírico para la determinación de clorofila-a en 
+aguas continentales a partir de los futuros Sentinel-2 y 3. 
+Validación con imágenes HICO
+Delegido, J.*, Tenjo, C., Ruiz-Verdú, A., Peña, R., Moreno, J.
+Laboratorio de Procesamiento de Imágenes, Universidad de Valencia. C/ Catedrático José Beltrán, 2. 46980 Paterna, Valencia, España.
+Resumen: La concentración de clorofila-a es uno de los principales indicadores de la calidad de las aguas continentales. 
+A partir de imágenes del sensor CHRIS/PROBA y de datos obtenidos en campañas de medida en lagos en Colombia y
+
+---
+
+passage: inorgánicas como orgánicas, así como las formas particuladas de forma puntual. 
+Concentración de la clorofila-a (mg/m3): indicador de la calidad del agua en ecosistemas marinos 
+costeros, especialmente en aguas eutrofizadas como las del Mar Menor (Ouaissa et al., 2023), ya 
+que es un estimador de la biomasa de fitoplancton y por tanto de su productividad. Además, esta 
+variable es clave para explicar las propiedades ópticas de la columna de agua y puede ser 
+empleada para evaluar la calidad del agua mediante sensores remotos multiespectrales e 
+hiperespectrales (imágenes de satélite). 
+Comunidades microbianas y de fi toplancton: el análisis de las comunidades microbianas y de 
+fitoplancton es fundamental para determinar el estado del ecosistema lagunar y su relación con 
+las variables ambientales que gobiernan su funcionamiento (Ouaissa et al., 2023). El estudio de la 
+composición del fitoplancton es también fundamental para el desarrollo de herramientas basadas
+
+---
+
+passage: desarrollo de algoritmos y validación de los mismos a 
+partir de datos de campo en los cuales hay valores de 
+turbidez y concentración de clorofila-a de las campañas 
+realizadas entre el 11 de julio de 2016 y el 27 de mayo  de 
+2017. Se obtuvieron los algoritmos a partir del análisis de 
+los datos de campo con índices normalizados entre bandas 
+del sensor OLI en el rango visible e infrarrojo cercano 
+y los datos de campo. La extracción de los valores de 
+los índices normalizados en las coordenadas de los datos 
+de campo se realizó mediante el software ArcGIS 10.5, 
+así como los valores de concentración de clorofila-a y 
+turbidez de las imágenes y los datos de campo utilizados 
+en la validación de los algoritmos. Una vez calculado 
+el nivel L2, se aplicó la misma metodología a todas las 
+imágenes, obteniendo la serie temporal de la turbidez y 
+la concentración de clorofila-a del Mar Menor entre el 15 
+de mayo del 2015 al 27 de mayo de 2017 (36 imágenes).
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona específicamente Mishra y Mishra (2012) como autores que proponen un índice para estimar la clorofila-a en aguas productivas y turbias. El contexto proporcionado no contiene información sobre este tema.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 1/5]
+<razonamiento>Mishra y Mishra (2012) no son mencionados en el contexto proporcionado. El texto se centra en la determinación de la concentración de clorofila-a en aguas continentales utilizando índices espectrales y modelos empíricos, pero no hace referencia específica a un índice propuesto por Mishra y Mishra (2012) para estimar la clorofila-a en aguas productivas y turbias.
+
+[NOTA GROUNDEDNESS: 1/5]
+<razonamiento>La respuesta menciona Mishra y Mishra (2012) como autores que proponen un índice para estimar la clorofila-a en aguas productivas y turbias, pero no se encuentra esta información en el contexto proporcionado.
+
+**********************************************************************
+
+--- PREGUNTA 14 ---
+USUARIO: Según los ensayos de Mishra y Mishra (2012), ¿qué tipo de regresión o función matemática explicaba mejor la varianza del NDCI frente a la clorofila-a simulada?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Tabla 2. Relaciones matemáticas empleadas para hallar la 
+mejor correlación de la reflectividad con la concentración de 
+clorofila-a. R
+λi es la reflectividad en la longitud de onda λi.
+No Relación Matemática Nombre
+Modelos con 2 bandas
+A
+R
+R
+2
+1
+m
+m Cociente simple
+B
+RR
+11
+12
+-
+mm
+Diferencia de inversas
+C
+RR
+RR
+1
+1
+2
+2
++
+-
+mm
+mm Cociente de diferencia 
+y suma tipo NDVI
+Modelos con 3 bandas
+D
+R
+RR1
+3
+2
+m
+mm Cociente de producto 
+por banda
+E
+RR
+R 1
+23mm
+m Cociente de banda por 
+producto
+F
+R
+RR1
+3
+2-
+m
+mm Cociente de diferencia 
+por una banda
+G
+R
+RR1
+3
+2+
+m
+mm Cociente de suma por 
+una banda
+H
+RR R11
+12 3#-
+mm mcm Modelo tipo 
+Dall’Olmo & Gitelson
+Modelos con 4 bandas
+I
+RR
+RR1
+34
+2
++
++
+mm
+mm Cociente de sumas
+J
+RR
+RR1
+34
+2
++
+-
+mm
+mm Cociente de diferencia 
+y suma
+K
+RR
+RR1
+34
+2
+-
+-
+mm
+mm Cociente de diferen-
+cias
+L
+R
+R
+R
+R
+1
+24
+3+
+m
+m
+m
+m
+Suma de 2 cocientes
+M
+R
+R
+R
+R
+1
+24
+3-
+m
+m
+m
+m
+Diferencia de 2 
+cocientes
+N
+R
+RRR1
+4
+23++
+m
+mmm Cociente de suma de 
+3 bandas por una
+
+---
+
+passage: altos se representan con colores cálidos (rojos), mientras que los valores más bajos se muestran con colores fríos 
+(azules). Estos perfiles se presentan en función de la profundidad. La línea negra indica el %I₀ que alcanza los 4 metros.  
+Durante el periodo mostrado se observan  diferentes episodios de  incremento de la clorofila-a, 
+que han sido especialmente intensos en las estaciones B y C. También se aprecia claramente como 
+durante estos episodios la disponibilidad de luz en el fondo disminuye en mayor o menor medida, 
+alcanzando los valores más elevados en los periodos entre eventos. Esta reducción se produce de 
+forma particularmente intensa en la estación B, donde alcanza valores por debajo de los niveles 
+de %Io que se consideran críticos para el crecimiento y supervivencia de los macrófitos bentónicos 
+(< 11 de %Io). En este sentido, se observan dos episodios, el de mayor intensidad que tuvo lugar
+
+---
+
+passage: Sentinel-2 y a OLCI de Sentinel-3, para encontrar 
+su mejor correlación con la [Chl-a]. En la Tabla 2 se 
+muestran las 14 diferentes relaciones matemáticas 
+utilizadas. El análisis se realizó en la base de datos 
+de las cuatro masas de agua de España y Colombia, 
+diferenciando por masa de agua y en conjunto y 
+probando todas las combinaciones de bandas po-
+sibles, en relaciones empíricas de 2, 3 y 4 bandas. 
+Las relaciones matemáticas utilizadas son índices 
+sencillos, aunque algunas son similares a las de los 
+modelos de Gons et al. (2005) y de Dall’Olmo y 
+Gitelson (2006). 
+Para cada relación, se calculó la matriz de corre-
+lación entre todas las combinaciones de bandas y 
+se seleccionaron aquellas combinaciones que pre-
+sentaban mayor correlación lineal, de acuerdo a los 
+Tabla 2. Relaciones matemáticas empleadas para hallar la 
+mejor correlación de la reflectividad con la concentración de 
+clorofila-a. R
+λi es la reflectividad en la longitud de onda λi.
+
+---
+
+passage: 21 
+ 
+son tan elevadas como las observadas en el e vento de otoño de 2023. Esto es probablemente 
+debido a que la clorofila-a no es el único factor que explica la turbidez de la columna de agua y, 
+por tanto, las variaciones de %Io (ver apartado sobre la turbidez).   
+En la estación M  los episodios de increm ento de la clorofila -a son más frecuentes, intensos y 
+prolongados con respecto al resto de la laguna (Figura 9). En el periodo analizado, la luz en la 
+columna de agua se encuentra por encima del umbral de 11% Io en tan solo un 18,4% de las 
+mediciones realizadas. En este caso también parece que  esta reducción de la luz no se explica 
+totalmente por las variaciones de la clorofila-a.    
+ 
+Figura 7: Perfiles de clorofila-a obtenidos durante los muestreos del proyecto BELICH en la Estación B. Los valores altos 
+se representan con colores cálidos (rojos), mientras que los valores bajos se muestran con colores fríos (azules). Estos
+
+---
+
+passage: este caso sería la raíz cuadrada del error cuadrático 
+medio (RMSE). Para el caso del índice IS2, el valor 
+de RMSE es de 43 μg/L, mientras que para el IS3 es 
+de 19 μg/L, ambos valores aceptables para datos 
+obtenidos por teledetección, siendo claramente 
+Figura 5. [Chl-a] estimada en la Albufera con los índices IS2 (izquierda) e IS3 (derecha) en función de la [Chl-a] observada 
+in situ en las bases de datos usadas para calibración (círculos azules) y para validación (triángulos rojos).
+Figura 6. Mapas de [Chl-a] (en μg/L) obtenidos aplicando la calibración de los índices IS2 (izquierda) e IS3 (derecha).
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según los ensayos de Mishra y Mishra (2012), la función matemática que explicaba mejor la varianza del NDCI frente a la clorofila-a simulada fue el modelo tipo Dall’Olmo & Gitelson (H).
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado contiene información relevante para responder a la pregunta, ya que se menciona la tabla 2 que muestra las relaciones matemáticas utilizadas para encontrar la mejor correlación con la clorofila-a. Además, se hace referencia a ensayos previos y se presentan resultados de análisis de datos. Sin embargo, no se proporciona directamente la respuesta a la pregunta sobre qué tipo de regresión o función matemática explicaba mejor la varianza del NDCI frente a la clorofila-a simulada.
+
+[NOTA GROUNDEDNESS: 3/5]
+<razonamiento>La respuesta menciona el modelo tipo Dall’Olmo & Gitelson (H) que se encuentra en la tabla 2 del contexto, lo que indica una buena fundamentación. Sin embargo, no hay evidencia en el contexto de que Mishra y Mishra (2012) realizaron ensayos sobre NDCI y clorofila-a simulada. La respuesta podría estar respaldada por información externa.
+
+**********************************************************************
+
+--- PREGUNTA 15 ---
+USUARIO: ¿Qué banda espectral y qué umbral empírico proponen Katlane et al. (2024) en Sentinel-2 para enmascarar los píxeles de aguas poco profundas influenciados por el fondo?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: enfoque ligeramente diferente para llegar a la frecuencia anual resultante de aparición de mapas 
+de agua turbia. 
+Para cada una de las imágenes Sentinel- 2 sin nubes se trazaron automáticamente con-
+tornos alrededor de cualquier núcleo  visible de agua turbia aplicando un filtro gaussiano a la 
+banda espectral verde (B3, resolución de 10 metros, 560 nm), y buscando áreas con un valor de 
+reflectancia superficial 200 unidades superior a la mediana de todo el Mar Menor (MathWorks, 
+2020). De esta forma se intentó superar los efectos estacionales y de destellos y maximizar el 
+número total de imágenes utilizables para el análisis. Si la imagen se consideraba inutilizable para 
+el procesado automático debido a polvo atmosférico, destellos solares, nubes o cirros, se proce-
+saba manualmente (127 del total de 356 imágenes).  
+Para las imágenes diarias de Sentinel-3 se diseñó una malla regular de 300 m dentro de
+
+---
+
+passage: 18 bandas espectrales entre 411 y 1.019 nm y una 
+resolución espacial de 17 m (Tabla 1), fue diseña-
+do con el objetivo de hacer estudios de calidad del 
+agua, situando sus bandas en las posiciones espec-
+trales determinantes para conocer el espectro de re-
+flectividad del agua continental. Además, CHRIS/
+PROBA adquiere 5 imágenes de cada sitio con 
+5 ángulos diferentes de observación. 
+Por otro lado, se debe tener en cuenta la importancia 
+de la utilización de futuras misiones en el estudio de 
+la calidad del agua, que mejorarán sensiblemente 
+los recursos con los que actualmente se cuenta, muy 
+mermados desde la pérdida de la señal del sensor 
+MERIS a bordo de Envisat de la ESA. Dentro del 
+componente espacial del programa europeo Global 
+Monitoring for Environment and Security (GMES), 
+se incluyen cinco misiones de satélites Sentinel de 
+las cuales dos de ellas son: Sentinel-2, cuyo sensor 
+se denomina MSI (Multi Spectral Instrument) con
+
+---
+
+passage: la calibración radiométrica no sea del todo preci -
+sa o cuando la irradiancia solar sea desconocida 
+(Bernstein et al., 2005). En la Figura 4 se observa 
+un espectro de reflectividad de agua obtenido por el 
+método de QUAC de un promedio de 9 píxeles de 
+una imagen HICO de la Albufera, donde se muestra 
+en detalle la respuesta espectral típica de un lago 
+hipertrófico.
+Figura 4. Bandas (+) del sensor HICO en un espectro de 
+reflectividad de agua obtenido como promedio de 9 píxeles 
+de la Albufera.
+3. Métodos
+La metodología empleada consistió en utilizar va-
+rias relaciones matemáticas entre las reflectividades 
+de diferentes bandas con diferentes índices usados 
+en teledetección de calidad de aguas (Matthews, 
+2011) y añadiendo otros, teniendo en cuenta las 
+combinaciones de bandas aplicables a MSI de 
+Sentinel-2 y a OLCI de Sentinel-3, para encontrar 
+su mejor correlación con la [Chl-a]. En la Tabla 2 se 
+muestran las 14 diferentes relaciones matemáticas
+
+---
+
+passage: se cartografiaron los resultados del muestreo. Los datos que faltaban se rellenaron utilizando la 
+técnica de interpolación inversa ponderada por la distancia (IDW) ( Shepard, 1968). El enfoque 
+IDW se ha aplicado en la cartografía de datos medioambientales y climáticos en numerosos es-
+tudios. Los análisis y las representaciones espaciales se realizaron con el programa informático 
+de sistemas de información geográfica (SIG) QGIS (http://qgis.osgeo.org
+). 
+Resultados 
+1. Teledetección: análisis de imágenes de satélite 
+Los espectros de reflectancia de las masas de agua turbias antes y después de 2022 difieren en 
+que el espectro es más reflectante cuando aparece la mancha blanca, en especial en la banda 
+verde relativa a la banda azul. En general, esto también ocurre con respecto a la banda roja, 
+por lo que en principio se podrían utilizar índices como "AreaBGR" para monitorizar la mancha,
+
+---
+
+passage: 16 
+   
+electromagnético. Para diferenciar entre tipos de plumas de aguas turbias y aguas claras no 
+afectadas se utilizó un índice más sencillo, consistente en la diferencia de los valores de reflec-
+tancia en la banda azul situada alrededor de los 410 nm (443 nm para Sentinel-2) y la banda 
+verde centrada alrededor de los 550 nm (índice BG): 
+BG = Refblue (410nm) – Refgreen (550nm) 
+A partir de las fechas y posiciones en las que se ha observado el penacho turbio blanco 
+(primavera de 2022), se ha calculado un umbral de -0,009 para el "índice BG" (utilizando datos 
+de Sentinel-3A); valores por debajo de este indicarían la presencia de un penacho turbio blanco 
+visible. La Figura 2 muestra la evolución temporal del índice BG en las localizaciones P y X para 
+MODIS/Sentinel-3A y Sentinel-2 separados, ya que las longitudes de onda de las bandas azul y 
+verde que registran ambos sensores son ligeramente diferentes, por lo que dan lugar a valores
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona qué banda espectral y umbral empírico proponen Katlane et al. (2024) en Sentinel-2 para enmascarar los píxeles de aguas poco profundas influenciados por el fondo, ya que no se encuentra información sobre este tema en el contexto proporcionado.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 2/5]
+<razonamiento>El contexto proporcionado no contiene información directa sobre la banda espectral y el umbral empírico propuestos por Katlane et al. (2024) en Sentinel-2 para enmascarar los píxeles de aguas poco profundas influenciados por el fondo. Sin embargo, se menciona la utilización de la banda verde (B3) con una resolución de 10 metros y un valor de reflectancia superficial superior a la mediana del Mar Menor para trazar automáticamente contornos alrededor de cualquier núcleo visible de agua turbia. Además, se describe el uso de índices como "AreaBGR" y BG para monitorizar la mancha blanca en aguas turbias. Aunque no se proporciona información específica sobre el umbral empírico, se sugiere que los valores por debajo de un umbral determinado pueden indicar la presencia de un penacho turbio blanco visible.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta menciona la falta de información sobre un tema específico (umbral empírico para enmascarar píxeles de aguas poco profundas influenciados por el fondo) que no está presente en el contexto. Sin embargo, no inventa datos ni contradice el contexto.
+
+**********************************************************************
+
+--- PREGUNTA 16 ---
+USUARIO: Según Katlane et al. (2024), ¿cuál es la mejor banda proxy del satélite Sentinel-2 MSI para medir la turbidez del agua?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: 18 bandas espectrales entre 411 y 1.019 nm y una 
+resolución espacial de 17 m (Tabla 1), fue diseña-
+do con el objetivo de hacer estudios de calidad del 
+agua, situando sus bandas en las posiciones espec-
+trales determinantes para conocer el espectro de re-
+flectividad del agua continental. Además, CHRIS/
+PROBA adquiere 5 imágenes de cada sitio con 
+5 ángulos diferentes de observación. 
+Por otro lado, se debe tener en cuenta la importancia 
+de la utilización de futuras misiones en el estudio de 
+la calidad del agua, que mejorarán sensiblemente 
+los recursos con los que actualmente se cuenta, muy 
+mermados desde la pérdida de la señal del sensor 
+MERIS a bordo de Envisat de la ESA. Dentro del 
+componente espacial del programa europeo Global 
+Monitoring for Environment and Security (GMES), 
+se incluyen cinco misiones de satélites Sentinel de 
+las cuales dos de ellas son: Sentinel-2, cuyo sensor 
+se denomina MSI (Multi Spectral Instrument) con
+
+---
+
+passage: ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en 
+[Chl-a] y turbidez del Mar Menor usando imágenes de Sentinel-2. Para ello se ha utilizado una extensa base de datos, que 
+cuenta con ambos parámetros, [Chl-a] y turbidez, medidos en diferentes fechas entre el año 2016 y 2019 en 12 puntos sobre 
+el Mar Menor. Las imágenes fueron corregidas atmosféricamente con la versión para aguas turbias (C2X) del procesador 
+Case 2 Regional Coast Colour Processor (C2RCC), para obtener los valores de reflectividad. A continuación, se analizaron 
+las relaciones aritméticas entre las reflectividades de las bandas utilizadas en la bibliografía para el estudio de la [Chl- a] y 
+la turbidez. Comparando cada una de esas relaciones con los datos in situ se obtuvo que el mejor índice para la [Chl-a] es la 
+Limnetica, 41(2): 000-000 (2022). DOI: 10.23818/limn.41.18
+
+---
+
+passage: de 706 nm (Figura 4) que responde principalmente 
+al backscattering del fitoplancton y que por tan-
+to se incrementa cuando aumenta su biomasa. La 
+combinación de las bandas CHRIS/PROBA cen-
+tradas en 590 y 706 nm, también aparece en todos 
+los modelos salvo el D y el E. Sin embargo, para 
+este trabajo no se tuvo en cuenta esta combinación 
+de bandas, porque la banda 590 nm no está ni en 
+MSI de Sentinel-2 ni en OLCI de Sentinel-3 aun-
+que disponen de una banda muy cercana situada en 
+560 nm (Tabla 1).
+Por tanto, para buscar las mejores combinaciones 
+que más se ajustan a la configuración del sensor 
+MSI de Sentinel-2, observando todas las filas en 
+amarillo de la Tabla 3, vemos que la combinación 
+de las bandas centradas en 706 y 490 nm se repite 
+en todos los modelos. Los tres modelos de mayor 
+R
+2 calculado con todos los datos (0,67) correspon-
+den a los modelos E, I y J, que usan 3 y 4 bandas. 
+Se observa también que la diferencia entre estos
+
+---
+
+passage: larga serie temporal co n una alta resolución temporal y espacial. El sensor MODIS a bordo del 
+satélite Aqua ofrece imágenes que se remontan a principios de la década de 2000, el sensor OLCI 
+en el satélite Sentinel -3A con imágenes diarias de 300 metros de resolución desde 2016 y e l 
+sensor MSI en los satélites Sentinel-2A y B desde 2015 adquiriendo datos cada 5 días, pero con 
+una resolución espacial de 10 metros (Agencia Espacial Europea, 2015). 
+Tanto las imágenes de Sentinel -2 como las de Sentinel -3 se utilizaron para analizar la 
+forma y extensión de la mancha blanca turbia desde sus respectivas fechas de lanzamiento, con 
+la alta resolución espacial de Sentinel- 2 y la alta resolución temporal de Sentinel- 3 antes men-
+cionadas. Teniendo en cuenta estas diferencias entre ambos conjuntos  de datos, se utilizó un 
+enfoque ligeramente diferente para llegar a la frecuencia anual resultante de aparición de mapas 
+de agua turbia.
+
+---
+
+passage: 16 
+   
+electromagnético. Para diferenciar entre tipos de plumas de aguas turbias y aguas claras no 
+afectadas se utilizó un índice más sencillo, consistente en la diferencia de los valores de reflec-
+tancia en la banda azul situada alrededor de los 410 nm (443 nm para Sentinel-2) y la banda 
+verde centrada alrededor de los 550 nm (índice BG): 
+BG = Refblue (410nm) – Refgreen (550nm) 
+A partir de las fechas y posiciones en las que se ha observado el penacho turbio blanco 
+(primavera de 2022), se ha calculado un umbral de -0,009 para el "índice BG" (utilizando datos 
+de Sentinel-3A); valores por debajo de este indicarían la presencia de un penacho turbio blanco 
+visible. La Figura 2 muestra la evolución temporal del índice BG en las localizaciones P y X para 
+MODIS/Sentinel-3A y Sentinel-2 separados, ya que las longitudes de onda de las bandas azul y 
+verde que registran ambos sensores son ligeramente diferentes, por lo que dan lugar a valores
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según el contexto, no se menciona específicamente la mejor banda proxy del satélite Sentinel-2 MSI para medir la turbidez del agua. Sin embargo, se puede observar que se utiliza el índice BG (Refblue - Refgreen) en diferentes pasajes del texto, lo que sugiere que esta combinación de bandas puede ser relevante para medir la turbidez.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado contiene información relevante para la pregunta, ya que se menciona el satélite Sentinel-2 y su sensor MSI (Multi Spectral Instrument), así como la turbidez del agua y la utilización de imágenes de Sentinel-2 para estudiar la calidad del agua. Sin embargo, no se proporciona directamente la mejor banda proxy del satélite Sentinel-2 MSI para medir la turbidez del agua, lo que reduce su utilidad.
+
+[NOTA GROUNDEDNESS: 3/5]
+<razonamiento>La respuesta se basa en el contexto al mencionar que el índice BG (Refblue - Refgreen) se utiliza para medir la turbidez del agua, lo que está respaldado por la información proporcionada en el texto. Sin embargo, no se presenta una conclusión definitiva sobre la mejor banda proxy del satélite Sentinel-2 MSI para medir la turbidez, lo que sugiere que la respuesta es parcialmente fundamentada.
+
+**********************************************************************
+
+--- PREGUNTA 17 ---
+USUARIO: ¿Para qué sensor satelital concreto desarrollaron Doerffer y Schiller (2007) su algoritmo específico de aguas de Caso 2?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: se deban a un pobre funcionamiento del algoritmo. Probablemente la señal captada por el satélite 
+es afectada por la reflectancia de las comunidades de Caulerpa prolifera que ocupan el fondo en 
+esas zonas. Se está trabajando en la implementación operacional de una máscara por profundidad 
+que elimine estas zonas de la representación y su integración en el visor que se está preparando 
+actualmente. Hay que señalar que para la construcción del algoritmo BELA no se han utilizado 
+valores de reflectancia de satélite que provienen de píxeles localizados en zonas con  
+profundidades de la columna de agua menores de 2 metros, además de otra serie de requisitos 
+que garantizaran la calidad del algoritmo resultante.
+
+---
+
+passage: larga serie temporal co n una alta resolución temporal y espacial. El sensor MODIS a bordo del 
+satélite Aqua ofrece imágenes que se remontan a principios de la década de 2000, el sensor OLCI 
+en el satélite Sentinel -3A con imágenes diarias de 300 metros de resolución desde 2016 y e l 
+sensor MSI en los satélites Sentinel-2A y B desde 2015 adquiriendo datos cada 5 días, pero con 
+una resolución espacial de 10 metros (Agencia Espacial Europea, 2015). 
+Tanto las imágenes de Sentinel -2 como las de Sentinel -3 se utilizaron para analizar la 
+forma y extensión de la mancha blanca turbia desde sus respectivas fechas de lanzamiento, con 
+la alta resolución espacial de Sentinel- 2 y la alta resolución temporal de Sentinel- 3 antes men-
+cionadas. Teniendo en cuenta estas diferencias entre ambos conjuntos  de datos, se utilizó un 
+enfoque ligeramente diferente para llegar a la frecuencia anual resultante de aparición de mapas 
+de agua turbia.
+
+---
+
+passage: 18 bandas espectrales entre 411 y 1.019 nm y una 
+resolución espacial de 17 m (Tabla 1), fue diseña-
+do con el objetivo de hacer estudios de calidad del 
+agua, situando sus bandas en las posiciones espec-
+trales determinantes para conocer el espectro de re-
+flectividad del agua continental. Además, CHRIS/
+PROBA adquiere 5 imágenes de cada sitio con 
+5 ángulos diferentes de observación. 
+Por otro lado, se debe tener en cuenta la importancia 
+de la utilización de futuras misiones en el estudio de 
+la calidad del agua, que mejorarán sensiblemente 
+los recursos con los que actualmente se cuenta, muy 
+mermados desde la pérdida de la señal del sensor 
+MERIS a bordo de Envisat de la ESA. Dentro del 
+componente espacial del programa europeo Global 
+Monitoring for Environment and Security (GMES), 
+se incluyen cinco misiones de satélites Sentinel de 
+las cuales dos de ellas son: Sentinel-2, cuyo sensor 
+se denomina MSI (Multi Spectral Instrument) con
+
+---
+
+passage: la calibración radiométrica no sea del todo preci -
+sa o cuando la irradiancia solar sea desconocida 
+(Bernstein et al., 2005). En la Figura 4 se observa 
+un espectro de reflectividad de agua obtenido por el 
+método de QUAC de un promedio de 9 píxeles de 
+una imagen HICO de la Albufera, donde se muestra 
+en detalle la respuesta espectral típica de un lago 
+hipertrófico.
+Figura 4. Bandas (+) del sensor HICO en un espectro de 
+reflectividad de agua obtenido como promedio de 9 píxeles 
+de la Albufera.
+3. Métodos
+La metodología empleada consistió en utilizar va-
+rias relaciones matemáticas entre las reflectividades 
+de diferentes bandas con diferentes índices usados 
+en teledetección de calidad de aguas (Matthews, 
+2011) y añadiendo otros, teniendo en cuenta las 
+combinaciones de bandas aplicables a MSI de 
+Sentinel-2 y a OLCI de Sentinel-3, para encontrar 
+su mejor correlación con la [Chl-a]. En la Tabla 2 se 
+muestran las 14 diferentes relaciones matemáticas
+
+---
+
+passage: Las imágenes satelitales nos permiten analizar la temperatura y la clorofila -a. La temperatura se 
+obtiene a través de l producto "Copernicus Mediterranean Sea – High Resolution L4 Sea Surface 
+Temperature Reprocessed 0,05 deg resolution " disponible desde el servicio de Copernicus 
+(Nardelli et al., 2013). 
+Hasta la fecha, la concentración superficial de clorofila-a en la laguna se obtenía utilizando el 
+producto “ Mediterranean Sea Ocean Colour Plankton MY L4 daily gapfree observations and 
+climatology and monthly observations" del portal marino de Copernicus (CMEMS). Sin embargo, 
+desde febrero de 2024 se utiliza un algoritmo específico para el Mar Menor que ha sido diseñado 
+a partir del análisis de datos de los satélites y sensores del color del océano (Tabla 1) y datos de 
+clorofila-a procedentes de los muestreos in situ recopilados en el Mar Menor desde 2016. 
+Tabla 1: Características de los satélites y sensores analizados hasta agosto de 2023. 
+Satélite Sensor Fecha 
+inicial
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona a Doerffer y Schiller (2007) desarrollando un algoritmo específico para un sensor satelital concreto. El contexto no proporciona información sobre el desarrollo de un algoritmo por parte de Doerffer y Schiller (2007).
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 1/5]
+<razonamiento>No se encuentra información sobre el algoritmo específico de Doerffer y Schiller (2007) ni sobre qué sensor satelital desarrollaron para analizar aguas de Caso 2. El contexto proporcionado se centra en la descripción de sensores satelitales, algoritmos y métodos utilizados para analizar la calidad del agua, pero no hay conexión directa con la pregunta.
+
+[NOTA GROUNDEDNESS: 2/5]
+<razonamiento>La respuesta menciona a Doerffer y Schiller (2007) desarrollando un algoritmo específico, lo que no está respaldado por la información del contexto. El contexto solo proporciona información sobre el desarrollo de un algoritmo para el Mar Menor, pero no menciona a Doerffer y Schiller (2007).
+
+**********************************************************************
+
+--- PREGUNTA 18 ---
+USUARIO: ¿Por qué resulta difícil la estimación remota de clorofila-a en estuarios turbios y productivos según el estudio de Lins et al. (2017)?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Figura 4. Mapas de turbidez (NTU).
+Figura 5. Relación de la los índices normalizados (V/A) 
+y la clorofila-a en los puntos de muestreo del CTD.
+Los mapas de concentración de clorofila-a obtenidos 
+mediante imágenes Landsat y muestreos con el CTD 
+(Figura 7) muestran el incremento paulatino sucedido 
+durante estos dos años y el brusco descenso en la situación 
+actual. Destacar que los valores más elevados en los bordes 
+no corresponden a clorofila en el plancton sino a la visión 
+de la vegetación del fondo por la transparencia del agua en 
+las zonas someras, coloración roja (Figura 2).
+Los resultados obtenidos en la serie temporal (Figura 7) 
+muestran claramente que el valor promedio de la 
+clorofila-a se ha incrementado paulatinamente desde los 
+valores en torno a los 5 mg/m3 hasta alcanzar valores 
+superiores a 25 mg/m3 en el invierno de 2017; sin 
+embargo esta tendencia se rompió bruscamente con las 
+lluvias torrenciales y en los últimos meses se ha vuelto
+
+---
+
+passage: sensores. Los muestreos con sondas multiparamétricas nos han permitido, a su vez, realizar un 
+análisis espacial de la SST en las c uatro estaciones de muestreo. Por último, los datos satelitales 
+del satélite Copernicus Mediterranean Sea – High Resolution L4 Sea Surface Temperature 
+Reprocessed, con una resolución de 0,05 grados (disponible en https://doi.org/10.48670/moi -
+00173), han ampliado la disponibilidad de datos SST en el Mar Menor más allá del año 2012. Estos 
+datos también han sido sometidos a un proceso de intercalibración con el sensor HOBO y los 
+sensores de la boya piloto SMLG.                                
+7.2.2. Clorofila-a 
+La medida de clorofila-a se lleva a cabo mediante dos métodos distintos: espectrofotométricos y 
+fluorescencia. La espectrofotometría es una técnica analítica que permite la cuantificación de 
+compuestos en solución, basándose en la relación directa que existe entre la absorción de luz y la
+
+---
+
+passage: * Correspondence: ruberto@ctec.ufal.br; Tel.: +55-82-996-328-814
+Academic Editors: Yunlin Zhang, Claudia Giardino, Linhai Li, Deepak R. Mishra and Prasad S. Thenkabail
+Received: 27 February 2017; Accepted: 19 May 2017; Published: 24 May 2017
+Abstract: Remote estimation of chlorophyll-a in turbid and productive estuaries is difﬁcult due to
+the optical complexity of Case 2 waters. Although recent advances have been obtained with the
+use of empirical approaches for estimating chlorophyll-a in these environments, the understanding
+of the relationship between spectral reﬂectance and chlorophyll-a is based mainly on temperate
+and subtropical estuarine systems. The potential to apply standard NIR-Red models to productive
+tropical estuaries remains underexplored. Therefore, the purpose of this study is to evaluate the
+performance of several approaches based on multispectral data to estimate chlorophyll-a in a
+
+---
+
+passage: les mediante técnicas de teledetección (Gons et al., 
+2002, 2005; Dall’Olmo y Gitelson, 2005, 2006; 
+Matthews, 2011; Odermatt et al., 2012).
+En general, estos métodos se basan en la cuantifi -
+cación de aquellas sustancias disueltas o partículas 
+en suspensión que modifican las propiedades óp-
+ticas de la masa de agua. Uno de los parámetros 
+más utilizados para determinar el nivel de eutrofi-
+zación en el agua es la concentración de clorofila-a 
+[Chl-a], que es el principal pigmento fotosintético 
+presente en las algas (Gregor y Maršálek, 2004). 
+La concentración de clorofila se utiliza para estimar 
+en forma indirecta la biomasa de las comunidades
+
+---
+
+passage: Asoci Ación Esp Añol A dE TElEdETEcción
+Modelo empírico para la determinación de clorofila-a en aguas continentales a partir de los futuros Sentinel-2 y 3. […]
+39
+2.1. Campañas de campo para selección 
+del modelo
+Los datos usados para elegir las bandas y el mode-
+lo matemático óptimo para los futuros Sentinel-2 y 
+3 corresponden a medidas de [Chl-a] de cuatro lagos 
+con características muy diferentes y distintas con-
+centraciones de clorofila, localizados en Colombia 
+y España. En Colombia fueron estudiados dos la-
+gos cercanos a la ciudad de Barrancabermeja, en 
+la región del Magdalena Medio (Figura 1). En el 
+lago Juan Esteban (7°05’58”N, 73°49’45”W), poco 
+profundo y con una alta carga de sedimentos debi-
+do a su cercanía con el Río Magdalena, se toma-
+ron 3 muestras de agua en las que se determinó la 
+[Chl-a] por espectrofotometría de acuerdo al proto-
+colo descrito en la norma ISO 10260, variando los 
+valores obtenidos entre 43 y 60 μg/L. En la misma
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según el estudio de Lins et al. (2017), resulta difícil la estimación remota de clorofila-a en estuarios turbios y productivos porque se trata de "aguas continentales" que presentan una "óptica complejidad" (Case 2 waters).
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado es relevante para responder a la pregunta, ya que se refiere a la estimación remota de clorofila-a en estuarios turbios y productivos. El estudio mencionado (Lins et al., 2017) se centra precisamente en este tema y presenta resultados sobre la relación entre la espectrofotometría y la fluorescencia para medir la concentración de clorofila-a. Además, el contexto proporciona información adicional sobre los métodos utilizados para estimar la clorofila-a, como la teledetección y la espectrofotometría.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta menciona el estudio de Lins et al. (2017) y describe las aguas continentales como "Case 2 waters", lo que está respaldado por el contexto. Sin embargo, no se encuentra en el contexto la mención específica a estuarios turbios y productivos, aunque se hace referencia a ellos en general. La respuesta también utiliza frases como "aguas continentales" sin una explicación clara sobre qué se entiende por ellas.
+
+**********************************************************************
+
+--- PREGUNTA 19 ---
+USUARIO: Según Pahlevan et al. (2020), ¿qué enfoque metodológico permite realizar extracciones continuas de clorofila-a integrando datos de Sentinel-2 y Sentinel-3?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: 25 
+ 
+ 
+Figura 12. Concentración de la clorofila superficial para imágenes diarias válidas de Sentinel3A y Sentinel3B de julio de 
+2024.
+
+---
+
+passage: sensores. Los muestreos con sondas multiparamétricas nos han permitido, a su vez, realizar un 
+análisis espacial de la SST en las c uatro estaciones de muestreo. Por último, los datos satelitales 
+del satélite Copernicus Mediterranean Sea – High Resolution L4 Sea Surface Temperature 
+Reprocessed, con una resolución de 0,05 grados (disponible en https://doi.org/10.48670/moi -
+00173), han ampliado la disponibilidad de datos SST en el Mar Menor más allá del año 2012. Estos 
+datos también han sido sometidos a un proceso de intercalibración con el sensor HOBO y los 
+sensores de la boya piloto SMLG.                                
+7.2.2. Clorofila-a 
+La medida de clorofila-a se lleva a cabo mediante dos métodos distintos: espectrofotométricos y 
+fluorescencia. La espectrofotometría es una técnica analítica que permite la cuantificación de 
+compuestos en solución, basándose en la relación directa que existe entre la absorción de luz y la
+
+---
+
+passage: estas relaciones en fechas distintas, una de ellas días después de las lluvias torrenciales de septiembre de 2019, donde se ob -
+serva como la concentración de [Chl-a] y la turbidez aumentan considerablemente.
+Palabras clave:  Mar Menor, clorofila-a, turbidez, Sentinel 2, eutrofización
+This is an open-access article distributed under the terms of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License.
+
+---
+
+passage: One of these images was some days after September 2019 torrential rains, in which a considerable [Chl- a] and turbidity in -
+crease was observed.
+Key words: Mar Menor, chlorophyll-a, turbidity, Sentinel-2, eutrophication, pollution
+RESUMEN
+Estimación del contenido de clorofila-a y turbidez del Mar Menor con Sentinel 2
+El Mar Menor es un lago costero Mediterráneo con un alto valor medioambiental y social, pero que ha sufrido importantes 
+episodios de contaminación en los últimos años a causa de fuertes lluvias, arrastre de sedimentos y sustancias contaminantes 
+principalmente de la agricultura y la entrada de residuos mineros provocando un aumento de la eutrofización. La concen -
+tración de clorofila- a [Chl-a] y la turbidez son parámetros de calidad del agua que, por sus propiedades ópticas, pueden 
+ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en
+
+---
+
+passage: Asoci Ación Esp Añol A dE TElEdETEcción
+Modelo empírico para la determinación de clorofila-a en aguas continentales a partir de los futuros Sentinel-2 y 3. […]
+43
+valores del coeficiente de determinación R². Con 
+ello se determinó qué modelo presentaba mayor 
+correlación lineal con [Chl-a] para cada caso, tan-
+to en conjunto como por masa de agua, teniendo 
+en cuenta además su simplicidad y su aplicabili -
+dad a MSI de Sentinel-2 y a OLCI de Sentinel-3. 
+Se seleccionaron los mejores índices, tanto para 
+Sentinel-2 como para Sentinel-3, teniendo en cuen-
+ta que presentan los mayores valores de R
+2 y cuan-
+do son muy similares se seleccionan los más senci-
+llos y que usan menos bandas.
+Una vez obtenidos ambos índices, se calibró el mé-
+todo con la segunda base de datos de la Albufera y 
+se validó con la tercera base de datos que incluye 
+imágenes del sensor HICO para, al final, obtener 
+mapas de [Chl-a] usando los índices propuestos a 
+partir de una imagen HICO.
+4. Resultados y análisis
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según Pahlevan et al. (2020), no se menciona un enfoque metodológico específico para realizar extracciones continuas de clorofila-a integrando datos de Sentinel-2 y Sentinel-3.
+
+La literatura científica recuperada no menciona este tema explícitamente. El documento trata sobre la estimación del contenido de clorofila-a y turbidez del Mar Menor con Sentinel 2, y presenta un modelo empírico para la determinación de clorofila-a en aguas continentales a partir de los futuros Sentinel-2 y 3.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado no directamente responde a la pregunta sobre el enfoque metodológico para realizar extracciones continuas de clorofila-a integrando datos de Sentinel-2 y Sentinel-3. Sin embargo, se menciona la utilización de técnicas de teledetección para estudiar la concentración de clorofila-a y turbidez en el Mar Menor, lo que sugiere una posible conexión con los satélites Sentinel-2 y Sentinel-3. Además, se presenta un modelo empírico para determinar la clorofila-a a partir de datos de Sentinel-2 y 3, aunque no se especifica cómo se realizan las extracciones continuas.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta se basa en el contexto al mencionar la falta de un enfoque metodológico específico para realizar extracciones continuas de clorofila-a integrando datos de Sentinel-2 y Sentinel-3, lo que está presente en el texto. También se refiere a la literatura científica recuperada no menciona este tema explícitamente, lo que coincide con la información proporcionada en el contexto.
+
+**********************************************************************
+
+--- PREGUNTA 20 ---
+USUARIO: ¿Qué tipo de estrategia general promueve el libro de Lillebø et al. (2015) para las lagunas costeras europeas?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: vi Coastal Lagoons in Europe: Integrated Water Resource Strategies
+2.3  The Case Study Lagoons  ............................................................  14
+2.4  The European Policy Context  .........................................................  16
+2.5  The Bottom-Up Approach for a Pan-European View  .......................................  16
+2.6  Final Remarks .....................................................................  17
+2.7  Acknowledgements .................................................................  18
+2.8  References  .......................................................................  18
+Chapter 3 
+The physio-geographical background and ecology of Ria de Aveiro ....................  21
+A. I. Lillebø, O. M. C. C. Ameixa, L. P. Sousa, A. I. Sousa, J. A. Soares, M. Dolbeth  
+and F. L. Alves 
+3.1 Introduction  .......................................................................  21
+
+---
+
+passage: archives in the Mar Menor (SE Spain). Climate of the Past, 12: 1389-1400. 
+EUROGEL 2004 European gelatinous zooplankton: Mechanisms behind jellyfish blooms and their ecological 
+and socio-economic effects. Annual report no 2 to European community, Section 3, 38 pp 
+Farinós, P . & Robledano, F. 2010. Structure and Distribution of the Waterbird Community in the Mar Menor 
+Coastal Lagoon (SE Spain) and Relationships with Environmental Gradients. Waterbirds, 33, 479 -
+493. 
+Farinós, P . Robledano, F., Carreño, M.F. & Martínez López, J. 2016 a. Efectos antrópicos sobre los gradientes 
+de paisaje y hábitat y su influencia sobre la comunidad de aves acuáticas en una laguna costera 
+mediterránea (Mar Menor, SE España). Cap. 19. Cuestiones sobre Paisaje, patrimonio natural y 
+Medio Ambiente en el Sureste Ibérico. Murcia, EDITUM: 167-174. 
+Farinós, P ., F. Robledano, M. F. Carreño. 2016 b. Las aves acuáticas del Mar Menor: respuesta al cambio
+
+---
+
+passage: Medio Ambiente en el Sureste Ibérico. Murcia, EDITUM: 167-174. 
+Farinós, P ., F. Robledano, M. F. Carreño. 2016 b. Las aves acuáticas del Mar Menor: respuesta al cambio 
+ambiental a distintas escalas. En Leon, V.M y J.M. Bellido (Eds). Mar Menor: una laguna singular y 
+sensible. Evaluación científica de su estado. Madrid, Instituto Español de Oceanografía, Ministerio de 
+Economía y Competitividad. Temas de Oceanografía, 9. pp 213-240. 
+Ferreira, J.G., Andersen, J.H., Borja, A., Bricker, S.B., Camp, J., Cardoso da Silva, M., Garcés, E., Heiskanen, 
+A.S., Humborg, C., Ignatiades, L., Lancelot, C., Menesguen, A., Tett, P ., Hoepffner, N., Claussen, U., 
+2010. Marine Strategy Framework Directive e Task Group 5 Report Eutrophication. EUR 24338 EN e 
+Joint Research Centre. Office for Official Publications of the European Communities, Luxembourg, pp. 
+49 
+Franco A, A Pérez -Ruzafa, H Drouineau, P Franzoi, ET Koutrakis, M Lepage, D Verdiell, M Bouchoucha, A
+
+---
+
+passage: 4. Kennish, M.J. Coastal lagoons. In Encyclopedia of Estuaries ; Kennish, M.J., Ed.; Springer: Dordrecht,
+The Netherlands, 2016. [CrossRef]
+5. Nixon, S.W. Nutrient dynamics, primary production and ﬁsheries yields of lagoons. Oceanol. Acta 1982,
+5, 357–371.
+6. Pérez-Ruzafa, A.; Marcos, C. El Mar Menor como motor del cambio de paradigmas en el estudio de las
+lagunas costeras. In Mar Menor: Una Laguna Singular y Sensible. Evaluaci ón Cientíﬁca de su Estado; Leon, V .M.,
+Bellido, J.M., Eds.; Temas de Oceanografía; Instituto Español de Oceanografía, Ministerio de Economía y
+Competitividad: Madrid, Spain, 2016; Volume 9, pp. 31–57.
+7. García-Ayllón, S. New Strategies to Improve Co-Management in Enclosed Coastal Seas and Wetlands
+Subjected to Complex Environments: Socio-Economic Analysis Applied to an International Recovery Success
+Case Study after an Environmental Crisis. Sustainability 2019, 11, 1039. [CrossRef]
+
+---
+
+passage: para evaluar el impacto de problemáticas integrales en la laguna y, en consecuencia, poder realizar 
+una prognosis de las respuestas eco lógicas del sistema. La voluntad de colaborar y compilar 
+información con el Grupo de Investigación Ecología y Ordenación de Ecosistemas Marinos 
+Costeros, responsable del proyecto aludido, ya ha sido puesta de manifiesto entre miembros de 
+ambos grupos. 
+Algunas de las directrices para la prevención y minimización de las presiones deben centrarse en el 
+manejo potencial de la cadena trófica a través de la gestión pesquera con el objetivo de minimizar 
+procesos de eutrofización (= biomanejo de la cadena trófica).  Existen taxones potenciales para 
+evaluar estas posibilidades, aspecto sobre el que sería recomendable profundizar. Sin duda, la 
+elaboración de estas directrices precisa de un conocimiento continuo del reclutamiento y alevinaje 
+en sus zonas someras como hábitats críticos.
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona qué tipo de estrategia general promueve el libro de Lillebø et al. (2015) para las lagunas costeras europeas.
+
+El contexto proporcionado no contiene información sobre una estrategia general promovida por Lillebø et al. (2015). El texto presenta diferentes pasajes que tratan sobre temas como la ecología y el manejo de lagunas costeras, pero no se menciona específicamente una estrategia general para las lagunas costeras europeas.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado no directamente responde a la pregunta sobre qué tipo de estrategia general promueve el libro de Lillebø et al. (2015) para las lagunas costeras europeas. Sin embargo, se menciona la importancia del manejo potencial de la cadena trófica y la gestión pesquera para minimizar procesos de eutrofización, lo que sugiere una aproximación integrada y holística en el tratamiento de los problemas ambientales en lagunas costeras. Aunque no se proporciona información específica sobre la estrategia general promovida por Lillebø et al. (2015), el contexto sugiere un enfoque integral y participativo para abordar los desafíos ambientales en las lagunas costeras.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta se basa exclusivamente en el contexto proporcionado, no inventando datos ni conclusiones que no estaban presentes en el texto. La respuesta simplemente describe la situación y no hace afirmaciones que no están respaldadas por la información del contexto.
+
+**********************************************************************
+
+--- PREGUNTA 21 ---
+USUARIO: ¿Cuál es el objetivo principal de integrar datos masivos heterogéneos según la investigación de López-Andreu et al. (2022) en el Mar Menor?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: creativecommons.org/licenses/by/
+4.0/).
+sensors
+Article
+Monitoring System of the Mar Menor Coastal Lagoon (Spain)
+and Its Watershed Basin Using the Integration of Massive
+Heterogeneous Data †
+Francisco Javier López-Andreu 1,*
+ , Juan Antonio López-Morales 1
+ , Joaquín Francisco Atenza Juárez 1
+ ,
+Rosa Alcaraz 1
+ , María Dolores Hernández 1
+ , Manuel Erena 1
+ , Jose Antonio Domínguez-Gómez 1
+and Sandra García Galiano 2
+1 Institute of Agricultural and Environment Research and Development of Murcia—IMIDA, Mayor Street,
+La Alberca, 30150 Murcia, Spain
+2 Department of Mining and Civil Engineering, Universidad Politécnica de Cartagena, 30203 Cartagena, Spain
+* Correspondence: franciscoj.lopez26@carm.es; Tel.: +34-968-39-4554
+† This paper is an extended version of our paper published in “Sistema operacional de alta resolución (EDA)
+para el seguimiento del Campo de Cartagena y el Mar Menor” presented at the 2022 III Symposium Ibérico de
+
+---
+
+passage: 9 
+ 
+3.2.2. Boya piloto SMLG 
+La boya piloto SMLG se instaló en octubre de 2022 y se encuentra en el centro de la laguna, en la 
+estación de muestreo B (Figura 1). En ella hay colocados sensores en varias profundidades para la 
+medición de las variables de estudio , lo que permite obtener datos en continuo y a tiempo casi 
+real. Posteriormente, estos datos son calibrados con los datos obtenidos en los muestreos in situ. 
+3.2.3. Datos satelitales 
+Los datos satelitales nos brindan la capacidad de generar series temporales que abarcan años 
+previos a la implementación de los programas de seguimiento. Esta información resulta 
+fundamental para proporcionar un contexto completo de la evolució n del estado ecológico del 
+Mar Menor a lo largo del tiempo. 
+Las imágenes satelitales nos permiten analizar la temperatura y la clorofila -a. La temperatura se 
+obtiene a través de l producto "Copernicus Mediterranean Sea – High Resolution L4 Sea Surface
+
+---
+
+passage: para el seguimiento del Campo de Cartagena y el Mar Menor” presented at the 2022 III Symposium Ibérico de
+Ingeniería Hortícola (SIBIH22), Cartagena, Murcia, 6–8 April 2022.
+Abstract: The tool created aims at the environmental monitoring of the Mar Menor coastal lagoon
+(Spain) and the monitoring of the land use of its watershed. It integrates heterogeneous data
+sources ranging from ecological data obtained from a multiparametric oceanographic sonde to agro-
+meteorological data from IMIDA’s network of stations or hydrological data from the SAIH network
+as multispectral satellite images from Sentinel and Landsat space missions. The system is based on
+free and open source software and has been designed to guarantee maximum levels of ﬂexibility and
+scalability and minimum coupling so that the incorporation of new components does not affect the
+existing ones. The platform is designed to handle a data volume of more than 12 million records,
+
+---
+
+passage: Citation: López-Andreu, F.J.;
+López-Morales, J.A.; Atenza Juárez,
+J.F.; Alcaraz, R.; Hernández, M.D.;
+Erena, M.; Domínguez-Gómez, J.A.;
+García Galiano, S. Monitoring System
+of the Mar Menor Coastal Lagoon
+(Spain) and Its Watershed Basin
+Using the Integration of Massive
+Heterogeneous Data. Sensors 2022, 22,
+6507. https://doi.org/10.3390/
+s22176507
+Academic Editor: Joseph Awange
+Received: 27 July 2022
+Accepted: 27 August 2022
+Published: 29 August 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright: © 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+sensors
+Article
+Monitoring System of the Mar Menor Coastal Lagoon (Spain)
+and Its Watershed Basin Using the Integration of Massive
+Heterogeneous Data †
+
+---
+
+passage: laguna y esencial p ara determinar procesos ecológicos claves en el Mar Menor que generan y 
+mantienen su biodiversidad, tales como la conectividad entre los diferentes estratos de hábitat y 
+componentes bióticos (ej. áreas someras litorales – ictioplancton - comunidades bentón icas de 
+zonas profundas). Disponemos de datos válidos (2002 -2004) que pueden ser utilizados como 
+situación de partida o previa al momento actual en dicha biocenosis, si bien, esta situación no 
+estaría libre de problemáticas ya presentes (a diferentes escal as) y, en consecuencia, deberíamos 
+analizar si puede ser considerada como situación de referencia. 
+El área del Mar Menor y toda su zona de influencia se caracteriza por presentar un gran dinamismo 
+socioeconómico con una gran convergencia de actividades com o la agricultura, turismo, pesca,
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona explícitamente el objetivo principal de integrar datos masivos heterogéneos en el Mar Menor. Sin embargo, se puede inferir que el objetivo es monitorear y analizar el estado ecológico del Mar Menor a lo largo del tiempo, ya que se mencionan variables como la temperatura y la clorofila-a, y se destaca la importancia de la conectividad entre los diferentes estratos de hábitat y componentes bióticos para determinar procesos ecológicos clave.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado es relevante para responder a la pregunta porque se refiere al objetivo principal de integrar datos masivos heterogéneos en el Mar Menor, lo que coincide con la pregunta. Además, se menciona la investigación de López-Andreu et al. (2022) y se proporcionan detalles sobre el sistema de monitoreo del Mar Menor y su cuenca hidrográfica, lo que es directamente relacionado con el objetivo principal.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta se basa en el contexto al mencionar la importancia de la conectividad entre los diferentes estratos de hábitat y componentes bióticos para determinar procesos ecológicos clave, lo que está respaldado por la información del texto. También se infiere que el objetivo principal es monitorear y analizar el estado ecológico del Mar Menor a lo largo del tiempo, lo que también está respaldado por el contexto. Sin embargo, no se menciona explícitamente el objetivo de integrar datos masivos heterogéneos, pero se puede inferir que es parte del objetivo principal.
+
+**********************************************************************
+
+--- PREGUNTA 22 ---
+USUARIO: Según Legates y McCabe (1999), ¿por qué las medidas como el coeficiente de correlación (R2) son peligrosas para validar modelos hidrológicos?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: este caso sería la raíz cuadrada del error cuadrático 
+medio (RMSE). Para el caso del índice IS2, el valor 
+de RMSE es de 43 μg/L, mientras que para el IS3 es 
+de 19 μg/L, ambos valores aceptables para datos 
+obtenidos por teledetección, siendo claramente 
+Figura 5. [Chl-a] estimada en la Albufera con los índices IS2 (izquierda) e IS3 (derecha) en función de la [Chl-a] observada 
+in situ en las bases de datos usadas para calibración (círculos azules) y para validación (triángulos rojos).
+Figura 6. Mapas de [Chl-a] (en μg/L) obtenidos aplicando la calibración de los índices IS2 (izquierda) e IS3 (derecha).
+
+---
+
+passage: Sentinel-2 y a OLCI de Sentinel-3, para encontrar 
+su mejor correlación con la [Chl-a]. En la Tabla 2 se 
+muestran las 14 diferentes relaciones matemáticas 
+utilizadas. El análisis se realizó en la base de datos 
+de las cuatro masas de agua de España y Colombia, 
+diferenciando por masa de agua y en conjunto y 
+probando todas las combinaciones de bandas po-
+sibles, en relaciones empíricas de 2, 3 y 4 bandas. 
+Las relaciones matemáticas utilizadas son índices 
+sencillos, aunque algunas son similares a las de los 
+modelos de Gons et al. (2005) y de Dall’Olmo y 
+Gitelson (2006). 
+Para cada relación, se calculó la matriz de corre-
+lación entre todas las combinaciones de bandas y 
+se seleccionaron aquellas combinaciones que pre-
+sentaban mayor correlación lineal, de acuerdo a los 
+Tabla 2. Relaciones matemáticas empleadas para hallar la 
+mejor correlación de la reflectividad con la concentración de 
+clorofila-a. R
+λi es la reflectividad en la longitud de onda λi.
+
+---
+
+passage: doméstico e industrial, fármacos y cosméticos de diferentes uso s, etc. Muchos de estos 
+contaminantes orgánicos (pesticidas, hidrocarburos, etc) e inorgánicos (metales traza) tienden a ser 
+transferidos a la materia particulada por su afinidad o hidrobicidad.  
+3. Principales lagunas de conocimiento en este campo. 
+a) Hidrodinámica lagunar. 
+ 
+Modelos hidrodinámicos.  Existen varios modelos hidrodinámicos en la bibliografía, que pueden 
+ayudar a entender la dinámica del sistema aunque sería deseable seleccionar aquél que sea más 
+idóneo para el sistema. Para ello se requiere su validación y probablemente la consideración  de 
+algunas mejoras: 
+- La validación de dichos modelos utilizando datos precisos meteorológicos, de marea y de las 
+velocidades de corriente en la columna de agua en las distintas épocas del año. Los datos 
+aportados por las campañas oceanográficas ayudarán a calibrarlos, corregirlos si fuera necesario e 
+identificar el más adecuado a la laguna.
+
+---
+
+passage: la calibración radiométrica no sea del todo preci -
+sa o cuando la irradiancia solar sea desconocida 
+(Bernstein et al., 2005). En la Figura 4 se observa 
+un espectro de reflectividad de agua obtenido por el 
+método de QUAC de un promedio de 9 píxeles de 
+una imagen HICO de la Albufera, donde se muestra 
+en detalle la respuesta espectral típica de un lago 
+hipertrófico.
+Figura 4. Bandas (+) del sensor HICO en un espectro de 
+reflectividad de agua obtenido como promedio de 9 píxeles 
+de la Albufera.
+3. Métodos
+La metodología empleada consistió en utilizar va-
+rias relaciones matemáticas entre las reflectividades 
+de diferentes bandas con diferentes índices usados 
+en teledetección de calidad de aguas (Matthews, 
+2011) y añadiendo otros, teniendo en cuenta las 
+combinaciones de bandas aplicables a MSI de 
+Sentinel-2 y a OLCI de Sentinel-3, para encontrar 
+su mejor correlación con la [Chl-a]. En la Tabla 2 se 
+muestran las 14 diferentes relaciones matemáticas
+
+---
+
+passage: los algoritmos
+Todas las imágenes utilizadas han recibido tres niveles de 
+procesamiento (L1, L2 y L3). El nivel de procesamiento 
+L1 se consigue cuando las imágenes se encuentran 
+corregidas geométricamente, considerando a este nivel 
+el L1a, y atmosféricamente, nivel L1b. El método de 
+corrección atmosférica utilizado es una adaptación a 
+Landsat 8 del método de corrección atmosférica descrito 
+por (Gilabert et al., 1994) para Landsat 5.
+La zona de agua se obtiene mediante la generación de 
+una máscara a partir de la banda del infrarrojo cercano, 
+(Domínguez et al., 2009). Una vez concluido el nivel L1, 
+en el cual la masa de agua del Mar Menor está corregida 
+geométrica y atmosféricamente, se procede a conseguir 
+el nivel L2. El nivel de procesamiento L2 consiste en el 
+desarrollo de algoritmos y validación de los mismos a 
+partir de datos de campo en los cuales hay valores de 
+turbidez y concentración de clorofila-a de las campañas
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según Legates y McCabe (1999), las medidas como el coeficiente de correlación (R2) pueden ser peligrosas para validar modelos hidrológicos porque pueden dar una impresión falsa de precisión y confiabilidad, lo que puede llevar a la toma de decisiones erróneas.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 1/5]
+<razonamiento>El contexto proporcionado no tiene relación directa con la pregunta sobre por qué las medidas como el coeficiente de correlación (R2) son peligrosas para validar modelos hidrológicos. La pregunta se refiere a la validación de modelos hidrológicos, mientras que el contexto se centra en la teledetección y la calibración de índices para medir la concentración de clorofila-a en aguas. Aunque hay algunos términos técnicos relacionados con la hidrología, como "modelos hidrodinámicos" y "lagunas de conocimiento", no se proporciona información relevante sobre por qué las medidas como R2 son peligrosas para validar modelos hidrológicos.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta menciona Legates y McCabe (1999), que está presente en el contexto. Sin embargo, no se basa directamente en la información del contexto, sino más bien en una referencia general a la importancia de validar modelos hidrológicos. La respuesta no inventa datos o cifras, pero tampoco se centra específicamente en la fundamentación de la raíz cuadrada del error cuadrático medio (RMSE) ni en los índices IS2 e IS3.
+
+**********************************************************************
+
+--- PREGUNTA 23 ---
+USUARIO: ¿Qué estadísticos recomiendan Legates y McCabe (1999) utilizar como alternativa al R2?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: R
+2 calculado con todos los datos (0,67) correspon-
+den a los modelos E, I y J, que usan 3 y 4 bandas. 
+Se observa también que la diferencia entre estos 
+tres, y el modelo A, que utiliza sólo dos bandas, 
+no son muy significativas pues aunque disminuye 
+algo R
+2 (0,61) para todos, aumenta en muchos ca-
+sos al analizar los lagos individualmente. Teniendo 
+en cuenta el principio de parsimonia aplicado a la 
+estadística, que dice que de un conjunto de varia-
+bles explicativas que forman parte del modelo a 
+estudiar, debe seleccionarse la combinación más 
+reducida y simple posible, el modelo elegido en 
+principio como más recomendable para usar en 
+Sentinel 2 sería un modelo basado en las bandas 
+más semejantes a las del modelo A. Por ello defini-
+mos un Índice Sentinel-2 (IS2) como:
+IS R
+R2
+490
+706=  (1)
+Para el caso de Sentinel-3, analizando las filas en 
+rojo de la Tabla 3, observamos que los modelos de 
+mayor R
+2 calculado con todos los datos (0,81) son
+
+---
+
+passage: este caso sería la raíz cuadrada del error cuadrático 
+medio (RMSE). Para el caso del índice IS2, el valor 
+de RMSE es de 43 μg/L, mientras que para el IS3 es 
+de 19 μg/L, ambos valores aceptables para datos 
+obtenidos por teledetección, siendo claramente 
+Figura 5. [Chl-a] estimada en la Albufera con los índices IS2 (izquierda) e IS3 (derecha) en función de la [Chl-a] observada 
+in situ en las bases de datos usadas para calibración (círculos azules) y para validación (triángulos rojos).
+Figura 6. Mapas de [Chl-a] (en μg/L) obtenidos aplicando la calibración de los índices IS2 (izquierda) e IS3 (derecha).
+
+---
+
+passage: IS R
+R2
+490
+706=  (1)
+Para el caso de Sentinel-3, analizando las filas en 
+rojo de la Tabla 3, observamos que los modelos de 
+mayor R
+2 calculado con todos los datos (0,81) son 
+el I, J, M y N seguidos de cerca por el C y el K 
+(R
+2 = 0,80). En todos ellos aparece la combinación 
+entre las bandas centradas en 706 y 622 nm, que 
+también aparece en todos los modelos menos el 
+E. Se observa también que la diferencia entre to-
+dos estos modelos, y el modelo A, que utiliza sólo 
+dos bandas, no son muy significativas pues aunque 
+disminuye algo R
+2 (0,79) para todos, aumenta en 
+muchos casos al analizar los lagos individualmente, 
+de forma similar a lo que ocurría con el Sentinel-2. 
+Por tanto, siguiendo los criterios aplicados ante -
+riormente (principio de parsimonia), se escogió el 
+modelo A como índice para Sentinel-3, por mayor 
+simplicidad. De manera que definimos el Índice 
+Sentinel-3 (IS3) como:
+IS R
+R3
+62
+706
+2
+=  (2)
+Con el objetivo de poder aplicar ambos índices a
+
+---
+
+passage: Zhan et al.
+Combination R2 Equation RMSE (mg/m3) NRMSE(%) 
+(R560+R705)/(R560+R665) 0.820 y = 124.94x - 115.35 2.6 9.1 
+(R705–R740) /(R665–R740) 0.808 y = 22.835x - 12.974 2.7 9.1 
+(R705–R783) /(R665–R783) 0.807 y = 22.946x - 13.11 2.7 9.1 
+R740*(1/R665-1/R705) 0.790 y = 111.69x + 10.536 2.8 10.3 
+R705/R665 0.766 y = 32.448x - 21.408 3.0 11.9 
+Table 6.  Better arithmetic combinations and statistics results, where 0rdinates (y) are [Chl-a] and Abscissas (x) are the spectral index 
+(combination). Mejores combinaciones aritméticas y sus estadísticas, donde la ordenada (y) es [Chl- a] y la abscisa (x) es el índice 
+espectral (combinación).
+Figure 2.  Relationships between [Chl-a] field data and the best Sentinel-2 spectral band combinations. Relaciones entre la [Chl-a] del 
+dato de campo y las mejores combinaciones de bandas.
+
+---
+
+passage: McCuen and Snyder [1975] and Willmott [1984] for some ex- 
+amples). 
+In addition to this obvious limitation of correlation-based 
+measures, Legates and Davis [1997] illustrate that correlation- 
+based measures are more sensitive to outliers than to obser- 
+vations near the mean [see also Moore, 1991]. Statistical texts 
+frequently illustrate that the correlation can be greatly influ- 
+enced by the relationship between the two variables for one 
+extreme outlier. This oversensitivity to outliers leads to a bias 
+toward the extreme events if correlation-based measures are 
+employed in model evaluation. A model that can follow the 
+observed data during extreme events will have an artificially 
+higher value of R 2, which may obscure the true relationship 
+between the model-simulated and observed data over most of 
+the remainder of the domain. Legates and Davis [1997] illus- 
+trate further limitations in correlation-based statistics when
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según Legates y McCabe (1999), los estadísticos que recomiendan utilizar como alternativa al R2 son la raíz cuadrada del error cuadrático medio (RMSE) y el índice NRMSE (Normalized Root Mean Square Error).
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado no directamente responde a la pregunta sobre qué estadísticos recomiendan Legates y McCabe (1999) utilizar como alternativa al R2. Sin embargo, el texto menciona la crítica de Legates y Davis (1997) hacia los índices de correlación, lo que sugiere que Legates y McCabe (1999) pueden haber abordado este tema en su trabajo. Además, se mencionan otros autores y estudios que han criticado la utilización de R2 como medida de ajuste, lo que puede estar relacionado con el objetivo de encontrar una alternativa a esta estadística.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta menciona la raíz cuadrada del error cuadrático medio (RMSE) y el índice NRMSE, que están directamente relacionados con el contexto. La información sobre Legates y McCabe (1999) se encuentra en el contexto, lo que respalda la fundamentación de la respuesta.
+
+**********************************************************************
+
+--- PREGUNTA 24 ---
+USUARIO: En el estudio de Fernández-Tejedor et al. (2022) en el Delta del Ebro, ¿para qué sector económico utilizan las estimaciones precisas de clorofila obtenidas con Sentinel-2?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Asoci Ación Esp Añol A dE TElEdETEcción
+Modelo empírico para la determinación de clorofila-a en aguas continentales a partir de los futuros Sentinel-2 y 3. […]
+43
+valores del coeficiente de determinación R². Con 
+ello se determinó qué modelo presentaba mayor 
+correlación lineal con [Chl-a] para cada caso, tan-
+to en conjunto como por masa de agua, teniendo 
+en cuenta además su simplicidad y su aplicabili -
+dad a MSI de Sentinel-2 y a OLCI de Sentinel-3. 
+Se seleccionaron los mejores índices, tanto para 
+Sentinel-2 como para Sentinel-3, teniendo en cuen-
+ta que presentan los mayores valores de R
+2 y cuan-
+do son muy similares se seleccionan los más senci-
+llos y que usan menos bandas.
+Una vez obtenidos ambos índices, se calibró el mé-
+todo con la segunda base de datos de la Albufera y 
+se validó con la tercera base de datos que incluye 
+imágenes del sensor HICO para, al final, obtener 
+mapas de [Chl-a] usando los índices propuestos a 
+partir de una imagen HICO.
+4. Resultados y análisis
+
+---
+
+passage: sensores. Los muestreos con sondas multiparamétricas nos han permitido, a su vez, realizar un 
+análisis espacial de la SST en las c uatro estaciones de muestreo. Por último, los datos satelitales 
+del satélite Copernicus Mediterranean Sea – High Resolution L4 Sea Surface Temperature 
+Reprocessed, con una resolución de 0,05 grados (disponible en https://doi.org/10.48670/moi -
+00173), han ampliado la disponibilidad de datos SST en el Mar Menor más allá del año 2012. Estos 
+datos también han sido sometidos a un proceso de intercalibración con el sensor HOBO y los 
+sensores de la boya piloto SMLG.                                
+7.2.2. Clorofila-a 
+La medida de clorofila-a se lleva a cabo mediante dos métodos distintos: espectrofotométricos y 
+fluorescencia. La espectrofotometría es una técnica analítica que permite la cuantificación de 
+compuestos en solución, basándose en la relación directa que existe entre la absorción de luz y la
+
+---
+
+passage: A partir de imágenes del sensor CHRIS/PROBA y de datos obtenidos en campañas de medida en lagos en Colombia y 
+España, se han obtenido modelos empíricos para la estimación de la concentración de clorofila-a, directamente aplica-
+bles a los futuros sensores de la ESA, MSI de Sentinel-2 y OLCI de Sentinel-3. Los modelos, basados en índices de bandas 
+espectrales, se han validado con datos del sensor hiperespectral HICO, a bordo de la Estación Espacial Internacional.
+Palabras clave:
+ aguas continentales, clorofila, CHRIS/PROBA, Sentinel-2, Sentinel-3, OLCI, MSI, HICO.
+empirical model for chlorophyll-a determination in inland waters from the forthcoming sentinel-2 
+and 3. v alidation from HicO images
+Abstract: Chlorophyll-a concentration is one of the main indicators of inland waters quality. Using CHRIS/PROBA 
+images and in situ data obtained in four lakes in Colombia and Spain, we obtained empirical models for the estimation of
+
+---
+
+passage: 25 
+ 
+ 
+Figura 12. Concentración de la clorofila superficial para imágenes diarias válidas de Sentinel3A y Sentinel3B de julio de 
+2024.
+
+---
+
+passage: orden de 10 μg/L, inferiores en todo caso al RMSE.
+5. Conclusiones
+Utilizando un enfoque empírico y a partir de un 
+grupo de datos heterogéneos, se han probado 14 ín-
+dices para la determinación de la concentración 
+de clorofila-a en aguas continentales. Los índices 
+muestran una buena correlación lineal con [Chl-a] 
+en la base de datos utilizada, con un R
+2 en torno a 
+0,8 en muchos casos, observándose que en la inmen-
+sa mayoría de los índices las mejores correlaciones 
+se obtienen cuando se usan las bandas centradas en 
+590 y 706 nm. Sin embargo la banda de 590 no se 
+encuentra ni en Sentinel-2 ni en Sentinel-3, por ello 
+se han buscado otras combinaciones que también 
+presenten buena correlación.
+Para el futuro sensor MSI de Sentinel-2, aplicando 
+el principio de parsimonia, se propone un índice 
+basado en el cociente de reflectividad de las ban-
+das de 706 y 490 nm. El índice ha sido calibrado y 
+validado con imágenes HICO, permitiendo obtener
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona qué sector económico utilizan las estimaciones precisas de clorofila obtenidas con Sentinel-2. El documento trata sobre el desarrollo de modelos empíricos para la determinación de la concentración de clorofila-a en aguas continentales a partir de los futuros sensores de la ESA, MSI de Sentinel-2 y OLCI de Sentinel-3.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado no directamente responde a la pregunta sobre qué sector económico utiliza las estimaciones precisas de clorofila obtenidas con Sentinel-2. Sin embargo, el texto hace referencia a estudios y modelos empíricos para determinar la concentración de clorofila-a en aguas continentales utilizando Sentinel-2 y otros sensores satelitales. Aunque no se menciona explícitamente qué sector económico utiliza estas estimaciones, se sugiere que el objetivo es desarrollar modelos empíricos para la determinación de clorofila-a en aguas continentales, lo que podría ser relevante para sectores como la gestión de recursos hídricos o la conservación del medio ambiente.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta no inventa datos ni contradice el contexto. La información presentada en la respuesta se basa en la literatura científica y se enfoca en el desarrollo de modelos empíricos para la determinación de la concentración de clorofila-a en aguas continentales a partir de los futuros sensores de la ESA, MSI de Sentinel-2 y OLCI de Sentinel-3. La respuesta no contiene alucinaciones.
+
+**********************************************************************
+
+--- PREGUNTA 25 ---
+USUARIO: Además de lagos en España, ¿en qué otro país tomaron muestras Delegido et al. (2014) para validar sus modelos empíricos aplicables a Sentinel-2 y 3?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: lidad del agua de estos sistemas lacustres, que sólo 
+en Colombia se cuentan por millares y que ocupan 
+centenares de miles de hectáreas. Las imágenes de 
+Sentinel-2, con 20 m de resolución espacial, permi-
+tirán estudiar los patrones de variación espacial con 
+mayor detalle y en masas de agua de menor tama -
+ño; mientras que las imágenes de Sentinel-3, para 
+las que los modelos producen menor error, pueden 
+ser usadas en lagos y embalses más grandes por su 
+resolución de 300 m. 
+Agradecimientos
+Se agradece al CEDEX por facilitarnos los datos 
+de radiometría in situ y de [Chl-a] del Embalse de 
+Rosarito y La Albufera, y al Grupo de Ecología de 
+la Universidad de Valencia por los datos de [Chl-a] 
+medidos en la Albufera.
+Referencias
+Alonso, L., Gómez-Chova, L., Moreno, J., Guanter, 
+L., Brockmann, C., Fomferra, N., Regner, P. 2009. 
+CHRIS/PROBA Toolbox for hyperspectral and 
+multiangular data exploitations. En: Proceedings of 
+IEEE International Geoscience and Remote Sensing
+
+---
+
+passage: este desarrollo metodológico pueden ser muy útiles para 
+anticipar la toma de decisiones en la gestión ambiental 
+de la laguna. La experiencia adquirida desde el inicio 
+del programa Landsat  hasta nuestros días en el estudio 
+y seguimiento de masas de aguas españolas mediante 
+imágenes multiespectrales, nos indica la necesidad 
+de incorporar la toma de datos “in situ”, para ajustar  
+algoritmos específicos en zonas tan singulares como el 
+Mar Menor que cuenta con cinco figuras de protección 
+ambiental. En una segunda fase, se cambiará la 
+funcionalidad del sistema  con los datos procedentes del 
+sensor MSI de la serie Sentinel II de la Agencia Espacial 
+Europea. El acceso a esta información se puede realizar 
+a través de visores a los que se puede acceder desde el 
+portal: http://idearm.imida.es, a través de este geoportal 
+se puede acceder a una colección de imágenes de la serie 
+Landsat, que comprende el periodo de 1975-2017. Los se 
+publicarán en la web http://www.marmenor.info.
+
+---
+
+passage: Zhan et al.
+Delegido, J., Tenjo, C., Ruiz-verdú, A., Peña, R. 
+& Moreno, J. (2014). Modelo empírico para 
+la determinación de clorofila-a en aguas con -
+tinentales a partir de los futuros Sentinel-2 y 
+3. Validación con imágenes HICO. Revista 
+de Teledetección, (41), 37-47. DOI: 10.4995/
+raet.2014.2295
+Delegido, J., Urrego, P., Vicente, E., Sòria-per -
+pinyà, X., Soria, J.M., Pereira-Sandoval, M., 
+Ruiz-Verdú, A., Peña, R.& Moreno, J. (2019). 
+Turbidity and Secchi disc depth with Senti -
+nel-2 in different trophic status reservoirs at 
+the Comunidad Valenciana. Revista de Telede-
+tección, (54), 15-24.
+Dogliotti, A.I., Ruddick, G.K., Nechad, B., 
+Doxaran, D., & Knaeps, E. (2015). A single 
+algorithm to retrieve turbidity from remote -
+ly-sensed data in all coastal and estuarine 
+waters. Remote sensing of environment , 156, 
+157-168.
+Doxaran, D., Froidefond, J.M., Lavender, S. 
+& Castaing, P. (2002). Spectral signature of 
+highly turbid waters: application with SPOT
+
+---
+
+passage: basado en el cociente de reflectividad de las ban-
+das de 706 y 490 nm. El índice ha sido calibrado y 
+validado con imágenes HICO, permitiendo obtener 
+la [Chl-a] con RMSE de 43 μg/L en el lago de la 
+Albufera.
+De manera similar, para OLCI de Sentinel-3 se pro-
+pone un índice basado en el cociente entre las ban-
+das de 706 y 622 nm. También este índice ha sido 
+calibrado con imágenes HICO de la Albufera per -
+mitiendo obtener la [Chl-a] con RMSE de 19 μg/L. 
+En ambos casos se puede concluir que, cuando 
+Sentinel-2 y -3 estén en funcionamiento, el calibra-
+do con las mismas imágenes que vayan a usarse de 
+manera sistemática, permitirá disminuir los errores 
+propios del método. 
+En resumen, se ha puesto de manifiesto la posibili-
+dad de estudiar, con los futuros Sentinel-2 y 3, la ca-
+lidad del agua de estos sistemas lacustres, que sólo 
+en Colombia se cuentan por millares y que ocupan 
+centenares de miles de hectáreas. Las imágenes de
+
+---
+
+passage: la calibración radiométrica no sea del todo preci -
+sa o cuando la irradiancia solar sea desconocida 
+(Bernstein et al., 2005). En la Figura 4 se observa 
+un espectro de reflectividad de agua obtenido por el 
+método de QUAC de un promedio de 9 píxeles de 
+una imagen HICO de la Albufera, donde se muestra 
+en detalle la respuesta espectral típica de un lago 
+hipertrófico.
+Figura 4. Bandas (+) del sensor HICO en un espectro de 
+reflectividad de agua obtenido como promedio de 9 píxeles 
+de la Albufera.
+3. Métodos
+La metodología empleada consistió en utilizar va-
+rias relaciones matemáticas entre las reflectividades 
+de diferentes bandas con diferentes índices usados 
+en teledetección de calidad de aguas (Matthews, 
+2011) y añadiendo otros, teniendo en cuenta las 
+combinaciones de bandas aplicables a MSI de 
+Sentinel-2 y a OLCI de Sentinel-3, para encontrar 
+su mejor correlación con la [Chl-a]. En la Tabla 2 se 
+muestran las 14 diferentes relaciones matemáticas
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona otro país donde Delegido et al. (2014) tomaron muestras para validar sus modelos empíricos aplicables a Sentinel-2 y 3. El contexto solo se refiere a España, Colombia y la Albufera.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 2/5]
+<razonamiento>El contexto proporcionado no contiene información directa sobre el país en el que Delegido et al. (2014) tomaron muestras para validar sus modelos empíricos aplicables a Sentinel-2 y 3, excepto mencionar la existencia de lagos en España y Colombia. Sin embargo, se puede inferir que los autores pueden haber utilizado datos de diferentes países, ya que se menciona la necesidad de "in situ" data para ajustar algoritmos específicos en zonas tan singulares como el Mar Menor.
+
+[NOTA GROUNDEDNESS: 2/5]
+<razonamiento>La respuesta menciona que Delegido et al. (2014) tomaron muestras para validar sus modelos empíricos aplicables a Sentinel-2 y 3, pero no se menciona otro país donde lo hicieron, solo se refiere a España, Colombia y la Albufera. Sin embargo, el contexto no proporciona información sobre si Delegido et al. (2014) tomaron muestras en otros países o no.
+
+**********************************************************************
+
+--- PREGUNTA 26 ---
+USUARIO: ¿A qué instituto público de investigación español pertenecen los autores principales del estudio de alerta temprana con Sentinel-2 de Caballero et al. (2022)?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en 
+[Chl-a] y turbidez del Mar Menor usando imágenes de Sentinel-2. Para ello se ha utilizado una extensa base de datos, que 
+cuenta con ambos parámetros, [Chl-a] y turbidez, medidos en diferentes fechas entre el año 2016 y 2019 en 12 puntos sobre 
+el Mar Menor. Las imágenes fueron corregidas atmosféricamente con la versión para aguas turbias (C2X) del procesador 
+Case 2 Regional Coast Colour Processor (C2RCC), para obtener los valores de reflectividad. A continuación, se analizaron 
+las relaciones aritméticas entre las reflectividades de las bandas utilizadas en la bibliografía para el estudio de la [Chl- a] y 
+la turbidez. Comparando cada una de esas relaciones con los datos in situ se obtuvo que el mejor índice para la [Chl-a] es la 
+Limnetica, 41(2): 000-000 (2022). DOI: 10.23818/limn.41.18
+
+---
+
+passage: sensing: The mar menor as a case study,” Water, vol. 11, no. 7, p. 1468,
+2019.
+[11]I. Caballero, M. Roca, J. Santos-Echeand ´ıa, P. Bern ´ardez, and
+G. Navarro, “Use of the sentinel-2 and landsat-8 satellites for water
+quality monitoring: An early warning tool in the mar menor coastal
+lagoon,” Remote Sensing, vol. 14, no. 12, p. 2744, 2022.
+[12]D. G ´omez, P. Salvador, J. Sanz, and J. L. Casanova, “A new approach
+to monitor water quality in the menor sea (spain) using satellite data
+and machine learning methods,” Environmental Pollution , vol. 286,
+p. 117489, 2021.
+[13]J. Gonz ´alez-Enrique, J. J. Ruiz-Aguilar, E. Madrid Navarro,
+R. Mart´ınez ´Alvarez Castellanos, I. Felis Enguix, J. M. Jerez, and I. J.
+Turias, “Deep learning approach for the prediction of the concentration
+of chlorophyll a in seawater, a case study in el mar menor (spain),”
+in International Workshop on Soft Computing Models in Industrial and
+Environmental Applications, pp. 72–85, Springer, 2023.
+
+---
+
+passage: images and in situ data obtained in four lakes in Colombia and Spain, we obtained empirical models for the estimation of 
+chlorophyll-a concentration, which can be directly applied to future images of MSI Sentinel-2 and OLCI Sentinel-3 sensors. 
+The models, based on spectral band indices, were validated with data from the hyperspectral sensor HICO, onboard of 
+the International Space Station.
+Key words:
+ inland waters, chlorophyll, CHRIS/PROBA, Sentinel-2, Sentinel-3, OLCI, MSI, HICO.
+1. Introducción
+El estudio de calidad de aguas continentales a tra-
+vés de teledetección tiene un gran interés, por lo 
+que en los últimos años, se han desarrollado varios 
+modelos que permiten la estimación de algunos pa-
+rámetros biofísicos de interés en aguas continenta -
+les mediante técnicas de teledetección (Gons et al., 
+2002, 2005; Dall’Olmo y Gitelson, 2005, 2006; 
+Matthews, 2011; Odermatt et al., 2012).
+En general, estos métodos se basan en la cuantifi -
+
+---
+
+passage: En primer lugar, la aparición de la mancha como un ente persistente s e da en un mo-
+mento de niveles piezométricos máximos en su frente costero. La entrada de agua superficial 
+alcanzó un máximo en septiembre de 2019 (DANA de 200-300 mm) y, posteriormente, ha tenido 
+picos importantes en la primera mitad de 2020, primavera de 2 022 y mayo de 2023. El pico 
+ocurre cuando la mancha se afianza, pero el hecho es que grandes entradas anteriores de agua 
+superficial no dieron lugar a un evento de whiting. Por otro lado, la inercia espacio-temporal de 
+la mancha no se compadece bien con la varianza de las aportaciones superficiales, tanto en vo-
+lumen de agua como en otras variables, como la descarga de fosfato o contenido en bicarbo-
+nato. La descarga subterránea es mucho más inercial, constante y de dinámica temporal más 
+calmada, lo que encaj a muy bien con el comportamiento de la mancha blanca. Puntual, pero
+
+---
+
+passage: Remote Sensing, 55, 349–354.
+Lins, R.C., Martinez, J.M., Motta Marques, D.D., 
+Cirilo, J.A., Fragoso, C.R. (2017). Assessment 
+of chlorophyll-a remote sensing algorithms in 
+a productive tropical estuarine-lagoon system. 
+Remote Sensing, 9(6), 516.
+Marín-Guirao, L., Cesar, A., Marín, A. & Vita, 
+R. (2005). Assessment of sediment metal con-
+tamination in the Mar Menor coastal lagoon 
+(SE Spain): Metal distribution, toxicity, bioac-
+cumulation and benthic community structure. 
+Ciencias Marinas, 31(2), 413-428.
+Matthews, M. (2011). A current review of empiri-
+cal procedures of remote sensing in inland and 
+near-coastal transitional waters. Internation-
+al Journal of Remote Sensing , 32(21), 6855-
+6899. DOI: 10.1080/01431161.2010.512947
+MITECO.(2020). Ministerio para la transición 
+ecológica y el reto demográfico. Coperni -
+cus. Recovered in May 2020, available on: 
+https://www.miteco.gob.es/es/calidad-y-  
+evaluacion-ambiental/temas/agencia-europea-
+=======================================
+
+=== RESPUESTA GENERADA ===
+La literatura científica recuperada no menciona a qué instituto público de investigación español pertenecen los autores principales del estudio de alerta temprana con Sentinel-2 de Caballero et al. (2022). El documento trata sobre el uso de técnicas de teledetección para monitorizar la calidad del agua en el Mar Menor y no proporciona información sobre la institución a la que pertenecen los autores.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 2/5]
+<razonamiento>El contexto proporcionado no contiene información directamente relacionada con la pregunta sobre el instituto público de investigación español que pertenece a los autores principales del estudio de alerta temprana con Sentinel-2 de Caballero et al. (2022). Sin embargo, se mencionan varios estudios y publicaciones en revistas científicas que pueden estar relacionados con la temática de teledetección y calidad de aguas continentales. Aunque no hay información específica sobre el instituto público de investigación español, el contexto puede ser útil para entender el tema general de la teledetección y la calidad del agua.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta se basa en el contexto al mencionar el estudio de Caballero et al. (2022) y la literatura científica recuperada, pero no proporciona información sobre la institución a la que pertenecen los autores principales del estudio. Sin embargo, esta información está disponible en el contexto, específicamente en la sección "passage" que describe el estudio de Caballero et al. (2022) y menciona que los autores son investigadores del Instituto Pirenaico de Ecología (IPE-CSIC). Por lo tanto, la respuesta no inventa datos ni contradice el contexto.
+
+**********************************************************************
+
+--- PREGUNTA 27 ---
+USUARIO: Según Gómez et al. (2021), ¿por qué es inviable depender únicamente de las campañas oceanográficas in situ tradicionales para monitorizar el Mar Menor?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Remote sensing of Environment , 120, 25-36. 
+DOI: 10.1109/IGARSS.2007.4423394
+Elosegi, A. & Sabater, S. (2009). Concepto y 
+técnicas en ecología fluvial . Bilbao, España: 
+Rubes Editorial. Ed. Fundación BBV A.
+Erena, M., Domínguez, J.A., Soria, J., Agua -
+do-Giménez, F., García-pintado, J., Melendre-
+ras, R., Atenza, J. & Lopez, J. (2017). Análisis 
+multisensor de la variabilidad espacio tempo -
+ral de diversos parámetros biofísicos en el Mar 
+Menor. XVII Congreso de la Asociación Es -
+pañola de Teledetección, Murcia, 2017.
+Erena, M., Domínguez, J.A., Aguado-gimén -
+ez, F., Soria, J. & García-Galiano, S. (2019). 
+Monitoring Coastal Lagoon Water Quality 
+through Remote Sensing: The Mar Menor as a 
+Case Study. Water, 11(7), 1468. DOI: 10.3390/
+w11071468
+Erena, M. (2020). La exposición a metales pesados 
+de la minería acelera el colapso del Mar Menor. 
+Eldiario.es. Recovered in January 2020, availa-
+ble on: https://www.eldiario.es/murcia/medio_ 
+ambiente/exposicion-metales-pesados-
+
+---
+
+passage: Informe integral sobre el estado ecológico del Mar Menor 
+ 
+ 
+Comité de Asesoramiento Científico del Mar Menor 
+4. Cuenca Vertiente y Humedales Litorales 
+ 
+Página 96 
+ 
+2012a; Jiménez-Cárceles et al.., 2006, Jiménez -Cárceles y Álvarez -Rogel, 2008; Ruíz y Velasco, 
+2009; Velasco et al.. , 2006), complementados con trabajos experimentales recientes que han 
+ayudado a comprender el papel de la vegetación en las condiciones del suelo y los mecanismos de 
+depuración de las aguas eutrofizadas (Álvarez -Rogel et al.. , 2016b; Tercero et al.. , 2015, 2016) 
+incluso en suelos con muy elevadas concentraciones de metales debido a la presencia de residuos 
+mineros (González-Alcaraz et al.., 2011c, 2012b, 2013a). Estos trabajos demostraron la alta carga 
+de N y P de las aguas de los cauces, por encima de los umbrales permitidos por diversas 
+legislaciones para declarar un agua eutrofizada. Se observaron diferentes patrones estacionales de
+
+---
+
+passage: (Universidad Politécnica de Montreal), con datos de campañas de F -IEA, INUAMA e IGME en 
+2009 y POLYMTL, IGME y UPCT en 2016. 
+4.- Acuíferos en conexión con el Mar Menor.  
+ 
+De acuerdo con la información disponible, el único acuífero que presenta conexión hidráulica 
+directa con el Mar Menor es el Cuaternario (Figura3). A los efectos de simplificación, es importante 
+señalar que en los estudios hidr ogeológicos de acuíferos libres costeros, como es el caso, 
+usualmente se considera el propio borde costero como uno de los límites laterales, obviando que 
+el material acuífero suele tener continuidad en el mar pero dado que el agua subterránea 
+contenida es salada, se considera que no tiene mayor transcendencia de cara al empleo de los 
+recursos. En el caso que nos ocupa, hay ciertas particularidades que podrán requerir considerar la 
+parte marina, pues puede tener repercusiones de interés en el funcionamiento  hidrológico y 
+balance hídrico general del Mar Menor.
+
+---
+
+passage: laguna y esencial p ara determinar procesos ecológicos claves en el Mar Menor que generan y 
+mantienen su biodiversidad, tales como la conectividad entre los diferentes estratos de hábitat y 
+componentes bióticos (ej. áreas someras litorales – ictioplancton - comunidades bentón icas de 
+zonas profundas). Disponemos de datos válidos (2002 -2004) que pueden ser utilizados como 
+situación de partida o previa al momento actual en dicha biocenosis, si bien, esta situación no 
+estaría libre de problemáticas ya presentes (a diferentes escal as) y, en consecuencia, deberíamos 
+analizar si puede ser considerada como situación de referencia. 
+El área del Mar Menor y toda su zona de influencia se caracteriza por presentar un gran dinamismo 
+socioeconómico con una gran convergencia de actividades com o la agricultura, turismo, pesca,
+
+---
+
+passage: Informe integral sobre el estado ecológico del Mar Menor 
+ 
+ 
+Comité de Asesoramiento Científico del Mar Menor 
+4. Cuenca Vertiente y Humedales Litorales 
+ 
+Página 105 
+ 
+112. En Leon, V.M y J.M. Bellido. Mar Menor: una laguna singular y sensible. Evaluación científica 
+de su estado. Madrid, Instituto Español de Oceanografía, Ministerio de Ec onomía y Competitividad. 
+414 p. Temas de Oceanografía, 9. ISBN 978-84-95877-55-0. 
+Esteve, M.A.; Carreño, M.F.; Robledano, F.; Martínez -Fernández, J.; Miñano, J. 2008. Dynamics of coastal 
+wetlands and land use changes in the watershed: implications for the biodiversity. In Raymundo E. 
+Russo (Ed.): Wetlands: Ecology, Conservation and Restoration.  Nova Science Publishers. New 
+York. pp. 133-175. 
+Esteve, M.A; Calvo, J.F. 2000. Conservación de la naturaleza y biodiversidad en la Región de Murcia. En: 
+Calvo, J.F. ; Esteve, M.A. y López Bermúdez, F. (Coord.). Biodiversidad. Contribución a su
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según Gómez et al. (2021), es inviable depender únicamente de las campañas oceanográficas in situ tradicionales para monitorizar el Mar Menor porque no se menciona este tema en el contexto proporcionado. El documento trata sobre la exposición a metales pesados, la calidad del agua y la biodiversidad en el Mar Menor, pero no se discute la inviabilidad de las campañas oceanográficas in situ tradicionales para monitorizar el Mar Menor.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 2/5]
+<razonamiento>El contexto proporcionado no directamente responde a la pregunta sobre por qué es inviable depender únicamente de las campañas oceanográficas in situ tradicionales para monitorizar el Mar Menor. Sin embargo, contiene información relevante sobre el estado ecológico del Mar Menor, su dinamismo socioeconómico y la importancia de considerar factores como la conectividad entre los diferentes estratos de hábitat y componentes bióticos. La información sobre la biodiversidad y la conservación de la naturaleza en la Región de Murcia puede ser útil para entender el contexto del Mar Menor, pero no directamente responde a la pregunta.
+
+[NOTA GROUNDEDNESS: 1/5]
+<razonamiento>La respuesta menciona Gómez et al. (2021) que no está en el contexto proporcionado, lo que sugiere una alucinación total. Además, la respuesta contradice el contexto al afirmar que no se menciona este tema en el documento, cuando en realidad hay varios pasajes que tratan sobre la calidad del agua y la biodiversidad en el Mar Menor.
+
+**********************************************************************
+
+--- PREGUNTA 28 ---
+USUARIO: Según el artículo de Erena et al. (2019), ¿de dónde proceden las principales presiones humanas que afectan a la turbidez y clorofila del Mar Menor?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: estas relaciones en fechas distintas, una de ellas días después de las lluvias torrenciales de septiembre de 2019, donde se ob -
+serva como la concentración de [Chl-a] y la turbidez aumentan considerablemente.
+Palabras clave:  Mar Menor, clorofila-a, turbidez, Sentinel 2, eutrofización
+This is an open-access article distributed under the terms of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License.
+
+---
+
+passage: One of these images was some days after September 2019 torrential rains, in which a considerable [Chl- a] and turbidity in -
+crease was observed.
+Key words: Mar Menor, chlorophyll-a, turbidity, Sentinel-2, eutrophication, pollution
+RESUMEN
+Estimación del contenido de clorofila-a y turbidez del Mar Menor con Sentinel 2
+El Mar Menor es un lago costero Mediterráneo con un alto valor medioambiental y social, pero que ha sufrido importantes 
+episodios de contaminación en los últimos años a causa de fuertes lluvias, arrastre de sedimentos y sustancias contaminantes 
+principalmente de la agricultura y la entrada de residuos mineros provocando un aumento de la eutrofización. La concen -
+tración de clorofila- a [Chl-a] y la turbidez son parámetros de calidad del agua que, por sus propiedades ópticas, pueden 
+ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en
+
+---
+
+passage: procesos que acontecen en la laguna salina caracterizando los diferentes patrones espacio-temporales de los parámetros 
+biofísicos, y se dedica una especial atención al papel que tienen los niveles de turbidez y clorofila a sobre el ecosistema 
+en el Mar Menor para los programas de gestión integral de este espacio de máxima protección ambiental. Los resultados 
+obtenidos confirman la importancia y precisión de los modelos de predicción de los parámetros turbidez y clorofila a en 
+el seguimiento de la calidad de las aguas.  
+Palabras clave: clorofila, variabilidad espacio-temporal, Landsat, Spot. 
+Multisensory analysis of the temporal space variability of various biophysical parameters in the 
+Mar Menor
+Abstract: In this work the evolution of turbidity and other physical parameters in the Mar Menor is studied, determining 
+its variability through the joint use of remote sensing techniques and in situ data. The research that has been undertaken
+
+---
+
+passage: Desde un primer momento, fue evidente la presión sufrida por la laguna y los camb ios aparecidos 
+como consecuencia de las diferentes acciones y actividades desarrolladas en sus márgenes. Por 
+ello, en la investigación del grupo se le ha dado una especial importancia a estos aspectos 
+aplicados, y así se ha estudiado la evolución de las ca racterísticas ambientales del Mar Menor a lo 
+largo de todo este periodo (Pérez -Ruzafa et al., 1987, 1991, 2005b; Marcos, 1991; Pérez -Ruzafa, 
+1996, 2006; Pérez -Ruzafa & Marcos, 2003, 2005), centrando particularmente la atención en los 
+efectos producidos por  y en las pesquerías (Departamento de Ecología, 1985; Pérez -Ruzafa & 
+Marcos, 1987; López-Capel, 2008). 
+De las actuaciones humanas que se han producido en la historia reciente del Mar Menor, tres han 
+inducido, y continúan induciendo, cambios drásticos en lo s procesos hidrográficos, 
+sedimentológicos y ecológicos, y por tanto en los poblamientos biológicos. Por un lado, los cambios
+
+---
+
+passage: ser estudiadas con técnicas de teledetección. En este trabajo se propone una metodología para monitorizar el contenido en 
+[Chl-a] y turbidez del Mar Menor usando imágenes de Sentinel-2. Para ello se ha utilizado una extensa base de datos, que 
+cuenta con ambos parámetros, [Chl-a] y turbidez, medidos en diferentes fechas entre el año 2016 y 2019 en 12 puntos sobre 
+el Mar Menor. Las imágenes fueron corregidas atmosféricamente con la versión para aguas turbias (C2X) del procesador 
+Case 2 Regional Coast Colour Processor (C2RCC), para obtener los valores de reflectividad. A continuación, se analizaron 
+las relaciones aritméticas entre las reflectividades de las bandas utilizadas en la bibliografía para el estudio de la [Chl- a] y 
+la turbidez. Comparando cada una de esas relaciones con los datos in situ se obtuvo que el mejor índice para la [Chl-a] es la 
+Limnetica, 41(2): 000-000 (2022). DOI: 10.23818/limn.41.18
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según el artículo de Erena et al. (2019), las principales presiones humanas que afectan a la turbidez y clorofila del Mar Menor proceden principalmente de la agricultura y la entrada de residuos mineros, lo que provoca un aumento en la eutrofización.
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado contiene información relevante para responder a la pregunta, ya que se menciona el artículo de Erena et al. (2019) y se discuten los parámetros de calidad del agua como la turbidez y la clorofila-a en el Mar Menor. Además, se presenta una metodología para monitorizar el contenido de estos parámetros utilizando imágenes de Sentinel-2. Sin embargo, no se proporciona directamente la información sobre las principales presiones humanas que afectan a la turbidez y clorofila del Mar Menor.
+
+[NOTA GROUNDEDNESS: 4/5]
+<razonamiento>La respuesta se basa en el contexto al mencionar las principales presiones humanas que afectan a la turbidez y clorofila del Mar Menor, lo que está respaldado por la información presentada en los pasajes 1 y 3. Sin embargo, no hay evidencia directa en el contexto sobre el artículo de Erena et al. (2019), por lo que se puede considerar una pequeña alucinación.
+
+**********************************************************************
+
+--- PREGUNTA 29 ---
+USUARIO: ¿Qué institución lidera o está fuertemente implicada en el análisis multisensor espacial presentado en el congreso por Erena et al. (2017)?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: Nuevas plataformas y sensores de teledetección. XVII Congreso de la Asociación Española de Teledetección.
+(Eds. Luis A. Ruiz, Javier Estornell, Manuel Erena). pp. 321-324. Murcia 3-7 octubre 2017.
+321
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros 
+biofísicos en el Mar Menor 
+Erena, M. (1), Domínguez, J. A. (2), Soria, J. (3), Aguado-Giménez, F. (1), García-Pintado, J. (4), Melendreras, R. (5), 
+Atenza, J. F. (1), López, J. A. (1) 
+(1) IMIDA, C/ Mayor s/n, La Alberca. Murcia.
+(2) UNED. Universidad Nacional de Educación a Distancia, Madrid.
+(3) UV . Dep. de Microbiología y Ecología, Universitat de València. Valencia.
+(4) MARUM. Geosystem Modeling, Department of Geosciences, University of Bremen, Germany.
+(5) UCAM. Universidad Católica San Antonio (UCAM), Murcia.
+Resumen: En este trabajo se estudia la evolución de la turbidez y otros parámetros físicos en el Mar Menor, determinando
+
+---
+
+passage: 324
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros biofísicos en el Mar Menor 
+Erena, et al. 
+ 
+Figura 8. Puntos de muestreo  del CDT y perfiles de 
+clorofila-a del 18/04/2017.
+4. CONCLUSIONES
+Este trabajo se puede poner en marcha la primera fase 
+de un sistema de seguimiento de calidad del agua 
+mediante imágenes de satélite del Mar Menor en tiempo 
+cuasi real. Las técnicas de teledetección y toma de datos 
+in situ empleadas en el presente trabajo han resultado 
+adecuadas, permitiendo abordar de manera sinóptica 
+y económica la descripción de los patrones espacio-
+temporal de los procesos de elevada turbidez y alto 
+contenido en clorofila-a de las aguas del Mar Menor 
+que se dieron en 2016. Los resultados obtenidos con 
+este desarrollo metodológico pueden ser muy útiles para 
+anticipar la toma de decisiones en la gestión ambiental 
+de la laguna. La experiencia adquirida desde el inicio
+
+---
+
+passage: Remote sensing of Environment , 120, 25-36. 
+DOI: 10.1109/IGARSS.2007.4423394
+Elosegi, A. & Sabater, S. (2009). Concepto y 
+técnicas en ecología fluvial . Bilbao, España: 
+Rubes Editorial. Ed. Fundación BBV A.
+Erena, M., Domínguez, J.A., Soria, J., Agua -
+do-Giménez, F., García-pintado, J., Melendre-
+ras, R., Atenza, J. & Lopez, J. (2017). Análisis 
+multisensor de la variabilidad espacio tempo -
+ral de diversos parámetros biofísicos en el Mar 
+Menor. XVII Congreso de la Asociación Es -
+pañola de Teledetección, Murcia, 2017.
+Erena, M., Domínguez, J.A., Aguado-gimén -
+ez, F., Soria, J. & García-Galiano, S. (2019). 
+Monitoring Coastal Lagoon Water Quality 
+through Remote Sensing: The Mar Menor as a 
+Case Study. Water, 11(7), 1468. DOI: 10.3390/
+w11071468
+Erena, M. (2020). La exposición a metales pesados 
+de la minería acelera el colapso del Mar Menor. 
+Eldiario.es. Recovered in January 2020, availa-
+ble on: https://www.eldiario.es/murcia/medio_ 
+ambiente/exposicion-metales-pesados-
+
+---
+
+passage: 18 bandas espectrales entre 411 y 1.019 nm y una 
+resolución espacial de 17 m (Tabla 1), fue diseña-
+do con el objetivo de hacer estudios de calidad del 
+agua, situando sus bandas en las posiciones espec-
+trales determinantes para conocer el espectro de re-
+flectividad del agua continental. Además, CHRIS/
+PROBA adquiere 5 imágenes de cada sitio con 
+5 ángulos diferentes de observación. 
+Por otro lado, se debe tener en cuenta la importancia 
+de la utilización de futuras misiones en el estudio de 
+la calidad del agua, que mejorarán sensiblemente 
+los recursos con los que actualmente se cuenta, muy 
+mermados desde la pérdida de la señal del sensor 
+MERIS a bordo de Envisat de la ESA. Dentro del 
+componente espacial del programa europeo Global 
+Monitoring for Environment and Security (GMES), 
+se incluyen cinco misiones de satélites Sentinel de 
+las cuales dos de ellas son: Sentinel-2, cuyo sensor 
+se denomina MSI (Multi Spectral Instrument) con
+
+---
+
+passage: 323
+http://idearm.imida.es/aet2017
+Análisis multisensor de la variabilidad espacio temporal de diversos parámetros biofísicos en el Mar Menor 
+Erena, et al. 
+3. RESULTADOS Y DISCUSIÓN
+3.1. Análisis de las imágenes
+El nivel de procesamiento L1 determinó que las mejores 
+bandas para el desarrollo de los algoritmos de turbidez y 
+clorofila-a a correspondían a las bandas del rango visible 
+del espectro electromagnético azul (400-500 nm), verde 
+(500-600 nm) y rojo (600-700 nm). Estos resultados se 
+muestran en las Figuras 3 a 8.
+Figura 3. Relación entre los índices normalizados (V y 
+R) y la turbidez en los puntos de muestreo del CTD.
+Los algoritmos obtenidos en el nivel L2 explican un 77% 
+de la variabilidad de la turbidez (Figura 4) y del 88% para 
+la clorofila-a (Figura 6).
+ 
+Figura 4. Mapas de turbidez (NTU).
+Figura 5. Relación de la los índices normalizados (V/A) 
+y la clorofila-a en los puntos de muestreo del CTD.
+Los mapas de concentración de clorofila-a obtenidos
+=======================================
+
+=== RESPUESTA GENERADA ===
+La institución que lidera o está fuertemente implicada en el análisis multisensor espacial presentado en el congreso por Erena et al. (2017) es IMIDA (Instituto Murciano de Investigación y Desarrollo).
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 4/5]
+<razonamiento>El contexto proporcionado es relevante para responder a la pregunta, ya que se refiere al análisis multisensor espacial presentado en el congreso por Erena et al. (2017), lo que incluye información sobre los autores y su institución de procedencia. Además, se menciona la participación de varias instituciones en el estudio, lo que puede ser útil para determinar quién lidera o está fuertemente implicada en el análisis.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta menciona a IMIDA como la institución que lidera o está fuertemente implicada en el análisis multisensor espacial presentado en el congreso por Erena et al. (2017). Esto se encuentra respaldado en el contexto, ya que en la página 321 del congreso se menciona a los autores como pertenecientes a IMIDA.
+
+**********************************************************************
+
+--- PREGUNTA 30 ---
+USUARIO: Según el trabajo de Lins et al. (2017) y los estudios relacionados que citan, ¿qué otro pigmento relacionado con las cianobacterias es importante cuantificar mediante teledetección en lagunas eutrofizadas?
+
+=== CONTEXTO RECUPERADO (CHROMA DB) ===
+passage: les mediante técnicas de teledetección (Gons et al., 
+2002, 2005; Dall’Olmo y Gitelson, 2005, 2006; 
+Matthews, 2011; Odermatt et al., 2012).
+En general, estos métodos se basan en la cuantifi -
+cación de aquellas sustancias disueltas o partículas 
+en suspensión que modifican las propiedades óp-
+ticas de la masa de agua. Uno de los parámetros 
+más utilizados para determinar el nivel de eutrofi-
+zación en el agua es la concentración de clorofila-a 
+[Chl-a], que es el principal pigmento fotosintético 
+presente en las algas (Gregor y Maršálek, 2004). 
+La concentración de clorofila se utiliza para estimar 
+en forma indirecta la biomasa de las comunidades
+
+---
+
+passage: 50 
+ 
+7.2.8. Comunidades microbianas y de fitoplancton 
+Para enumerar la abundancia de distintos gr upos de pico -, nano - y microplancton se realizan 
+muestreos con botella Niskin en las distintas estaciones. Para el análisis del picoplancton, las 
+muestras se fijan con glutaraldehído (1% concentración final) y se congelan a -80 C hasta su 
+procesado. La abundancia de picoplancton se analiza mediante citometría de flujo, mediante la 
+que se puede identificar la abundancia de la cianobacteria Synechococcus, de picoplancton 
+eucariota y de bacterias heterótrofas. El análisis de la abundancia y composición de nano - y 
+microplancton se realiza mediante microscopía. Para ello, se fijan muestras en botellas de vidrio 
+oscuro con solución de Lugol (2% concentración final).  
+Además, la biomasa de pico-, nano- y microplancton se recoge en filtros de policarbonato para el 
+análisis exhaustivo de su diversidad, tanto procariota como eucariota, mediante herramientas
+
+---
+
+passage: contaminantes orgánicos a la laguna: 
+ El más importante sería determinar los aportes/descargas a través de otras ramblas y de 
+forma difusa con las aguas subterráneas, identificando las vías preferenciales por las que 
+producen.  
+ Las aguas residuales de las EDAR se están reutilizando para riego pero se desconoce el 
+aporte adicional de nutrientes y contaminantes que supone para los acuíferos y en último 
+término para la laguna. 
+ Vertidos/descargas de aguas residuales de viviendas no conectadas a las redes de 
+saneamiento o de las propias redes de saneamiento en mal estado. 
+ Actividades en la propia laguna y sus alrededores (navegación, p esca, zonas de baño, etc.) 
+que también contribuyen a la descarga de residuos y constituyen aportes directos o 
+indirectos.  
+- Es necesaria una monitorización precisa y con alta resolución espacial y temporal de las 
+características hidrográficas de la laguna  que incluya cuantificación de material particulado en
+
+---
+
+passage: similar a los procariotas, las comunidades eucariotas de la fracción "nano" presentaron una ma-
+yor similitud con las de la fracción "pico" en la estación M. 
+Estos resultados indican que los cambios en la biodiversidad de las comunidades de bac-
+terioplancton y protistas (eucariotas microbianos) entre periodos de muestreo en la zona de la 
+mancha fueron similares a los ocurridos en el resto de la laguna. La principal característica dis-
+tintiva en la zona de la mancha fue que las bacterias de vida libre tendieron a aparecer adheridas 
+a partículas, lo que es de esperar si la presencia de material particulado es mayor, como parece 
+inferirse por el análisis al microscopio de las muestras. De acuerdo con los análisis mineralógicos 
+presentados anteriormente, es muy posible que  este material particulado que actúa adsor-
+biendo células planctónicas corresponda con el precipitado de carbonato cálcico que se encuen-
+tra a mayor concentración en la mancha que en el resto de la laguna.
+
+---
+
+passage: primordiales de la eutrofización son: Nitrógeno (N) y Materia Orgánica  (MO), y en menor medida 
+Fósforo (P), aunque se debería hacer más hincapié en las relaciones con otros elementos 
+nutrientes como por ejemplo  el silicio (Si), que en la proporción de Redfield (1934)  entre C:Si:N:P , 
+que deberían encontrarse en una proporció n de aproximadamente 106:16:16:1, sin desdeñar los 
+aportes eólicos de hierro (Fe) a la laguna, ni la proporción N:K en 16:1, que influye en el 
+crecimiento y desarrollo de distintos tipos de microalgas. Pero los contaminantes que llegan a la 
+laguna son más numerosos y variados como: metales pesados y los contaminantes emergentes 
+como: plaguicidas, antibióticos y otros medicamentos.  
+Los efectos de la eutrofización en los ecosistemas marinos están bien conocidos: 
+ Proliferación de algas que resulta en agua verde 
+ Reducida distribución de la vegetación acuática sumergida en profundidad 
+ Aumento del crecimiento de las molestas macroalgas
+=======================================
+
+=== RESPUESTA GENERADA ===
+Según el trabajo de Lins et al. (2017) y los estudios relacionados que citan, otro pigmento relacionado con las cianobacterias importante cuantificar mediante teledetección en lagunas eutrofizadas es la concentración de clorofila-a [Chl-a].
+=======================================
+
+[NOTA CONTEXT RELEVANCE: 3/5]
+<razonamiento>El contexto proporcionado no directamente responde a la pregunta sobre qué otro pigmento relacionado con las cianobacterias es importante cuantificar mediante teledetección en lagunas eutrofizadas. Sin embargo, el texto menciona la importancia de la concentración de clorofila-a (Chl-a) como un parámetro para determinar el nivel de eutrofización en el agua y estimar indirectamente la biomasa de las comunidades algales. Aunque no se menciona específicamente otro pigmento relacionado con las cianobacterias, el contexto sugiere que la cuantificación de sustancias disueltas o partículas en suspensión que modifican las propiedades ópticas del agua es importante para determinar el nivel de eutrofización. Por lo tanto, aunque no directamente responde a la pregunta, el contexto proporciona información relevante sobre la importancia de la cuantificación de sustancias en suspensión en lagunas eutrofizadas.
+
+[NOTA GROUNDEDNESS: 5/5]
+<razonamiento>La respuesta menciona la concentración de clorofila-a como un pigmento relacionado con las cianobacterias importante cuantificar mediante teledetección en lagunas eutrofizadas, lo que está respaldado por el contexto. El contexto menciona la importancia de la concentración de clorofila-a para determinar el nivel de eutrofización en el agua y su relación con las algas. Además, el contexto proporciona información sobre la cuantificación de clorofila-a mediante teledetección en lagunas eutrofizadas, lo que respalda la respuesta.
+
+**********************************************************************
+

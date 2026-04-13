@@ -26,7 +26,7 @@ PROMPTS_POR_TIPO = {
     )
 }
 class Orquestador:
-    def __init__(self, ruta_csv, ruta_pdf, modelo="llama3"):
+    def __init__(self, ruta_csv, ruta_directorio_pdfs, modelo="llama3"):
         
         #DuckDB 
         if not os.path.exists(ruta_csv):
@@ -39,10 +39,8 @@ class Orquestador:
 
         # RAG
         self.rag_engine = GestorRAG()
-        self.rag_engine.ingestar(ruta_pdf)
+        self.rag_engine.ingestar(ruta_directorio_pdfs)
         print("Motor RAG: Listo (Base de datos vectorial cargada)")
-        
-        self.llm_clasificador = OllamaLLM(model=modelo, temperature=0.0)
         self.llm_generador = OllamaLLM(model=modelo, temperature=0.0)
 
     def clasificar_pregunta(self, pregunta):
@@ -71,11 +69,14 @@ class Orquestador:
         except Exception as e:
             return f"ERROR DESCONOCIDO EN SQL: {e}"
 
-    def ejecutar_RAG(self, pregunta_usuario):
+    def ejecutar_RAG(self, pregunta_usuario, k_relevantes=5, umbral=0.35):
 
-        print("\nConsultando PDFs con RAG para conseguir contextos teóricos...")
-        resultado = self.rag_engine.consultar(pregunta_usuario)
-        print("   -> Literatura recuperada correctamente.")
+        print(f"\nConsultando PDFs con RAG (K={k_relevantes}, Umbral={umbral})...")
+        resultado = self.rag_engine.consultar(pregunta_usuario, k_relevantes, umbral)
+        if isinstance(resultado, str):
+            print("  -> No se encontró contexto relevante.")
+        else:
+            print("  -> Literatura recuperada correctamente.")
         return resultado
     
     def ejecutar_pipeline(self, pregunta_usuario):
@@ -167,7 +168,7 @@ class Orquestador:
         return self.llm_generador.invoke(prompt)
 
 
-    def generar_rag_only(self, pregunta, resultado_rag):
+    def generar_rag_only(self, pregunta, resultado_rag, incluir_fuentes=True):
 
         if isinstance(resultado_rag, str):
             contexto = resultado_rag  # El mensaje de "No se encontró..."
@@ -191,12 +192,15 @@ class Orquestador:
             "Si el contexto no responde a la pregunta, di textualmente: "
             "'La literatura científica recuperada no menciona [lo que el usuario ha preguntado]. "
             "El documento trata sobre [de qué trata el contexto].'\n\n"
-            "4. Sé directo y académico. Responde en el mismo idioma de la pregunta."
+             "4. IGNORA BIBLIOGRAFÍA\n"
+            "Si algún fragmento del contexto es una lista de referencias bibliográficas "
+            "(contiene patrones como 'Autor et al., año', DOI o URLs), ignóralo completamente.\n\n"
+            "5. Sé directo y académico. Responde en el mismo idioma de la pregunta."
         )
 
         respuesta = self.llm_generador.invoke(prompt)
 
-        if fuentes:
+        if incluir_fuentes and fuentes:
             respuesta_final = respuesta + "\n\n---\nFuentes consultadas:\n"
             for fuente in fuentes:
                 respuesta_final += f"- {fuente}\n"
@@ -265,11 +269,11 @@ class Orquestador:
 if __name__ == "__main__":
 
     ruta_csv_real = "/home/ivan/Universidad/TFG/datos/AEMET_clean/MS_Torrepacheco1.csv"
-    ruta_pdf_real = "/home/ivan/Universidad/TFG/datos/Docs/Delegido et al_2014_Modelo empírico para la determinación de clorofila-a en aguas continentales a.pdf"
+    ruta_directorio_pdfs = "/home/ivan/Universidad/TFG/datos/Docs/"
     
     
     try:
-        app = Orquestador(ruta_csv_real, ruta_pdf_real)
+        app = Orquestador(ruta_csv_real, ruta_directorio_pdfs)
 
         while True:
             pregunta = input("\n¿Qué quieres saber de los datos? (o 'salir'): ")

@@ -1,0 +1,31 @@
+Pregunta,Context_Relevance_Score,Groundedness_Score
+"Según el estudio de Caballero et al., ¿qué satélites se proponen utilizar como herramienta de alerta temprana para la monitorización de la calidad del agua en el Mar Menor?",2,2
+¿Qué cuatro algoritmos de Machine Learning y Deep Learning evaluaron Gómez et al. (2021) para estimar el contenido de clorofila-a en el Mar Menor usando datos de Sentinel-2?,3,5
+"Según el artículo de Erena et al. (2019), ¿cuáles son las principales presiones humanas que sufre el frágil ecosistema del Mar Menor?",4,4
+¿Con qué sensor específico validaron Delegido et al. (2014) sus modelos empíricos de estimación de clorofila-a diseñados para los satélites Sentinel-2 y Sentinel-3?,4,2
+¿Qué parámetros biofísicos se relacionaron mediante el uso de datos in situ y técnicas de teledetección en el análisis multisensor de Erena et al. (2017)?,4,5
+"Según el informe del IEO-CSIC sobre la Mancha Blanca, ¿cuáles son las principales causas ambientales que originan este fenómeno en el Mar Menor?",4,3
+"¿A qué proyecto marco del Ministerio para la Transición Ecológica (MITERD) pertenece el estudio Origen, naturaleza, causas y consecuencias de la Mancha Blanca?",3,5
+"Según los perfiles CTD del informe de actualización del IEO-CSIC (octubre 2024), ¿se pueden publicar y difundir libremente los datos contenidos en el informe?",1,4
+"Según Jimeno-Sáez et al. (2020), ¿qué indicador biológico de eutrofización se modeliza en el Mar Menor utilizando algoritmos de Machine Learning?",4,5
+"¿Cuáles fueron los dos años en los que el Mar Menor sufrió crisis de eutrofización sin precedentes, según señalan Jimeno-Sáez et al. (2020)?",3,5
+"En la investigación de Giménez et al. (2024) sobre aguas someras, ¿qué tipo específico de arquitectura de Deep Learning destaca para procesar la información del satélite Sentinel-3?",1,5
+¿En qué programa espacial o servicio europeo se fundamenta el sistema de monitorización diaria de clorofila-a propuesto por Giménez et al. (2023)?,1,5
+¿Qué índice proponen específicamente Mishra y Mishra (2012) para estimar la clorofila-a en aguas productivas y turbias?,2,4
+"Según los ensayos de Mishra y Mishra (2012), ¿qué tipo de regresión o función matemática explicaba mejor la varianza del NDCI frente a la clorofila-a simulada?",1,5
+¿Qué banda espectral y qué umbral empírico proponen Katlane et al. (2024) en Sentinel-2 para enmascarar los píxeles de aguas poco profundas influenciados por el fondo?,1,3
+"Según Katlane et al. (2024), ¿cuál es la mejor banda proxy del satélite Sentinel-2 MSI para medir la turbidez del agua?",3,5
+¿Para qué sensor satelital concreto desarrollaron Doerffer y Schiller (2007) su algoritmo específico de aguas de Caso 2?,1,5
+¿Por qué resulta difícil la estimación remota de clorofila-a en estuarios turbios y productivos según el estudio de Lins et al. (2017)?,4,4
+"Según Pahlevan et al. (2020), ¿qué enfoque metodológico permite realizar extracciones continuas de clorofila-a integrando datos de Sentinel-2 y Sentinel-3?",2,5
+¿Qué tipo de estrategia general promueve el libro de Lillebø et al. (2015) para las lagunas costeras europeas?,1,5
+¿Cuál es el objetivo principal de integrar datos masivos heterogéneos según la investigación de López-Andreu et al. (2022) en el Mar Menor?,1,5
+"Según Legates y McCabe (1999), ¿por qué las medidas como el coeficiente de correlación (R2) son peligrosas para validar modelos hidrológicos?",1,5
+¿Qué estadísticos recomiendan Legates y McCabe (1999) utilizar como alternativa al R2?,1,5
+"En el estudio de Fernández-Tejedor et al. (2022) en el Delta del Ebro, ¿para qué sector económico utilizan las estimaciones precisas de clorofila obtenidas con Sentinel-2?",3,4
+"Además de lagos en España, ¿en qué otro país tomaron muestras Delegido et al. (2014) para validar sus modelos empíricos aplicables a Sentinel-2 y 3?",1,5
+¿A qué instituto público de investigación español pertenecen los autores principales del estudio de alerta temprana con Sentinel-2 de Caballero et al. (2022)?,1,5
+"Según Gómez et al. (2021), ¿por qué es inviable depender únicamente de las campañas oceanográficas in situ tradicionales para monitorizar el Mar Menor?",3,2
+"Según el artículo de Erena et al. (2019), ¿de dónde proceden las principales presiones humanas que afectan a la turbidez y clorofila del Mar Menor?",3,5
+¿Qué institución lidera o está fuertemente implicada en el análisis multisensor espacial presentado en el congreso por Erena et al. (2017)?,1,5
+"Según el trabajo de Lins et al. (2017) y los estudios relacionados que citan, ¿qué otro pigmento relacionado con las cianobacterias es importante cuantificar mediante teledetección en lagunas eutrofizadas?",3,5

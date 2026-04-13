@@ -2,7 +2,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import numpy as np
 
 MARGEN_EMPATE = 0.008
-TOP_K = 3
+TOP_K = 4
 class ClasificadorIntencion:
     def __init__(self):
         self.embedder = HuggingFaceEmbeddings(

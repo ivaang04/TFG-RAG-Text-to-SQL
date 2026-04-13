@@ -1,0 +1,31 @@
+Pregunta,Context_Relevance_Score,Groundedness_Score
+¿Qué ventajas ofrecen los satélites de la serie Sentinel frente a las campañas oceanográficas tradicionales para medir la calidad del agua en el Mar Menor?,4,3
+¿Por qué resulta complicado estimar de forma precisa la concentración de clorofila-a mediante satélite en aguas someras y turbias?,4,4
+¿Cómo afectan las comunidades de macrófitos del fondo (como Caulerpa prolifera) a la reflectancia captada por los satélites en las zonas poco profundas de la laguna?,4,5
+"A la hora de procesar imágenes satelitales, ¿por qué es necesario aplicar una corrección atmosférica antes de calcular los índices de calidad del agua?",3,4
+¿Qué parámetros biofísicos del agua se pueden monitorizar habitualmente mediante el uso de índices de reflectividad en imágenes multiespectrales?,3,5
+¿Cuáles son las principales actividades humanas en la cuenca vertiente que han provocado el aumento de nutrientes y la eutrofización del ecosistema?,4,5
+¿Qué consecuencias visuales y ecológicas directas tiene la proliferación masiva de fitoplancton en las aguas del Mar Menor?,4,5
+"¿Cómo influyen los episodios de lluvias torrenciales, como las DANAs, en los niveles de turbidez y clorofila-a de la laguna?",4,4
+¿Qué impacto ha tenido la actividad minera histórica de la Sierra de Cartagena-La Unión en los sedimentos y la calidad del medio natural?,5,4
+¿Por qué se considera que el Mar Menor ha perdido el carácter oligotrófico que lo caracterizaba en décadas pasadas?,4,5
+¿En qué consiste el fenómeno conocido como 'mancha blanca' en el Mar Menor y cómo difiere ópticamente del resto de las aguas?,4,4
+¿Qué hipótesis se barajan sobre el origen ambiental y la permanencia temporal de la 'mancha blanca' en la zona occidental de la laguna?,4,4
+¿Por qué es crítico medir la penetración de la luz en la columna de agua para garantizar la supervivencia de la flora bentónica?,4,5
+"Además de la espectrofotometría en laboratorio, ¿qué otros métodos o instrumentos in situ se utilizan para medir los niveles de clorofila-a en tiempo real?",3,5
+¿De qué manera interactúa la descarga de aguas subterráneas procedentes del acuífero Cuaternario con la hidrología general del Mar Menor?,4,5
+¿Por qué se utiliza frecuentemente la concentración de clorofila-a como el principal indicador biológico para evaluar el estado trófico de un ecosistema costero?,3,5
+¿Qué ventajas aporta el uso de algoritmos de Machine Learning (inteligencia artificial) en la predicción y modelización de indicadores de calidad del agua?,4,5
+¿Cómo se relacionan los altos niveles de materia orgánica y nutrientes disueltos con los episodios de anoxia o falta de oxígeno en el fondo marino?,4,4
+¿Qué papel juegan el drenaje agrícola y las aguas residuales urbanas en la alteración de los mecanismos homeostáticos y de autorregulación de la laguna?,3,5
+"¿Por qué es importante integrar datos masivos heterogéneos (satélites, boyas, estaciones meteorológicas) en un único sistema para gestionar el Mar Menor?",4,5
+"En la validación de modelos hidrológicos y ambientales, ¿por qué se desaconseja el uso exclusivo del coeficiente de correlación (R2) y qué métricas (como el RMSE) se recomiendan como alternativa?",3,5
+¿Qué características ópticas definen a las llamadas 'aguas de Caso 2' y por qué requieren algoritmos de procesamiento satelital diferentes a los de aguas oceánicas abiertas?,4,5
+"Además de la clorofila-a, ¿qué otros pigmentos fotosintéticos es crucial cuantificar mediante teledetección para detectar floraciones tóxicas de cianobacterias en lagunas eutrofizadas?",3,4
+¿Qué índices espectrales específicos (como el NDCI) o combinaciones de bandas se proponen en la literatura para estimar la clorofila-a en aguas continentales productivas?,4,4
+¿Qué ventajas metodológicas ofrece combinar datos satelitales de alta resolución espacial con sensores de alta frecuencia temporal (visita diaria) para monitorizar masas de agua dinámicas?,3,4
+¿Cómo interactúan los ciclos climáticos de sequía y los descensos de los niveles piezométricos del acuífero en la atenuación o desaparición de los episodios de blanqueamiento del agua?,4,5
+¿Qué tipo de estrategias integradas de gestión de recursos hídricos se promueven a nivel europeo e internacional para la conservación y recuperación de lagunas costeras?,4,4
+¿Qué restricciones de confidencialidad o normativas de propiedad intelectual suelen aplicarse a la difusión y publicación de los datos brutos obtenidos por las redes de monitorización institucionales?,1,5
+¿Qué arquitecturas de aprendizaje profundo (Deep Learning) han demostrado ser efectivas para procesar series temporales de imágenes satelitales en la predicción de la calidad del agua?,3,5
+"¿Qué sectores económicos costeros, como la acuicultura o la pesca tradicional, son los principales beneficiarios directos de la implementación de sistemas de alerta temprana basados en teledetección?",2,5

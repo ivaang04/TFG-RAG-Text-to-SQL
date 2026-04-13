@@ -1,5 +1,6 @@
 import os
 import shutil
+import re
 from langchain_community.document_loaders import PyPDFLoader, PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -37,6 +38,17 @@ class GestorRAG:
         )
         print(f" Base de datos vectorial lista en: {self.db_path}")
 
+    def es_chunk_bibliografia(self, texto):
+        """Detecta si un chunk es mayoritariamente bibliografía mediante densidad de patrones."""
+        lineas = [l.strip() for l in texto.split('\n') if l.strip()]
+        if not lineas:
+            return False
+            
+        patron = re.compile(r'.{10,}\(\d{4}\)|\bDOI\b|https?://', re.IGNORECASE)
+        matches = sum(1 for l in lineas if patron.search(l))
+        
+        #Si más de la mitad de las líneas parecen referencias, descartamos el chunk
+        return (matches / len(lineas)) > 0.5
 
     def cargar_directorio(self, ruta_directorio):
         """Carga los PDFs de una carpeta."""
@@ -101,6 +113,9 @@ class GestorRAG:
         chunks_nuevos = []
         for chunk in chunks_con_ids:
             if chunk.metadata["id"] not in ids_existentes:
+                if self.es_chunk_bibliografia(chunk.page_content):
+                    print(f"Chunk de bibliografía descartado: {chunk.metadata['id']}")
+                    continue
                 if not chunk.page_content.startswith("passage: "):
                     chunk.page_content = "passage: " + chunk.page_content
                 chunks_nuevos.append(chunk)
@@ -133,30 +148,43 @@ class GestorRAG:
         except:
             return 0
         
-    def consultar(self, query):
+    def consultar(self, query, k_relevantes=K_RELEVANTES, umbral_similitud=UMBRAL_SIMILITUD):
 
         print(f"\nPensando: '{query}'...")
 
-        query_= "query: " + query if not query.startswith("query: ") else query
+        query_ = "query: " + query if not query.startswith("query: ") else query
         
-        # RETRIEVAL
-        # Buscamos los k fragmentos más relevantes
-        resultados = self.db.similarity_search_with_score(query_, k=K_RELEVANTES)
+        # OVER-FETCHING: Capturamos el doble por si hay duplicados o bibliografía
+        k_busqueda = k_relevantes * 2
+        resultados = self.db.similarity_search_with_score(query_, k=k_busqueda)
 
-        resultados_relevantes = [res for res in resultados if res[1] < UMBRAL_SIMILITUD]  # Filtramos por un umbral de similitud
-        
-        if not resultados_relevantes:
+            # LOG TEMPORAL
+        print(f"Chunks recuperados: {len(resultados)}")
+        print(f"Scores: {[round(score, 3) for _, score in resultados]}")
+        print(f"Umbral activo: {umbral_similitud}")
+
+        # Buscamos los que estén repetidos
+        textos_vistos = set()
+        resultados_unicos = []
+
+        for doc, score in resultados:
+            if score < umbral_similitud:
+                texto_limpio = doc.page_content.strip()
+
+                if texto_limpio not in textos_vistos:
+                    textos_vistos.add(texto_limpio)
+                    resultados_unicos.append((doc, score))
+
+                    if len(resultados_unicos) == k_relevantes:
+                        break
+
+        if not resultados_unicos:
             return "No se encontró información relevante en la base de datos."
 
-        # Nos quedamos solo con el texto de los chunks para el contexto. El score lo ignoramos por ahora.
-        contexto_texto = "\n\n---\n\n".join([doc.page_content for doc, _ in resultados_relevantes])
+        contexto_texto = "\n\n---\n\n".join([doc.page_content for doc, _ in resultados_unicos])
         
-    
-        # Usamos set() para quitar duplicados, ya que a veces el mismo fragmento puede aparecer varias veces si el texto es muy similar.
-        fuentes = list(set([doc.metadata.get("id", "Desconocido") for doc, _ in resultados_relevantes]))
-
-            
-        fuentes_ids_ordenadas= sorted(fuentes, key=GestorRAG.extraer_pagina)
+        fuentes = list(set([doc.metadata.get("id", "Desconocido") for doc, _ in resultados_unicos]))
+        fuentes_ids_ordenadas = sorted(fuentes, key=GestorRAG.extraer_pagina)
 
         return {
             "contexto": contexto_texto,
