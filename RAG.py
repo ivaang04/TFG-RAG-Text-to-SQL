@@ -9,10 +9,10 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.documents import Document
 
-UMBRAL_SIMILITUD = 0.35
+UMBRAL_SIMILITUD = 0.175
 MODELO_EMBEDDINGS = "intfloat/multilingual-e5-small"
 CHROMA_PATH = "./chroma_db"
-K_RELEVANTES = 5
+K_RELEVANTES = 7
 
 class GestorRAG:
     def __init__(self):

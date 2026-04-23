@@ -1,3 +1,5 @@
+import os
+
 import duckdb
 import re
 from langchain_ollama import OllamaLLM
@@ -23,15 +25,13 @@ class ConsultaSQL:
         Tu objetivo principal es generar consultas SQL precisas, eficientes y robustas para responder a las preguntas de los usuarios basándote en los conjuntos de datos proporcionados. 
         Valoras la corrección técnica por encima de la velocidad y siempre verificas las suposiciones sobre el esquema antes de realizar consultas.
         
-        # TABLA: 'datos'
         # ESQUEMA:
         {self.esquema}
 
         # CAPACIDADES Y HERRAMIENTAS (ESPECÍFICAS DE DUCKDB)
-        1.  **Conciencia del Esquema:** NUNCA adivines nombres. La tabla es 'datos'.
+        1.  **Conciencia del Esquema:** NUNCA adivines nombres. Las tablas disponibles son exactamente las del esquema inyectado.
         2.  **Restricción Absoluta de Columnas:** 
-            - Si una columna mencionada en la pregunta NO existe en el esquema, 
-            NO generes SQL.
+            - Si una columna mencionada en la pregunta NO existe en el esquema, NO generes SQL.
             - Explica claramente que la columna no está disponible.
             - NO inventes nombres similares.
             
@@ -66,15 +66,43 @@ class ConsultaSQL:
         """
     
     def cargar_datos(self):
-        """Creamos una vista para poder consultar el CSV usando consultas SQL."""
-        try:
-            self.con.execute(f"CREATE VIEW datos AS SELECT * FROM read_csv_auto('{self.ruta_csv}', skip=4)")
-        except Exception as e:
-            print(f"Error crítico cargando el CSV: {e}")
+        """Montamos las 5 tablas."""
+        tablas = {
+            "AEMET": "AEMET_unificada_limpia.csv",
+            "Boyas_Superficie_Nautilus": "Boyas_Nautilus_unificadas_limpias.csv",
+            "Perfiles_Fondo_UPCT_Prof": "BoyasUPCT_Prof_unificadas_limpias.csv",
+            "SAIH_Piezometros": "SAIH_Piezometros_unificados_limpios.csv",
+            "SAIH_Ramblas": "SAIH_ramblas_unificadas_limpias.csv"
+        }
+        
+        for nombre_tabla, archivo in tablas.items():
+            ruta = os.path.join(self.ruta_csv, archivo)
+            if os.path.exists(ruta):
+                self.con.execute(f"CREATE VIEW {nombre_tabla} AS SELECT * FROM read_csv_auto('{ruta}')")
+                print(f" Tabla '{nombre_tabla}' montada en DuckDB.")
+            else:
+                print(f" Advertencia: No se encontró {ruta}")
 
     def obtener_esquema(self):
-        """Extraemos los nombres de columnas y tipos para que el LLM los conozca."""
-        return self.con.execute("DESCRIBE datos").df().to_string()
+        """Extraemos los esquemas de TODAS las tablas para que el LLM pueda hacer JOINs."""
+        tablas = [
+            "AEMET", 
+            "Boyas_Superficie_Nautilus", 
+            "Perfiles_Fondo_UPCT_Prof", 
+            "SAIH_Piezometros", 
+            "SAIH_Ramblas"
+        ]
+        
+        esquema_total = "BASE DE DATOS 'MAR MENOR':\n\n"
+        
+        for t in tablas:
+            try:
+                desc = self.con.execute(f"DESCRIBE {t}").df().to_string()
+                esquema_total += f"--- TABLA: {t} ---\n{desc}\n\n"
+            except Exception as e:
+                print(f"Error al describir la tabla {t}: {e}")
+                
+        return esquema_total
     
     def limpiar_respuesta(self, respuesta):
         match = re.search(r'```sql\s*(.*?)\s*```', respuesta, re.DOTALL | re.IGNORECASE)
@@ -93,41 +121,41 @@ class ConsultaSQL:
         ejemplos = """
         EJEMPLOS DE REFERENCIA (ESTILO DE PENSAMIENTO Y CÓDIGO):
 
-        Caso 1: Extremo y Contexto Completo
-        Usuario: "¿Cuál fue la temperatura máxima y cuándo ocurrió?"
+        Caso 1: Extremo, Contexto Completo y Selección de Tabla
+        Usuario: "¿Cuál fue la temperatura máxima en la estación de la AEMET y cuándo ocurrió?"
         Asistente:
         <thought_process>
-        El usuario pide el valor máximo y su contexto temporal (fecha y hora). 
-        En lugar de usar MAX() que perdería el contexto, ordenaré por temperatura de forma descendente y tomaré la primera fila. 
+        El usuario pide el valor máximo de temperatura y su contexto temporal. Específicamente menciona "AEMET", así que usaré la tabla 'AEMET'.
+        En lugar de usar MAX() que perdería el contexto temporal y daría error de GROUP BY, ordenaré por la columna "Temperature (°C)" de forma descendente y tomaré la primera fila con LIMIT 1. 
         Usaré SELECT * para traer todas las columnas de ese evento.
         </thought_process>
         ```sql
-        SELECT * FROM datos ORDER BY "Temperature (°C)" DESC LIMIT 1;
+        SELECT * FROM AEMET ORDER BY "Temperature (°C)" DESC LIMIT 1;
         ```
 
         Caso 2: Agrupación Temporal
-        Usuario: "¿Cuánto llovió en total cada día?"
+        Usuario: "¿Cuánto llovió en total cada día en la rambla?"
         Asistente:
         <thought_process>
-        El usuario pide un sumatorio agrupado por día. 
-        Usaré SUM en la precipitación y agruparé por la columna Date.
+        El usuario pide un sumatorio agrupado por día y menciona "rambla", por lo que usaré la tabla 'SAIH_Ramblas'. 
+        Usaré SUM en la precipitación y agruparé por la columna "Date".
         </thought_process>
         ```sql
-        SELECT "Date", SUM("accumulated Precipitation (0.1 mm)") AS total_lluvia FROM datos GROUP BY "Date" ORDER BY "Date";
+        SELECT "Date", SUM("Precipitation (mm)") AS total_lluvia FROM SAIH_Ramblas GROUP BY "Date" ORDER BY "Date";
         ```
 
         Caso 3: Múltiples extremos (UNION con contexto completo)
-        Usuario: "Dime el registro del momento de mayor calor y el de mayor humedad"
+        Usuario: "Dime el registro del momento de mayor calor y el de mayor humedad en la boya nautilus"
         Asistente:
         <thought_process>
-        Pide dos eventos extremos independientes. Necesito un UNION ALL.
+        Pide dos eventos extremos independientes de la tabla 'Boyas_Superficie_Nautilus'. Necesito un UNION ALL.
         Para cumplir la regla de contexto completo, usaré SELECT * en ambos, añadiendo una columna 'Tipo' para diferenciarlos.
         Es obligatorio usar paréntesis ( ) alrededor de cada SELECT con LIMIT.
         </thought_process>
         ```sql
-        (SELECT *, 'Mayor Calor' AS Tipo FROM datos ORDER BY "Temperature (°C)" DESC LIMIT 1) 
+        (SELECT *, 'Mayor Calor' AS Tipo FROM Boyas_Superficie_Nautilus ORDER BY "Temperature (°C)" DESC LIMIT 1) 
         UNION ALL 
-        (SELECT *, 'Mayor Humedad' AS Tipo FROM datos ORDER BY "relative Humidity (%)" DESC LIMIT 1);
+        (SELECT *, 'Mayor Humedad' AS Tipo FROM Boyas_Superficie_Nautilus ORDER BY "relative Humidity (%)" DESC LIMIT 1);
         ```
         """
         prompt = f"""
@@ -151,7 +179,7 @@ class ConsultaSQL:
         - Error devuelto por DuckDB:
         {error_previo}
         
-        Por favor, analiza por qué falló esa consulta específica en tu <thought_process> y escribe una nueva consulta corregida.
+        Por favor, analiza por qué falló esa consulta específica en tu <thought_process> y escribe una nueva consulta corregida asegurándote de usar los nombres de tabla EXACTOS del esquema.
         """
 
         prompt += "\nTU RESPUESTA (Thinking + SQL + Explicación):"

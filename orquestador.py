@@ -4,7 +4,6 @@ import os
 import asyncio
 import re
 from langchain_ollama import OllamaLLM
-# Importamos TUS módulos reales
 from generadorSQL import ConsultaSQL 
 from RAG import GestorRAG   
 from clasificadorIntencion import ClasificadorIntencion
@@ -14,7 +13,7 @@ LIMITE_INTERPRETACION = 15
 PROMPTS_POR_TIPO = {
     "AGREGACION": (
         "La tabla contiene un único valor agregado (máximo, mínimo, media, conteo...).\n"
-        "Responde en una o dos frases directas mencionando el valor y la fecha si está disponible."
+        "Responde en una o dos frases directas mencionando el valor, la fecha/hora y SIEMPRE el lugar, estación o boya donde se registró (si aparece en la tabla)."
     ),
     "SERIE_TEMPORAL": (
         "Muestra la tabla en formato markdown.\n"
@@ -154,7 +153,7 @@ class Orquestador:
         instruccion_especifica = PROMPTS_POR_TIPO[tipo]
 
         prompt = (
-            "Eres un analista de datos ambiental. Responde a la pregunta del usuario usando exclusivamente los datos proporcionados.\n\n"
+            "Eres un analista de datos especializado en ciencias marinas. Responde a la pregunta del usuario usando exclusivamente los datos proporcionados.\n\n"
             f"<<< PREGUNTA >>>\n{pregunta}\n<<< FIN_PREGUNTA >>>\n\n"
             f"<<< DATOS >>>\n{datos}\n<<< FIN_DATOS >>>\n\n"
             "INSTRUCCIONES:\n"
@@ -244,14 +243,12 @@ class Orquestador:
             f"<<<DATOS_SQL>>>\n{datos_str}\n<<<FIN_DATOS_SQL>>>\n\n"
             f"<<<CONTEXTO_CIENTIFICO>>>\n{contexto}\n<<<FIN_CONTEXTO_CIENTIFICO>>>\n\n"
             "INSTRUCCIONES:\n\n"
-            "1. SOBERANÍA EMPÍRICA\n"
-            "Los DATOS_SQL son la fuente principal. No modifiques ni inventes valores.\n\n"
-            "2. CERO ALUCINACIONES\n"
+            "1. CERO ALUCINACIONES\n"
             "No inventes datos, fechas ni conclusiones que no estén en la tabla.\n\n"
-            "3. CONTEXTO CIENTÍFICO\n"
+            "2. CONTEXTO CIENTÍFICO\n"
             "Usa ÚNICAMENTE el texto del bloque CONTEXTO_CIENTIFICO para la parte teórica. "
             "Aunque conozcas información relevante sobre el tema, NO la incluyas si no está en el contexto. \n\n"
-            "4. IDIOMA Y FORMATO\n"
+            "3. IDIOMA Y FORMATO\n"
             "Responde en el mismo idioma de la pregunta. Sé directo y conciso."
         )
 
@@ -268,7 +265,7 @@ class Orquestador:
 
 if __name__ == "__main__":
 
-    ruta_csv_real = "/home/ivan/Universidad/TFG/datos/AEMET_clean/MS_Torrepacheco1.csv"
+    ruta_csv_real = "/home/ivan/Universidad/TFG/datos/datos_procesados/"
     ruta_directorio_pdfs = "/home/ivan/Universidad/TFG/datos/Docs/"
     
     
