@@ -8,7 +8,7 @@ ruta_datos = os.path.join(directorio_actual, 'datos')
 nombre_carpeta_origen = 'BoyasProf_clean' 
 
 ruta_origen = os.path.join(ruta_datos, nombre_carpeta_origen) 
-ruta_salida = os.path.join(ruta_datos, 'BoyasProf_unificadas')
+ruta_salida = os.path.join(ruta_datos, 'BoyasProf_IMIDA_unificadas')
 os.makedirs(ruta_salida, exist_ok=True)
 
 carpetas_estaciones = [d for d in os.listdir(ruta_origen) if os.path.isdir(os.path.join(ruta_origen, d))]
@@ -33,7 +33,7 @@ for estacion in carpetas_estaciones:
     archivos_csv = glob.glob(os.path.join(ruta_estacion, "*.csv"))
     
     # Ignoramos metadatos
-    archivos_csv = [f for f in archivos_csv if 'metadata' not in f.lower()]
+    archivos_csv = [f for f in archivos_csv if 'metadata' not in f.lower() and 'metadatos' not in f.lower()]
     
     if not archivos_csv:
         continue
@@ -93,7 +93,7 @@ for estacion in carpetas_estaciones:
 df_final = pd.concat(dfs_todas_estaciones, ignore_index=True)
 
 # Guardamos
-ruta_final = os.path.join(ruta_salida, 'BoyasProf_unificadas_limpias.csv')
+ruta_final = os.path.join(ruta_salida, 'BoyasProf_IMIDA_unificadas_limpias.csv')
 df_final.to_csv(ruta_final, index=False)
 
 print(f"Total de filas: {len(df_final)}")

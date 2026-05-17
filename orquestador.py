@@ -1,13 +1,12 @@
-from duckdb import df
 import pandas as pd
 import os
-import asyncio
-import re
 from langchain_ollama import OllamaLLM
 from generadorSQL import ConsultaSQL 
 from RAG import GestorRAG   
 from clasificadorIntencion import ClasificadorIntencion
 
+K_RELEVANTES_RAG = 5
+UMBRAL_RAG = 0.175
 LIMITE_FILAS = 1000
 LIMITE_INTERPRETACION = 15
 PROMPTS_POR_TIPO = {
@@ -63,12 +62,12 @@ class Orquestador:
                 
         except ValueError as ve:
             return f"ERROR DE SEGURIDAD/VALIDACIÓN: {ve}"
-        except RuntimeError as re:
-            return f"ERROR DE EJECUCIÓN SQL (Tras reintentos): {re}"
+        except RuntimeError as runtime_error:
+            return f"ERROR DE EJECUCIÓN SQL (Tras reintentos): {runtime_error}"
         except Exception as e:
             return f"ERROR DESCONOCIDO EN SQL: {e}"
 
-    def ejecutar_RAG(self, pregunta_usuario, k_relevantes=5, umbral=0.35):
+    def ejecutar_RAG(self, pregunta_usuario, k_relevantes=K_RELEVANTES_RAG, umbral=UMBRAL_RAG):
 
         print(f"\nConsultando PDFs con RAG (K={k_relevantes}, Umbral={umbral})...")
         resultado = self.rag_engine.consultar(pregunta_usuario, k_relevantes, umbral)
@@ -164,7 +163,17 @@ class Orquestador:
             "- Responde en el mismo idioma de la pregunta."
         )
 
-        return self.llm_generador.invoke(prompt)
+        respuesta_llm = self.llm_generador.invoke(prompt)
+        
+        # Recuperamos las tablas que acaba de usar DuckDB
+        fuentes_sql = self.sql_engine.ultimas_tablas_usadas
+        
+        if fuentes_sql:
+            respuesta_llm += "\n\n---\nTablas de datos consultadas:\n"
+            for tabla in fuentes_sql:
+                respuesta_llm += f"- {tabla}\n"
+                
+        return respuesta_llm
 
 
     def generar_rag_only(self, pregunta, resultado_rag, incluir_fuentes=True):
@@ -253,12 +262,21 @@ class Orquestador:
         )
 
         respuesta_limpia = self.llm_generador.invoke(prompt_sintesis)
+        fuentes_sql = self.sql_engine.ultimas_tablas_usadas
 
-        if fuentes:
-            respuesta_final = (
-                respuesta_limpia + "\n\n---\nFuentes consultadas:\n"
-                + "".join(f"- {fuente}\n" for fuente in fuentes)
-            )
+        if fuentes_sql or fuentes:
+            respuesta_final = respuesta_limpia + "\n\n---\n"
+            
+            if fuentes_sql:
+                respuesta_final += "Tablas de datos consultadas:\n"
+                for tabla in fuentes_sql:
+                    respuesta_final += f"- {tabla}\n"
+                    
+            if fuentes:
+                respuesta_final += "Literatura científica consultada:\n"
+                for fuente in fuentes:
+                    respuesta_final += f"- {fuente}\n"
+                    
             return respuesta_final
 
         return respuesta_limpia

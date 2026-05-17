@@ -12,11 +12,13 @@ class ConsultaSQL:
         self.con = duckdb.connect(database=':memory:')
         self.cargar_datos()
         self.esquema = self.obtener_esquema()
+        self.ultimas_tablas_usadas = []
         self.system_prompt = self.construir_prompt_sistema()
 
     def construir_prompt_sistema(self):
         """
-        Sigue los principios de 'Anclaje de Persona' e 'Ingeniería de Contexto'.
+        Construye el system prompt aplicando técnicas de role prompting,
+        ingeniería de contexto y few-shot prompting.
         """
         return f"""
         # IDENTIDAD
@@ -69,8 +71,8 @@ class ConsultaSQL:
         """Montamos las 5 tablas."""
         tablas = {
             "AEMET": "AEMET_unificada_limpia.csv",
-            "Boyas_Superficie_Nautilus": "Boyas_Nautilus_unificadas_limpias.csv",
-            "Perfiles_Fondo_UPCT_Prof": "BoyasUPCT_Prof_unificadas_limpias.csv",
+            "Boyas_Nautilus": "Boyas_Nautilus_unificadas_limpias.csv",
+            "Boyas_IMIDA_UPCT": "BoyasProf_IMIDA_UPCT_unificadas_limpias.csv",
             "SAIH_Piezometros": "SAIH_Piezometros_unificados_limpios.csv",
             "SAIH_Ramblas": "SAIH_ramblas_unificadas_limpias.csv"
         }
@@ -87,8 +89,8 @@ class ConsultaSQL:
         """Extraemos los esquemas de TODAS las tablas para que el LLM pueda hacer JOINs."""
         tablas = [
             "AEMET", 
-            "Boyas_Superficie_Nautilus", 
-            "Perfiles_Fondo_UPCT_Prof", 
+            "Boyas_Nautilus", 
+            "Boyas_IMIDA_UPCT", 
             "SAIH_Piezometros", 
             "SAIH_Ramblas"
         ]
@@ -116,6 +118,13 @@ class ConsultaSQL:
 
         return None
 
+    def extraer_tablas(self, sql):
+        """Extrae los nombres de las tablas usadas en la consulta SQL."""
+        # Busca palabras que van después de FROM o JOIN
+        tablas = re.findall(r"(?:FROM|JOIN)\s+[\"']?([a-zA-Z0-9_]+)[\"']?", sql, re.IGNORECASE)
+        self.ultimas_tablas_usadas = list(set(tablas))
+        return self.ultimas_tablas_usadas
+    
     def generar_sql(self, pregunta, error_previo=None, sql_fallido=None):
 
         ejemplos = """
@@ -148,14 +157,14 @@ class ConsultaSQL:
         Usuario: "Dime el registro del momento de mayor calor y el de mayor humedad en la boya nautilus"
         Asistente:
         <thought_process>
-        Pide dos eventos extremos independientes de la tabla 'Boyas_Superficie_Nautilus'. Necesito un UNION ALL.
+        Pide dos eventos extremos independientes de la tabla 'Boyas_Nautilus'. Necesito un UNION ALL.
         Para cumplir la regla de contexto completo, usaré SELECT * en ambos, añadiendo una columna 'Tipo' para diferenciarlos.
         Es obligatorio usar paréntesis ( ) alrededor de cada SELECT con LIMIT.
         </thought_process>
         ```sql
-        (SELECT *, 'Mayor Calor' AS Tipo FROM Boyas_Superficie_Nautilus ORDER BY "Temperature (°C)" DESC LIMIT 1) 
+        (SELECT *, 'Mayor Calor' AS Tipo FROM Boyas_Nautilus ORDER BY "Temperature (°C)" DESC LIMIT 1) 
         UNION ALL 
-        (SELECT *, 'Mayor Humedad' AS Tipo FROM Boyas_Superficie_Nautilus ORDER BY "relative Humidity (%)" DESC LIMIT 1);
+        (SELECT *, 'Mayor Humedad' AS Tipo FROM Boyas_Nautilus ORDER BY "relative Humidity (%)" DESC LIMIT 1);
         ```
         """
         prompt = f"""
@@ -195,7 +204,7 @@ class ConsultaSQL:
 
     def generar_y_ejecutar(self, pregunta):
     
-        
+        self.ultimas_tablas_usadas = []
         print(f"\n Se está procesando la pregunta: '{pregunta}'...")
         respuesta_raw = self.generar_sql(pregunta)
         
@@ -218,6 +227,7 @@ class ConsultaSQL:
                     raise ValueError("La consulta SQL generada no es segura. Se detectaron comandos prohibidos.")
                 
                 # Ejecución exitosa
+                self.extraer_tablas(sql)
                 return self.con.execute(sql).df()
             
             except ValueError as ve:
