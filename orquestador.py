@@ -39,7 +39,7 @@ class Orquestador:
         self.rag_engine = GestorRAG()
         self.rag_engine.ingestar(ruta_directorio_pdfs)
         print("Motor RAG: Listo (Base de datos vectorial cargada)")
-        self.llm_generador = OllamaLLM(model=modelo, temperature=0.0)
+        self.llm_generador = OllamaLLM(model="llama3", temperature=0.0, num_ctx=8192)
 
     def clasificar_pregunta(self, pregunta):
         tipo, scores = self.clasificador_intencion.clasificar(pregunta)
@@ -96,9 +96,17 @@ class Orquestador:
             datos = self.ejecutar_sql(pregunta_usuario)
             literatura = self.ejecutar_RAG(pregunta_usuario)
 
-            if isinstance(datos, str) and "ERROR" in datos:
-                return "No se pudo obtener evidencia empírica válida...\n\n" + self.generar_rag_only(pregunta_usuario, literatura)
-            
+            sql_invalido = isinstance(datos, str) and "ERROR" in datos
+            sql_vacio = (not isinstance(datos, str)) and datos.empty
+
+            if sql_invalido or sql_vacio:
+                aviso = (
+                    "No se pudo obtener evidencia empírica válida de la base de datos "
+                    "para esta consulta, por lo que la siguiente respuesta se fundamenta "
+                    "únicamente en la literatura científica.\n\n"
+                )
+                return aviso + self.generar_rag_only(pregunta_usuario, literatura)
+
             return self.generar_sintesis(pregunta_usuario, datos, literatura)
 
     def detectar_tipo_resultado(self, df):
@@ -262,21 +270,24 @@ class Orquestador:
         )
 
         respuesta_limpia = self.llm_generador.invoke(prompt_sintesis)
-        fuentes_sql = self.sql_engine.ultimas_tablas_usadas
 
-        if fuentes_sql or fuentes:
+        fuentes_sql = self.sql_engine.ultimas_tablas_usadas
+        
+        hay_datos_sql = (not isinstance(datos, str)) and not datos.empty
+
+        if (fuentes_sql and hay_datos_sql) or fuentes:
             respuesta_final = respuesta_limpia + "\n\n---\n"
-            
-            if fuentes_sql:
+
+            if fuentes_sql and hay_datos_sql:
                 respuesta_final += "Tablas de datos consultadas:\n"
                 for tabla in fuentes_sql:
                     respuesta_final += f"- {tabla}\n"
-                    
+
             if fuentes:
                 respuesta_final += "Literatura científica consultada:\n"
                 for fuente in fuentes:
                     respuesta_final += f"- {fuente}\n"
-                    
+
             return respuesta_final
 
         return respuesta_limpia

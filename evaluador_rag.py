@@ -204,10 +204,10 @@ if __name__ == "__main__":
     campos_csv = [
         "Pregunta", "Context_Relevance_Score", "Groundedness_Score"
     ]
-    total_preguntas = len(preguntas_test)
+    total_preguntas = len(preguntas_test_semantico)
 
-    lista_k = [3, 5, 7]
-    lista_umbrales = [0.10, 0.125, 0.15, 0.20]
+    lista_k = [5]
+    lista_umbrales = [0.10]
 
     total_combinaciones = len(lista_k) * len(lista_umbrales)
     combinacion_actual = 1
@@ -238,7 +238,7 @@ if __name__ == "__main__":
 
             # Recorre las 30 preguntas para la combinación actual
 
-            for i, pregunta in enumerate(preguntas_test, 1):
+            for i, pregunta in enumerate(preguntas_test_semantico, 1):
                 print(f"\n  -> Pregunta {i}/{total_preguntas}: '{pregunta}'")
                 
                 # Pasamos los valores K y umbral

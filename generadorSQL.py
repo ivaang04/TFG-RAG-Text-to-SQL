@@ -4,11 +4,13 @@ import duckdb
 import re
 from langchain_ollama import OllamaLLM
 
+MAX_INTENTOS = 5
+
 class ConsultaSQL:
     def __init__(self, ruta_csv):
         """Inicializamos la conexión a DuckDB y el LLM."""
         self.ruta_csv = ruta_csv
-        self.llm = OllamaLLM(model="llama3", temperature = 0.0)
+        self.llm = OllamaLLM(model="llama3", temperature=0.0, num_ctx=8192)
         self.con = duckdb.connect(database=':memory:')
         self.cargar_datos()
         self.esquema = self.obtener_esquema()
@@ -72,7 +74,7 @@ class ConsultaSQL:
         tablas = {
             "AEMET": "AEMET_unificada_limpia.csv",
             "Boyas_Nautilus": "Boyas_Nautilus_unificadas_limpias.csv",
-            "Boyas_IMIDA_UPCT": "BoyasProf_IMIDA_UPCT_unificadas_limpias.csv",
+            "Boyas_IMIDA_UPCT": "BoyasProf_IMIDA_UPCT_tidy.csv",
             "SAIH_Piezometros": "SAIH_Piezometros_unificados_limpios.csv",
             "SAIH_Ramblas": "SAIH_ramblas_unificadas_limpias.csv"
         }
@@ -107,15 +109,18 @@ class ConsultaSQL:
         return esquema_total
     
     def limpiar_respuesta(self, respuesta):
-        match = re.search(r'```sql\s*(.*?)\s*```', respuesta, re.DOTALL | re.IGNORECASE)
-        if match:
+
+        match = re.search(r'```sql\s*(.*?)(?:```|$)', respuesta, re.DOTALL | re.IGNORECASE)
+        if match and match.group(1).strip():
             return match.group(1).strip()
 
-        # Buscar primer SELECT real
-        match_select = re.search(r'(SELECT .*?;)', respuesta, re.DOTALL | re.IGNORECASE)
-        if match_select:
-            return match_select.group(1).strip()
-
+        # Fallback: acepta WITH o SELECT, ; opcional
+        match_sql = re.search(r'((?:WITH|SELECT)\b.*)', respuesta, re.DOTALL | re.IGNORECASE)
+        if match_sql:
+            sql = match_sql.group(1).strip()
+            if ';' in sql:
+                sql = sql[:sql.rfind(';') + 1]  # último ;, no el primero
+            return sql
         return None
 
     def extraer_tablas(self, sql):
@@ -176,86 +181,117 @@ class ConsultaSQL:
 
         # PREGUNTA: {pregunta}
         """
-        
-        if error_previo and sql_fallido:
-            prompt += f"""
-        Tu último intento de responder a esta pregunta falló.
-        
-        - Consulta SQL que escribiste:
-        ```sql
-        {sql_fallido}
-        ```
-        - Error devuelto por DuckDB:
-        {error_previo}
-        
-        Por favor, analiza por qué falló esa consulta específica en tu <thought_process> y escribe una nueva consulta corregida asegurándote de usar los nombres de tabla EXACTOS del esquema.
-        """
+
+        if error_previo:
+            prompt += "\n\nTu último intento de responder falló.\n"
+            if sql_fallido:
+                prompt += (
+                    "\n- Consulta SQL que escribiste:\n"
+                    "```sql\n"
+                    f"{sql_fallido}\n"
+                    "```\n"
+                )
+            prompt += (
+                "\n- Problema detectado:\n"
+                f"{error_previo}\n\n"
+                "Analiza la causa en tu <thought_process> y devuelve una consulta "
+                "corregida usando los nombres de tabla EXACTOS del esquema.\n"
+            )
 
         prompt += "\nTU RESPUESTA (Thinking + SQL + Explicación):"
-                
+
         return self.llm.invoke(prompt)
 
     def es_seguro(self, sql):
+        """
+        Verifica la seguridad de la consulta mediante análisis de tokens.
+        Extrae todas las palabras (alfanuméricas) de la consulta y comprueba
+        mediante intersección de conjuntos que no haya comandos prohibidos.
+        """
         if not sql:
             return False
-        sql_clean = sql.upper()
-        prohibidos = ["DROP", "DELETE", "INSERT", "UPDATE", "ALTER", "TRUNCATE"]
-        return "SELECT" in sql_clean and not any(p in sql_clean for p in prohibidos)
+            
+        # Tokenización: Extraemos todas las palabras puras (ignorando símbolos como *, (, ), ;, etc.)
+        # El patrón \w+ captura secuencias de letras, números y guiones bajos.
+        tokens = re.findall(r'\w+', sql.upper())
+        
+        # Convertimos la lista de tokens en un "Set" para optimizar las búsquedas de pertenencia e intersección.
+        tokens_set = set(tokens)
+        
+        # Definimos nuestras palabras clave
+        prohibidos = {"DROP", "DELETE", "INSERT", "UPDATE", "ALTER", "TRUNCATE"}
+        
+        # Comprobamos si existe el token "SELECT" en la consulta. Si no está, no es una consulta válida.
+        tiene_select = "SELECT" in tokens_set
+        
+        # Si la intersección está vacía, no hay palabras prohibidas.
+        tiene_prohibidos = bool(tokens_set & prohibidos)
+        
+        return tiene_select and not tiene_prohibidos
+
+    def _detectar_truncamiento(self, respuesta):
+        """Abrió ```sql pero no lo cerró -> respuesta cortada."""
+        abre = re.search(r'```sql', respuesta, re.IGNORECASE)
+        cierra = re.search(r'```sql\s*.*?```', respuesta, re.DOTALL | re.IGNORECASE)
+        return bool(abre) and not bool(cierra)
+
+    def _mostrar_razonamiento(self, respuesta, etiqueta):
+        m = re.search(r'<thought_process>(.*?)</thought_process>', respuesta, re.DOTALL)
+        if m:
+            print(f"\n {etiqueta}:\n{m.group(1).strip()}\n")
 
     def generar_y_ejecutar(self, pregunta):
-    
         self.ultimas_tablas_usadas = []
         print(f"\n Se está procesando la pregunta: '{pregunta}'...")
-        respuesta_raw = self.generar_sql(pregunta)
-        
-        #Se muestra el razonamiento
-        razonamiento = re.search(r'<thought_process>(.*?)</thought_process>', respuesta_raw, re.DOTALL)
-        if razonamiento:
-            print(f"\n RAZONAMIENTO:\n{razonamiento.group(1).strip()}\n")
-            
-        sql = self.limpiar_respuesta(respuesta_raw)
-    
-        if not sql:
-            raise ValueError("El agente no pudo generar una consulta SQL válida.")
 
-        # Bucle de intentos
-        max_intentos = 5
+        max_intentos = MAX_INTENTOS
+        error_previo = None     # feedback de texto para el siguiente intento
+        sql_fallido = None      # SQL del intento anterior (solo si llegó a ejecutarse)
         ultimo_error = None
+
         for intento in range(max_intentos):
+            respuesta_raw = self.generar_sql(pregunta, error_previo=error_previo, sql_fallido=sql_fallido)
+            etiqueta = "RAZONAMIENTO" if intento == 0 else "CORRECCIÓN DEL RAZONAMIENTO"
+            self._mostrar_razonamiento(respuesta_raw, etiqueta)
+
+            # Comprobamos si la respuesta ha sido cortada
+            if self._detectar_truncamiento(respuesta_raw):
+                print(f"Intento {intento+1}: respuesta truncada (bloque SQL sin cerrar).")
+                ultimo_error = "Respuesta truncada: ```sql sin cerrar."
+                error_previo = ("Tu respuesta anterior se cortó: el bloque ```sql quedó sin "
+                                "cerrar. Sé más conciso en <thought_process> y devuelve la "
+                                "consulta completa en un único bloque ```sql ... ``` cerrado.")
+                sql_fallido = None
+                continue
+
+            # Extraer SQL
+            sql = self.limpiar_respuesta(respuesta_raw)
+            if not sql:
+                print(f"Intento {intento+1}: no se pudo extraer SQL.")
+                ultimo_error = "No se devolvió SQL parseable."
+                error_previo = ("No pude extraer ninguna consulta SQL de tu respuesta. "
+                                "Devuélvela dentro de un bloque ```sql ... ``` cerrado.")
+                sql_fallido = None
+                continue
+
+            #  Fallo de seguridad -> parada dura, sin reintento
+            if not self.es_seguro(sql):
+                raise ValueError("La consulta SQL generada no es segura. "
+                                "Se detectaron comandos prohibidos.")
+
+            # Ejecutar
             try:
-                if not self.es_seguro(sql): 
-                    raise ValueError("La consulta SQL generada no es segura. Se detectaron comandos prohibidos.")
-                
-                # Ejecución exitosa
                 self.extraer_tablas(sql)
                 return self.con.execute(sql).df()
-            
-            except ValueError as ve:
-                # Si es un error de seguridad, lo re-lanzamos hacia arriba (no se intenta corregir)
-                raise ve
-            
             except Exception as e:
-                # Aquí capturamos los errores que no han sido capturados en el anterior catch, es decir, errores de DuckDB.
-                # Sintaxis, columnas que no existen, etc.
-                # Estos errores los intentaremos corregir. 
                 print(f"Intento {intento+1} fallido: {e}")
                 ultimo_error = e
-                if intento < max_intentos - 1:
-                    print("Auto-corrigiendo...")
-                    #Enviamos el error de vuelta
-                    # anadir consulta que ha generado error
-                    respuesta_corr = self.generar_sql(pregunta, error_previo=str(e), sql_fallido=sql)
-                    sql = self.limpiar_respuesta(respuesta_corr)
+                error_previo = str(e)
+                sql_fallido = sql
+                continue
 
-                    if not sql:
-                        continue # Si no se pudo generar un SQL válido, intentamos de nuevo sin enviar el error (reiniciando el proceso)
-                    
-                    # Mostrar razonamiento de corrección
-                    razonamiento_correcto = re.search(r'<thought_process>(.*?)</thought_process>', respuesta_corr, re.DOTALL)
-                    if razonamiento_correcto:
-                        print(f"CORRECCIÓN DEL RAZONAMIENTO: {razonamiento_correcto.group(1).strip()}")
-                
-        raise RuntimeError(f"No se pudo resolver la consulta tras {max_intentos} intentos. Último error: {ultimo_error}")
+        raise RuntimeError(f"No se pudo resolver la consulta tras {max_intentos} "
+                        f"intentos. Último error: {ultimo_error}")
 
     def generar_respuesta_natural(self, pregunta, df_resultado):
         """Genera una respuesta natural. """
