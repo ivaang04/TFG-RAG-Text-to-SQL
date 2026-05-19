@@ -211,20 +211,17 @@ class ConsultaSQL:
         if not sql:
             return False
             
-        # Tokenización: Extraemos todas las palabras puras (ignorando símbolos como *, (, ), ;, etc.)
-        # El patrón \w+ captura secuencias de letras, números y guiones bajos.
-        tokens = re.findall(r'\w+', sql.upper())
+        sql_limpio = re.sub(r'--.*|/\*.*?\*/', '', sql, flags=re.DOTALL)
         
-        # Convertimos la lista de tokens en un "Set" para optimizar las búsquedas de pertenencia e intersección.
+        sql_limpio = sql_limpio.replace("''", "") 
+        sql_limpio = re.sub(r"'[^']*'", "", sql_limpio)
+        
+        tokens = re.findall(r'\w+', sql_limpio.upper())
         tokens_set = set(tokens)
         
-        # Definimos nuestras palabras clave
         prohibidos = {"DROP", "DELETE", "INSERT", "UPDATE", "ALTER", "TRUNCATE"}
         
-        # Comprobamos si existe el token "SELECT" en la consulta. Si no está, no es una consulta válida.
         tiene_select = "SELECT" in tokens_set
-        
-        # Si la intersección está vacía, no hay palabras prohibidas.
         tiene_prohibidos = bool(tokens_set & prohibidos)
         
         return tiene_select and not tiene_prohibidos
