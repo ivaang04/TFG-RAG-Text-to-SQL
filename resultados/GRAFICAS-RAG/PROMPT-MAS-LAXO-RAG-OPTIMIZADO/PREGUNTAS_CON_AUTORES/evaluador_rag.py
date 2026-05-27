@@ -3,7 +3,7 @@ from time import time
 from langchain_ollama import OllamaLLM
 import re
 
-from orquestador import Orquestador
+from src.orquestador import Orquestador
 
 class JuezRAG:
     def __init__(self):

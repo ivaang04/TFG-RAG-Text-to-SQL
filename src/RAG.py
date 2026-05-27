@@ -9,17 +9,19 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.documents import Document
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 UMBRAL_SIMILITUD = 0.175
 MODELO_EMBEDDINGS = "intfloat/multilingual-e5-small"
-CHROMA_PATH = "./chroma_db"
+MODELO_LLM = "llama3"
+CHROMA_PATH = "./chroma_db"  # NOTE: constante nunca usada — la clase construye self.db_path en __init__
 K_RELEVANTES = 5
 
 class GestorRAG:
     def __init__(self):
         """Inicializa las rutas, el modelo de embeddings y la base de datos."""
 
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        self.db_path = os.path.join(base_dir, "chroma_db")
+        self.db_path = os.path.join(BASE_DIR, "src", "chroma_db")
         self.modelo_embeddings = MODELO_EMBEDDINGS 
         
         print("Inicializando motor...")
@@ -219,14 +221,14 @@ class GestorRAG:
         
         # Inferencia
 
-        modelo = OllamaLLM(model="llama3", temperature = 0.0) 
+        modelo = OllamaLLM(model=MODELO_LLM, temperature=0.0)
         return modelo.invoke(prompt)
 
 if __name__ == "__main__":
     #Inicializamos la clase RAG
     rag = GestorRAG()
     
-    ruta_pdf_prueba = "/home/ivan/Universidad/TFG/datos/Docs/"
+    ruta_pdf_prueba = os.path.join(BASE_DIR, "datos", "Docs")
     
     # Se ingesta el PDF 
     rag.ingestar(ruta_pdf_prueba)

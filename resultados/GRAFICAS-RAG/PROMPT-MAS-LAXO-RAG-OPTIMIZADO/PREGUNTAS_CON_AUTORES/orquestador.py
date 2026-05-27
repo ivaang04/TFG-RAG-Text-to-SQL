@@ -4,9 +4,8 @@ import os
 import asyncio
 import re
 from langchain_ollama import OllamaLLM
-# Importamos TUS módulos reales
-from generadorSQL import ConsultaSQL 
-from RAG import GestorRAG   
+from src.generadorSQL import ConsultaSQL 
+from src.RAG import GestorRAG   
 from clasificadorIntencion import ClasificadorIntencion
 
 LIMITE_FILAS = 1000

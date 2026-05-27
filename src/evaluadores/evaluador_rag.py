@@ -1,13 +1,17 @@
+import os
 from time import time
 
 from langchain_ollama import OllamaLLM
 import re
 
-from orquestador import Orquestador
+from src.orquestador import Orquestador
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+MODELO_LLM = "llama3"
 
 class JuezRAG:
     def __init__(self):
-        self.juez_llm = OllamaLLM(model="llama3", temperature=0.0)
+        self.juez_llm = OllamaLLM(model=MODELO_LLM, temperature=0.0)
 
     def _parsear_respuesta(self, texto_respuesta):
         try:
@@ -116,8 +120,8 @@ import csv
 
 if __name__ == "__main__":
     
-    ruta_csv_real = "/home/ivan/Universidad/TFG/datos/AEMET_clean/MS_Torrepacheco1.csv"
-    ruta_directorio_real = "/home/ivan/Universidad/TFG/datos/Docs/" 
+    ruta_csv_real = os.path.join(BASE_DIR, "datos", "AEMET_clean", "MS_Torrepacheco1.csv")
+    ruta_directorio_real = os.path.join(BASE_DIR, "datos", "Docs")
     
     app = Orquestador(ruta_csv_real, ruta_directorio_real)
     juez = JuezRAG()
@@ -164,7 +168,7 @@ if __name__ == "__main__":
         "A la hora de procesar imágenes satelitales, ¿por qué es necesario aplicar una corrección atmosférica antes de calcular los índices de calidad del agua?",
         "¿Qué parámetros biofísicos del agua se pueden monitorizar habitualmente mediante el uso de índices de reflectividad en imágenes multiespectrales?",
 
-        # BLOQUE 2: Eutrofización y Presiones Humanas
+        # BLOQUE 2: Eutrofización
         "¿Cuáles son las principales actividades humanas en la cuenca vertiente que han provocado el aumento de nutrientes y la eutrofización del ecosistema?",
         "¿Qué consecuencias visuales y ecológicas directas tiene la proliferación masiva de fitoplancton en las aguas del Mar Menor?",
         "¿Cómo influyen los episodios de lluvias torrenciales, como las DANAs, en los niveles de turbidez y clorofila-a de la laguna?",
@@ -206,8 +210,8 @@ if __name__ == "__main__":
     ]
     total_preguntas = len(preguntas_test_semantico)
 
-    lista_k = [3,5,7]
-    lista_umbrales = [0.175, 0.25, 0.35, 0.45, 0.55, 0.65]
+    lista_k = [5]
+    lista_umbrales = [0.10]
 
     total_combinaciones = len(lista_k) * len(lista_umbrales)
     combinacion_actual = 1
@@ -236,7 +240,7 @@ if __name__ == "__main__":
             with open(nombre_archivo_log, mode="w", encoding="utf-8") as f_log:
                 f_log.write(f"=== DIARIO DEL JUEZ | K={k} | Umbral={umbral} ===\n\n")
 
-            # Recorre las preguntas
+            # Recorre las 30 preguntas para la combinación actual
 
             for i, pregunta in enumerate(preguntas_test_semantico, 1):
                 print(f"\n  -> Pregunta {i}/{total_preguntas}: '{pregunta}'")
@@ -296,5 +300,6 @@ if __name__ == "__main__":
     tiempo_fin = time()
     minutos = (tiempo_fin - tiempo_inicio) / 60
     print("\n" + "*"*70)
-    print(f"Finalizado en {minutos:.1f}")
+    print(f"Finalizado en {minutos:.1f} minutos")
+    print(f"Se han generado {total_combinaciones} archivos CSV.")
     print("*"*70)

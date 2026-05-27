@@ -1,9 +1,12 @@
-import pandas as pd
 import os
+import pandas as pd
 from langchain_ollama import OllamaLLM
-from generadorSQL import ConsultaSQL 
-from RAG import GestorRAG   
+from generadorSQL import ConsultaSQL
+from RAG import GestorRAG
 from clasificadorIntencion import ClasificadorIntencion
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODELO_LLM = "llama3"
 
 K_RELEVANTES_RAG = 5
 UMBRAL_RAG = 0.175
@@ -24,7 +27,7 @@ PROMPTS_POR_TIPO = {
     )
 }
 class Orquestador:
-    def __init__(self, ruta_csv, ruta_directorio_pdfs, modelo="llama3"):
+    def __init__(self, ruta_csv, ruta_directorio_pdfs, modelo=MODELO_LLM):
         
         #DuckDB 
         if not os.path.exists(ruta_csv):
@@ -39,7 +42,7 @@ class Orquestador:
         self.rag_engine = GestorRAG()
         self.rag_engine.ingestar(ruta_directorio_pdfs)
         print("Motor RAG: Listo (Base de datos vectorial cargada)")
-        self.llm_generador = OllamaLLM(model="llama3", temperature=0.0, num_ctx=8192)
+        self.llm_generador = OllamaLLM(model=MODELO_LLM, temperature=0.0, num_ctx=8192)
 
     def clasificar_pregunta(self, pregunta):
         tipo, scores = self.clasificador_intencion.clasificar(pregunta)
@@ -294,8 +297,8 @@ class Orquestador:
 
 if __name__ == "__main__":
 
-    ruta_csv_real = "/home/ivan/Universidad/TFG/datos/datos_procesados/"
-    ruta_directorio_pdfs = "/home/ivan/Universidad/TFG/datos/Docs/"
+    ruta_csv_real = os.path.join(BASE_DIR, "datos", "datos_procesados")
+    ruta_directorio_pdfs = os.path.join(BASE_DIR, "datos", "Docs")
     
     
     try:

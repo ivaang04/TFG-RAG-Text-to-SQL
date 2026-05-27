@@ -3,10 +3,12 @@ import numpy as np
 
 MARGEN_EMPATE = 0.008
 TOP_K = 4
+MODELO_EMBEDDINGS = "intfloat/multilingual-e5-small"
+
 class ClasificadorIntencion:
     def __init__(self):
         self.embedder = HuggingFaceEmbeddings(
-            model_name="intfloat/multilingual-e5-small",
+            model_name=MODELO_EMBEDDINGS,
             model_kwargs={'device': 'cpu'},
             encode_kwargs={'normalize_embeddings': True} 
         )

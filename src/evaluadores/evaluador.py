@@ -4,12 +4,14 @@ import random
 from collections import defaultdict
 from langchain_huggingface import HuggingFaceEmbeddings
 
+MODELO_EMBEDDINGS = "intfloat/multilingual-e5-small"
+
 class EvaluadorEnrutador:
     def __init__(self, ejemplos_base):
         print("Cargando modelo de embeddings...")
 
         self.embedder = HuggingFaceEmbeddings(
-            model_name="intfloat/multilingual-e5-small",
+            model_name=MODELO_EMBEDDINGS,
             model_kwargs={'device': 'cpu'},
             encode_kwargs={'normalize_embeddings': True}
         )
@@ -28,12 +30,6 @@ class EvaluadorEnrutador:
 
     def similitud_coseno(self, v1, v2):
         return np.dot(v1, v2)
-    
-    def aplicar_margen(self,s_sql, s_rag, s_hib, margen=0.008):
-        if abs(s_sql - s_rag) <= margen:
-            return "HIBRIDO"
-        dicc = {"SQL": s_sql, "RAG": s_rag, "HIBRIDO": s_hib}
-        return max(dicc, key=dicc.get)
 
     def evaluar_pregunta(self, pregunta):
 
@@ -63,25 +59,25 @@ class EvaluadorEnrutador:
         pred_1nn = resultados[0]["tipo"]
 
 
+        # Media total
+        pred_media_total = max(
+            scores_por_categoria,
+            key=lambda cat: np.mean(scores_por_categoria[cat])
+        )
 
-        # Media total (Con regla de empate)
-        media_tot_sql = np.mean(scores_por_categoria["SQL"]) if scores_por_categoria["SQL"] else 0
-        media_tot_rag = np.mean(scores_por_categoria["RAG"]) if scores_por_categoria["RAG"] else 0
-        media_tot_hib = np.mean(scores_por_categoria["HIBRIDO"]) if scores_por_categoria["HIBRIDO"] else 0
-        
-        pred_media_total = self.aplicar_margen(media_tot_sql, media_tot_rag, media_tot_hib)
 
-        #Media Top-K 
-
+        #Media Top-K
         ks = [1, 2, 3, 4, 5, 7, 10]
         predicciones_media_k = {}
 
         for k in ks:
-            m_sql = np.mean(sorted(scores_por_categoria["SQL"], reverse=True)[:k]) if scores_por_categoria["SQL"] else 0
-            m_rag = np.mean(sorted(scores_por_categoria["RAG"], reverse=True)[:k]) if scores_por_categoria["RAG"] else 0
-            m_hib = np.mean(sorted(scores_por_categoria["HIBRIDO"], reverse=True)[:k]) if scores_por_categoria["HIBRIDO"] else 0
-            
-            predicciones_media_k[f"Media_Top_{k}"] = self.aplicar_margen(m_sql, m_rag, m_hib)
+            pred = max(
+                scores_por_categoria,
+                key=lambda cat: np.mean(
+                    sorted(scores_por_categoria[cat], reverse=True)[:k]
+                )
+            )
+            predicciones_media_k[f"Media_Top_{k}"] = pred
 
         #Voto Top-K
         predicciones_voto_k = {}
@@ -120,6 +116,7 @@ class EvaluadorEnrutador:
             pred_random,
             scores_medios
         )
+    
 
 dataset_tfg_antiguas = {
     "SQL": [
@@ -374,7 +371,7 @@ if __name__ == "__main__":
             contador += 1
 
 
-    nombre_archivo = "resultados_clasificadorConEmpate_antiguo.csv"
+    nombre_archivo = "resultados_clasificador_antiguo.csv"
 
     with open(nombre_archivo, mode="w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=campos)

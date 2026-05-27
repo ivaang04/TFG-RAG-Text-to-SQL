@@ -4,7 +4,7 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import PromptTemplate
 import re
 
-from orquestador import Orquestador
+from src.orquestador import Orquestador
 
 class JuezRAG:
     def __init__(self):
