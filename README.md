@@ -109,7 +109,6 @@ TFG-Fine-Tunning/
 └── README.md                  # Este fichero
 ```
 
-> Ajusta esta sección según tu estructura real de carpetas.
 
 ## Uso
 
