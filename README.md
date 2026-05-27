@@ -29,7 +29,7 @@ Consulta del usuario
 ┌─────────────────────┐
 │ Clasificador de     │
 │ intención           │
-│ (embeddings)        │
+│ (embeddings + KNN)  │
 └──────────┬──────────┘
            │
    ┌───────┴───────┐
@@ -51,7 +51,7 @@ Consulta del usuario
 
 ## Requisitos
 
-- **Sistema operativo**: Linux (probado en Ubuntu 22.04+). Funciona también en macOS.
+- **Sistema operativo**: Linux (probado en Ubuntu sobre WSL). Funciona también en macOS.
 - **Python**: 3.12 o superior.
 - **Memoria RAM**: 16 GB recomendados (el modelo Llama 3 8B requiere ~5 GB).
 - **Disco**: ~10 GB libres para modelos, base de datos vectorial y datos.
@@ -69,8 +69,8 @@ cd TFG-Fine-Tunning
 ### 2. Crear un entorno virtual e instalar dependencias
 
 ```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
+python3.12 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -92,23 +92,43 @@ Deberías ver `llama3:latest` en la lista.
 
 ```
 TFG-Fine-Tunning/
-├── src/
-│   ├── clasificador.py        # Clasificador de intención
-│   ├── consulta_sql.py        # Módulo SQL
-│   ├── rag.py                 # Módulo RAG
-│   ├── orquestador.py         # Orquestador central
-│   └── juez_rag.py            # Modelo juez para evaluación
-├── datos/
-│   ├── csv/                   # Datos empíricos preprocesados
-│   └── docs/                  # Corpus de literatura científica (PDFs)
-├── evaluacion/
-│   ├── conjuntos_prueba/      # Test sets del clasificador y RAG
-│   └── scripts/               # Scripts de evaluación experimental
-├── requirements.txt           # Dependencias Python
-├── LICENSE                    # Licencia MIT
-└── README.md                  # Este fichero
+├── limpiar_datos/                       # Scripts ETL de preprocesamiento de datos
+│   ├── limpiar_datos_boyas_Nautilus.py
+│   ├── limpiar_datos_boyas_prof_IMIDA.py
+│   ├── limpiar_datos_boyas_UPCT.py
+│   ├── limpiar_datos_ramblas.py
+│   ├── limpiar_datos_SAIH_piezometros.py
+│   └── union_Prof_IMIDA_UPCT.py
+├── resultados/                          # Gráficas y resultados experimentales
+│   ├── GRAFICAS-CLASIFICADOR/
+│   └── GRAFICAS-RAG/
+├── src/                                 # Código fuente principal
+│   ├── evaluadores/                     # Modelos juez y scripts de evaluación
+│   ├── clasificadorIntencion.py         # Clasificador de intención
+│   ├── generadorSQL.py                  # Módulo SQL
+│   ├── orquestador.py                   # Orquestador central
+│   └── RAG.py                           # Módulo RAG
+├── datos/                               # Datos empíricos y corpus documental (no incluidos)
+├── chroma_db/                           # Base de datos vectorial (generada automáticamente)
+├── requirements.txt                     # Dependencias Python
+├── LICENSE                              # Licencia MIT
+└── README.md                            # Este fichero
 ```
 
+## Datos
+
+Por motivos de tamaño y de las restricciones de difusión asociadas a las fuentes originales, los datos empíricos y el corpus de literatura científica **no se incluyen en este repositorio**. Para reproducir los experimentos:
+
+- **Datos empíricos**: provienen del proyecto OMM-Azul del IMIDA y de las redes públicas de AEMET y SAIH. Los scripts en `limpiar_datos/` permiten regenerar los ficheros CSV unificados a partir de los datos en bruto.
+- **Corpus documental**: 36 documentos científico-técnicos en formato PDF, procedentes de bases de datos académicas y repositorios institucionales (IEO-CSIC, CARM, entre otros). Las fuentes concretas se detallan en la memoria del TFG.
+
+Una vez obtenidos los datos, deben colocarse en una carpeta `datos/` con la siguiente estructura:
+
+```
+datos/
+├── csv/                    # Ficheros CSV resultantes del preprocesamiento
+└── Docs/                   # PDFs del corpus de literatura científica
+```
 
 ## Uso
 
@@ -132,16 +152,35 @@ Respuesta: El pH medio de la estación E3 en 2023 fue de 8.64...
 Respuesta: Según los estudios consultados, la eutrofización...
 ```
 
-## Reproducir los experimentos
-
-Los scripts de evaluación del clasificador y del módulo RAG se encuentran en `evaluacion/scripts/`. Para reproducir los resultados presentados en el capítulo 5 de la memoria:
+### Ejecutar módulos individualmente
 
 ```bash
-python evaluacion/scripts/eval_clasificador.py
-python evaluacion/scripts/eval_rag.py
+python src/RAG.py                       # Solo el módulo RAG
+python src/generadorSQL.py              # Solo el módulo SQL
+python src/clasificadorIntencion.py     # Solo el clasificador
 ```
 
-Los resultados se generan en formato CSV y se guardan en `evaluacion/resultados/`.
+## Reproducir los experimentos
+
+Los scripts de evaluación se encuentran en `src/evaluadores/`. Los resultados generados se almacenan en `resultados/` como gráficas, organizadas en dos carpetas:
+
+- `resultados/GRAFICAS-CLASIFICADOR/` — Resultados del clasificador de intención.
+- `resultados/GRAFICAS-RAG/` — Resultados del módulo RAG.
+
+Para reproducir los resultados presentados en el capítulo 5 de la memoria, ejecuta los scripts correspondientes desde la raíz del repositorio.
+
+## Preprocesamiento de datos
+
+Los scripts de la carpeta `limpiar_datos/` implementan el proceso ETL descrito en la sección 4.2 de la memoria. Cada script procesa una fuente de datos distinta:
+
+| Script | Fuente de datos |
+|---|---|
+| `limpiar_datos_boyas_Nautilus.py` | Boyas NAUTILUS de la UPCT |
+| `limpiar_datos_boyas_prof_IMIDA.py` | Boyas a profundidad fija del IMIDA |
+| `limpiar_datos_boyas_UPCT.py` | Boyas de la UPCT |
+| `limpiar_datos_ramblas.py` | Aforadores de ramblas del SAIH |
+| `limpiar_datos_SAIH_piezometros.py` | Piezómetros del SAIH |
+| `union_Prof_IMIDA_UPCT.py` | Integración de boyas IMIDA y UPCT |
 
 ## Tecnologías utilizadas
 
@@ -154,10 +193,6 @@ Los resultados se generan en formato CSV y se guardan en `evaluacion/resultados/
 | Modelo de embeddings | intfloat/multilingual-e5-small | — |
 | Modelo de lenguaje | Llama 3 (8B) | latest |
 | Plataforma de inferencia | Ollama | 0.15.4 |
-
-## Memoria del TFG
-
-La memoria completa del trabajo está disponible en formato PDF en [enlace al PDF si lo subes al repo o al repositorio institucional de la Universidad].
 
 ## Licencia
 
