@@ -29,7 +29,7 @@ Consulta del usuario
 ┌─────────────────────┐
 │ Clasificador de     │
 │ intención           │
-│ (embeddings)  │
+│ (embeddings)        │
 └──────────┬──────────┘
            │
    ┌───────┴───────┐
@@ -93,6 +93,7 @@ Deberías ver `llama3:latest` en la lista.
 ```
 TFG-Fine-Tuning/
 ├── limpiar_datos/                       # Scripts ETL de preprocesamiento de datos
+|   ├── limpiar_datos_AEMET.py
 │   ├── limpiar_datos_boyas_Nautilus.py
 │   ├── limpiar_datos_boyas_prof_IMIDA.py
 │   ├── limpiar_datos_boyas_UPCT.py
@@ -126,7 +127,7 @@ Una vez obtenidos los datos, deben colocarse en una carpeta `datos/` con la sigu
 
 ```
 datos/
-├── csv/                    # Ficheros CSV resultantes del preprocesamiento
+├── datos_procesados/       # Ficheros CSV resultantes del preprocesamiento
 └── Docs/                   # PDFs del corpus de literatura científica
 ```
 
