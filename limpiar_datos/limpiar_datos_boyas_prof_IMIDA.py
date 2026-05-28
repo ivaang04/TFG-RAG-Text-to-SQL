@@ -93,7 +93,7 @@ for estacion in carpetas_estaciones:
 df_final = pd.concat(dfs_todas_estaciones, ignore_index=True)
 
 # Guardamos
-ruta_final = os.path.join(ruta_salida, 'BoyasProf_IMIDA_unificadas_limpias.csv')
+ruta_final = os.path.join(ruta_datos, 'BoyasProf_IMIDA_unificadas_limpias.csv')
 df_final.to_csv(ruta_final, index=False)
 
 print(f"Total de filas: {len(df_final)}")

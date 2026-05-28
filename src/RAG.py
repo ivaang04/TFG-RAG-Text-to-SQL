@@ -1,6 +1,7 @@
 import os
 import shutil
 import re
+import logging
 from langchain_community.document_loaders import PyPDFLoader, PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -9,20 +10,21 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.documents import Document
 
+logging.getLogger("pypdf").setLevel(logging.ERROR)
+logging.getLogger("pdfminer").setLevel(logging.ERROR)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 UMBRAL_SIMILITUD = 0.175
 MODELO_EMBEDDINGS = "intfloat/multilingual-e5-small"
 MODELO_LLM = "llama3"
-CHROMA_PATH = "./chroma_db"  # NOTE: constante nunca usada — la clase construye self.db_path en __init__
+CHROMA_PATH = os.path.join(BASE_DIR, "chroma_db")
 K_RELEVANTES = 5
 
 class GestorRAG:
-    def __init__(self):
-        """Inicializa las rutas, el modelo de embeddings y la base de datos."""
-
-        self.db_path = os.path.join(BASE_DIR, "src", "chroma_db")
-        self.modelo_embeddings = MODELO_EMBEDDINGS 
+    
+    def __init__(self, db_path=CHROMA_PATH, modelo_embeddings=MODELO_EMBEDDINGS):
+        self.db_path = db_path
+        self.modelo_embeddings = modelo_embeddings
         
         print("Inicializando motor...")
         
@@ -116,7 +118,6 @@ class GestorRAG:
         for chunk in chunks_con_ids:
             if chunk.metadata["id"] not in ids_existentes:
                 if self.es_chunk_bibliografia(chunk.page_content):
-                    print(f"Chunk de bibliografía descartado: {chunk.metadata['id']}")
                     continue
                 if not chunk.page_content.startswith("passage: "):
                     chunk.page_content = "passage: " + chunk.page_content
@@ -159,11 +160,6 @@ class GestorRAG:
         # OVER-FETCHING: Capturamos el doble por si hay duplicados o bibliografía
         k_busqueda = k_relevantes * 2
         resultados = self.db.similarity_search_with_score(query_, k=k_busqueda)
-
-            # LOG TEMPORAL
-        print(f"Chunks recuperados: {len(resultados)}")
-        print(f"Scores: {[round(score, 3) for _, score in resultados]}")
-        print(f"Umbral activo: {umbral_similitud}")
 
         # Buscamos los que estén repetidos
         textos_vistos = set()

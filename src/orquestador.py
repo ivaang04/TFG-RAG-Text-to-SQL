@@ -46,7 +46,6 @@ class Orquestador:
 
     def clasificar_pregunta(self, pregunta):
         tipo, scores = self.clasificador_intencion.clasificar(pregunta)
-        print("Scores clasificación:", scores)
         return tipo
 
     def ejecutar_sql(self, pregunta_usuario):
@@ -72,7 +71,6 @@ class Orquestador:
 
     def ejecutar_RAG(self, pregunta_usuario, k_relevantes=K_RELEVANTES_RAG, umbral=UMBRAL_RAG):
 
-        print(f"\nConsultando PDFs con RAG (K={k_relevantes}, Umbral={umbral})...")
         resultado = self.rag_engine.consultar(pregunta_usuario, k_relevantes, umbral)
         if isinstance(resultado, str):
             print("  -> No se encontró contexto relevante.")

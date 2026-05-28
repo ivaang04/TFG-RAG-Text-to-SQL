@@ -75,7 +75,7 @@ class ConsultaSQL:
         tablas = {
             "AEMET": "AEMET_unificada_limpia.csv",
             "Boyas_Nautilus": "Boyas_Nautilus_unificadas_limpias.csv",
-            "Boyas_IMIDA_UPCT": "BoyasProf_IMIDA_UPCT_tidy.csv",
+            "Boyas_IMIDA_UPCT": "BoyasProf_IMIDA_UPCT_unificadas_limpias.csv",
             "SAIH_Piezometros": "SAIH_Piezometros_unificados_limpios.csv",
             "SAIH_Ramblas": "SAIH_ramblas_unificadas_limpias.csv"
         }
@@ -84,7 +84,6 @@ class ConsultaSQL:
             ruta = os.path.join(self.ruta_csv, archivo)
             if os.path.exists(ruta):
                 self.con.execute(f"CREATE VIEW {nombre_tabla} AS SELECT * FROM read_csv_auto('{ruta}')")
-                print(f" Tabla '{nombre_tabla}' montada en DuckDB.")
             else:
                 print(f" Advertencia: No se encontró {ruta}")
 
@@ -240,7 +239,6 @@ class ConsultaSQL:
 
     def generar_y_ejecutar(self, pregunta):
         self.ultimas_tablas_usadas = []
-        print(f"\n Se está procesando la pregunta: '{pregunta}'...")
 
         max_intentos = MAX_INTENTOS
         error_previo = None     # feedback de texto para el siguiente intento
@@ -254,7 +252,6 @@ class ConsultaSQL:
 
             # Comprobamos si la respuesta ha sido cortada
             if self._detectar_truncamiento(respuesta_raw):
-                print(f"Intento {intento+1}: respuesta truncada (bloque SQL sin cerrar).")
                 ultimo_error = "Respuesta truncada: ```sql sin cerrar."
                 error_previo = ("Tu respuesta anterior se cortó: el bloque ```sql quedó sin "
                                 "cerrar. Sé más conciso en <thought_process> y devuelve la "
@@ -265,7 +262,6 @@ class ConsultaSQL:
             # Extraer SQL
             sql = self.limpiar_respuesta(respuesta_raw)
             if not sql:
-                print(f"Intento {intento+1}: no se pudo extraer SQL.")
                 ultimo_error = "No se devolvió SQL parseable."
                 error_previo = ("No pude extraer ninguna consulta SQL de tu respuesta. "
                                 "Devuélvela dentro de un bloque ```sql ... ``` cerrado.")
@@ -282,7 +278,6 @@ class ConsultaSQL:
                 self.extraer_tablas(sql)
                 return self.con.execute(sql).df()
             except Exception as e:
-                print(f"Intento {intento+1} fallido: {e}")
                 ultimo_error = e
                 error_previo = str(e)
                 sql_fallido = sql

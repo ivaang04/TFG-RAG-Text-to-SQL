@@ -36,7 +36,7 @@ for ruta_archivo in archivos:
 
 # Concatenamos y guardamos
 df_final = pd.concat(dfs, ignore_index=True)
-ruta_final = os.path.join(ruta_salida, 'Boyas_Unificadas_Limpias.csv')
+ruta_final = os.path.join(ruta_salida, 'Boyas_Nautilus_unificadas_limpias.csv')
 df_final.to_csv(ruta_final, index=False)
 
 print(f"Proceso terminado. Se han unido {len(archivos)} boyas.")

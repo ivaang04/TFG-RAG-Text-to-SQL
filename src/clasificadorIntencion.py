@@ -149,8 +149,6 @@ class ClasificadorIntencion:
         mejor_score = scores[tipo_detectado]
         
 
-        print(f"Match más cercano: '{mejor_match['texto_match']}' ({mejor_match['score']:.3f})")
-
         # ----------------------------------
         # empate SQL vs RAG (si no se ha detectado híbrido)
         # ----------------------------------
