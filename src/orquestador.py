@@ -83,7 +83,6 @@ class Orquestador:
         print(f"Procesando solicitud: '{pregunta_usuario}'\n")
 
         tipo = self.clasificar_pregunta(pregunta_usuario)
-        print(f"Tipo detectado: {tipo}")
 
         if tipo == "SQL":
             datos = self.ejecutar_sql(pregunta_usuario)
@@ -178,7 +177,7 @@ class Orquestador:
         fuentes_sql = self.sql_engine.ultimas_tablas_usadas
         
         if fuentes_sql:
-            respuesta_llm += "\n\n---\nTablas de datos consultadas:\n"
+            respuesta_llm += "\nTablas de datos consultadas:\n"
             for tabla in fuentes_sql:
                 respuesta_llm += f"- {tabla}\n"
                 
@@ -218,7 +217,7 @@ class Orquestador:
         respuesta = self.llm_generador.invoke(prompt)
 
         if incluir_fuentes and fuentes:
-            respuesta_final = respuesta + "\n\n---\nFuentes consultadas:\n"
+            respuesta_final = respuesta + "\nFuentes consultadas:\n"
             for fuente in fuentes:
                 respuesta_final += f"- {fuente}\n"
             return respuesta_final
@@ -280,7 +279,7 @@ class Orquestador:
             respuesta_final = respuesta_limpia + "\n\n---\n"
 
             if fuentes_sql and hay_datos_sql:
-                respuesta_final += "Tablas de datos consultadas:\n"
+                respuesta_final += "\nTablas de datos consultadas:\n"
                 for tabla in fuentes_sql:
                     respuesta_final += f"- {tabla}\n"
 
@@ -311,7 +310,7 @@ if __name__ == "__main__":
 
             respuesta = app.ejecutar_pipeline(pregunta)
             
-            print("\n:Respuesta final inferida:")
+            print("\nRespuesta final inferida:")
             print("-" * 40)
             print(respuesta)
             print("-" * 40)

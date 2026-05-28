@@ -248,7 +248,7 @@ class ConsultaSQL:
         for intento in range(max_intentos):
             respuesta_raw = self.generar_sql(pregunta, error_previo=error_previo, sql_fallido=sql_fallido)
             etiqueta = "RAZONAMIENTO" if intento == 0 else "CORRECCIÓN DEL RAZONAMIENTO"
-            self._mostrar_razonamiento(respuesta_raw, etiqueta)
+            #self._mostrar_razonamiento(respuesta_raw, etiqueta)
 
             # Comprobamos si la respuesta ha sido cortada
             if self._detectar_truncamiento(respuesta_raw):
