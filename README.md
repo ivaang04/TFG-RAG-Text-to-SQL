@@ -140,26 +140,6 @@ python src/orquestador.py
 
 El sistema lanzará una interfaz por terminal donde podrás formular preguntas en lenguaje natural. Para salir, escribe `salir`.
 
-### Ejemplo de uso
-
-```
-> ¿Cuál fue el pH medio de la estación E3 en 2023?
-[Modo SQL]
-Respuesta: El pH medio de la estación E3 en 2023 fue de 8.64...
-
-> ¿Qué dicen los autores sobre la eutrofización del Mar Menor?
-[Modo RAG]
-Respuesta: Según los estudios consultados, la eutrofización...
-```
-
-### Ejecutar módulos individualmente
-
-```bash
-python src/RAG.py                       # Solo el módulo RAG
-python src/generadorSQL.py              # Solo el módulo SQL
-python src/clasificadorIntencion.py     # Solo el clasificador
-```
-
 ## Reproducir los experimentos
 
 Los scripts de evaluación se encuentran en `src/evaluadores/`. Los resultados generados se almacenan en `resultados/` como gráficas, organizadas en dos carpetas:
