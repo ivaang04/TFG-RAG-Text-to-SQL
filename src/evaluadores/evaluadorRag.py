@@ -8,6 +8,7 @@ from src.orquestador import Orquestador
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MODELO_LLM = "llama3"
+RUTA_SALIDA = os.path.join(BASE_DIR, "resultados", "GRAFICAS-RAG")
 
 class JuezRAG:
     def __init__(self):
@@ -120,7 +121,7 @@ import csv
 
 if __name__ == "__main__":
     
-    ruta_csv_real = os.path.join(BASE_DIR, "datos", "AEMET_clean", "MS_Torrepacheco1.csv")
+    ruta_csv_real = os.path.join(BASE_DIR, "datos", "datos_procesados")
     ruta_directorio_real = os.path.join(BASE_DIR, "datos", "Docs")
     
     app = Orquestador(ruta_csv_real, ruta_directorio_real)
@@ -204,7 +205,6 @@ if __name__ == "__main__":
         "¿Qué sectores económicos costeros, como la acuicultura o la pesca tradicional, son los principales beneficiarios directos de la implementación de sistemas de alerta temprana basados en teledetección?"
     ]
 
-    nombre_archivo_csv = "resultados_evaluacion_rag.csv"
     campos_csv = [
         "Pregunta", "Context_Relevance_Score", "Groundedness_Score"
     ]
@@ -223,9 +223,10 @@ if __name__ == "__main__":
     for k in lista_k:
         for umbral in lista_umbrales:
             
-            # Generamos un nombre de archivo único para esta combinación
-            nombre_archivo_csv = f"resultados_k{k}_umbral{umbral}_preguntas_simples.csv"
-            nombre_archivo_log = f"log_k{k}_umbral{umbral}_preguntas_simples.txt"
+            # DESPUÉS
+            os.makedirs(RUTA_SALIDA, exist_ok=True)
+            nombre_archivo_csv = os.path.join(RUTA_SALIDA, f"resultados_k{k}_umbral{umbral}_preguntas_simples.csv")
+            nombre_archivo_log = os.path.join(RUTA_SALIDA, f"log_k{k}_umbral{umbral}_preguntas_simples.txt")
             
             print("\n" + "="*70)
             print(f"[{combinacion_actual}/{total_combinaciones}] INICIANDO PRUEBA -> K: {k} | Umbral: {umbral}")

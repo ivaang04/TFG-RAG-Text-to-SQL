@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import csv
 import random
@@ -5,6 +6,8 @@ from collections import defaultdict
 from langchain_huggingface import HuggingFaceEmbeddings
 
 MODELO_EMBEDDINGS = "intfloat/multilingual-e5-small"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+RUTA_SALIDA = os.path.join(BASE_DIR, "resultados", "GRAFICAS-CLASIFICADOR")
 
 class EvaluadorEnrutador:
     def __init__(self, ejemplos_base):
@@ -376,7 +379,8 @@ if __name__ == "__main__":
             contador += 1
 
 
-    nombre_archivo = "resultados_clasificadorConEmpate_antiguo.csv"
+    os.makedirs(RUTA_SALIDA, exist_ok=True)
+    nombre_archivo = os.path.join(RUTA_SALIDA, "resultados_clasificadorConEmpate_antiguo.csv")
 
     with open(nombre_archivo, mode="w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=campos)
