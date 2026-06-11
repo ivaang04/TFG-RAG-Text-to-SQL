@@ -113,7 +113,6 @@ TFG-RAG-Text-to-SQL/
 ├── chroma_db/                           # Base de datos vectorial (generada automáticamente)
 ├── requirements.txt                     # Dependencias Python
 ├── LICENSE                              # Licencia MIT
-├── TFG-Ivan-Guillamon-Banos             # La memoria del TFG
 └── README.md                            # Este fichero
 ```
 
