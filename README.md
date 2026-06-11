@@ -62,8 +62,8 @@ Consulta del usuario
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/ivaang04/TFG-Fine-Tuning.git
-cd TFG-Fine-Tuning
+git clone https://github.com/ivaang04/TFG-RAG-Text-to-SQL.git
+cd TFG-RAG-Text-to-SQL
 ```
 
 ### 2. Crear un entorno virtual e instalar dependencias
@@ -91,7 +91,7 @@ Deberías ver `llama3:latest` en la lista.
 ## Estructura del repositorio
 
 ```
-TFG-Fine-Tuning/
+TFG-RAG-Text-to-SQL/
 ├── limpiar_datos/                       # Scripts ETL de preprocesamiento de datos
 |   ├── limpiar_datos_AEMET.py
 │   ├── limpiar_datos_boyas_Nautilus.py
