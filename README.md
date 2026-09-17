@@ -66,8 +66,8 @@ Puedes instalar y ejecutar el proyecto de dos formas: con un entorno virtual de 
 #### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/ivaang04/TFG-Fine-Tuning.git
-cd TFG-Fine-Tuning
+git clone https://github.com/ivaang04/TFG-RAG-Text-to-SQL.git
+cd TFG-RAG-Text-to-SQL
 ```
 
 #### 2. Crear un entorno virtual e instalar dependencias
@@ -149,7 +149,7 @@ El sistema lanzará la misma interfaz por terminal que en la instalación local.
 ## Estructura del repositorio
 
 ```
-TFG-Fine-Tuning/
+TFG-RAG-Text-to-SQL/
 ├── limpiar_datos/                       # Scripts ETL de preprocesamiento de datos
 |   ├── limpiar_datos_AEMET.py
 │   ├── limpiar_datos_boyas_Nautilus.py
@@ -171,7 +171,6 @@ TFG-Fine-Tuning/
 ├── chroma_db/                           # Base de datos vectorial (generada automáticamente)
 ├── requirements.txt                     # Dependencias Python
 ├── LICENSE                              # Licencia MIT
-├── TFG-Ivan-Guillamon-Banos             # La memoria del TFG
 └── README.md                            # Este fichero
 ```
 
