@@ -1,0 +1,31 @@
+services:
+  tfg-app:
+    build: .
+    container_name: tfg_rag_app
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    volumes:
+      - ./limpiar_datos:/app/limpiar_datos
+      - ./datos:/app/datos
+      - ./chroma_db:/app/chroma_db
+      - hf_cache:/root/.cache/huggingface
+    stdin_open: true
+    tty: true
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama_server
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  ollama_data:
+  hf_cache:

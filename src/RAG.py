@@ -12,6 +12,7 @@ from langchain_core.documents import Document
 
 logging.getLogger("pypdf").setLevel(logging.ERROR)
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
+OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 UMBRAL_SIMILITUD = 0.175
@@ -217,7 +218,7 @@ class GestorRAG:
         
         # Inferencia
 
-        modelo = OllamaLLM(model=MODELO_LLM, temperature=0.0)
+        modelo = OllamaLLM(model=MODELO_LLM, temperature=0.0, base_url=OLLAMA_BASE_URL)
         return modelo.invoke(prompt)
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ from clasificadorIntencion import ClasificadorIntencion
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODELO_LLM = "llama3"
-
+OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
 K_RELEVANTES_RAG = 5
 UMBRAL_RAG = 0.175
 LIMITE_FILAS = 1000
@@ -42,7 +42,7 @@ class Orquestador:
         self.rag_engine = GestorRAG()
         self.rag_engine.ingestar(ruta_directorio_pdfs)
         print("Motor RAG: Listo (Base de datos vectorial cargada)")
-        self.llm_generador = OllamaLLM(model=MODELO_LLM, temperature=0.0, num_ctx=8192)
+        self.llm_generador = OllamaLLM(model=MODELO_LLM, temperature=0.0, num_ctx=8192, base_url=OLLAMA_BASE_URL)
 
     def clasificar_pregunta(self, pregunta):
         tipo, scores = self.clasificador_intencion.clasificar(pregunta)

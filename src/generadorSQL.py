@@ -6,12 +6,12 @@ from langchain_ollama import OllamaLLM
 
 MAX_INTENTOS = 5
 MODELO_LLM = "llama3"
-
+OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
 class ConsultaSQL:
     def __init__(self, ruta_csv):
         """Inicializamos la conexión a DuckDB y el LLM."""
         self.ruta_csv = ruta_csv
-        self.llm = OllamaLLM(model=MODELO_LLM, temperature=0.0, num_ctx=8192)
+        self.llm = OllamaLLM(model=MODELO_LLM, temperature=0.0, num_ctx=8192, base_url=OLLAMA_BASE_URL)
         self.con = duckdb.connect(database=':memory:')
         self.cargar_datos()
         self.esquema = self.obtener_esquema()

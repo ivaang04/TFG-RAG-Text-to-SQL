@@ -1,0 +1,9 @@
+resultados/
+src/evaluadores/
+*.pdf
+*.png
+*.md
+TFG-Ivan-Guillamon-Banos.pdf
+__pycache__/
+*.pyc
+.git/
