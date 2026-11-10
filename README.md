@@ -109,8 +109,8 @@ ollama serve
 #### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/ivaang04/TFG-Fine-Tuning.git
-cd TFG-Fine-Tuning
+git clone https://github.com/ivaang04/TFG-RAG-Text-to-SQL.git
+cd TFG-RAG-Text-to-SQL
 ```
 
 #### 2. Construir las imágenes
